@@ -1,0 +1,21 @@
+siteName: Penn Star Land Transfer
+tagline: This is a tagline
+pages:
+  - index:
+      layout: default
+      sections:
+        - hero
+        - cta
+        - featuredPosts
+  - about:
+      layout: default
+      sections:
+        - hero
+        - cta
+        - featuredPosts
+  - about:
+      layout: default
+      sections:
+        - hero
+        - cta
+        - featuredPosts

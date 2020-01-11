@@ -4,11 +4,11 @@ import { Styled } from "theme-ui"
 
 // ⛔️ demonstrates implementing theme-ui components in another theme
 
-const EventList = ({ events }) => (
+const PageList = ({ events }) => (
   <>
-    <Styled.h1>Upcoming Events</Styled.h1>
+    <Styled.h1>Page List Component</Styled.h1>
     <Styled.ul>
-      {events.map(event => (
+      {/* {events.map(event => (
         <Styled.li key={event.id}>
           <strong>
             <Link to={event.slug}>{event.name}</Link>
@@ -21,10 +21,10 @@ const EventList = ({ events }) => (
           })}{" "}
           in {event.location}
         </Styled.li>
-      ))}
+      ))} */}
     </Styled.ul>
 
   </>
 )
 
-export default EventList
+export default PageList
