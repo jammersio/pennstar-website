@@ -1,11 +1,10 @@
 import React from 'react'
-import Box from "../components/Box"
-import "../styles/styles.scss"
+import Layout from "../gatsby-theme-styleguide/components/layout"
 
 export default function about() {
   return (
-    <Box className="text-center">
-      About
-    </Box>
+    <Layout>
+      <p className="text-center">About</p>
+    </Layout>
   )
 }

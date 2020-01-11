@@ -21,7 +21,7 @@ export const theme = {
     // sets defaults for components
     // provided by theme-ui
     Layout: {
-      color: 'gray.2',
+      color: 'primary',
       fontFamily: 'body',
       fontSize: 1,
       lineHeight: 'body'
