@@ -1,7 +1,7 @@
 {
-  "private": true,
-  "name": "site",
+  "name": "gatsby-theme-yaml-data",
   "version": "1.0.0",
+  "main": "index.js",
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
@@ -9,16 +9,20 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "yarn develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
-  "dependencies": {
+  "peerDependencies": {
     "gatsby": "^2.18.18",
-    "gatsby-theme-boostrap-sass": "*",
-    "gatsby-theme-default-starter": "*",
-    "gatsby-theme-styleguide": "*",
-    "gatsby-theme-yaml-data": "*",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
+    "gatsby": "^2.18.18",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "dependencies": {
+    "gatsby-source-filesystem": "^2.1.46",
+    "gatsby-transformer-yaml": "^2.2.23"
   }
 }

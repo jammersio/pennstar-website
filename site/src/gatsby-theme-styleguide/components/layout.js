@@ -15,6 +15,7 @@ export default ({ children }) => {
   `)
   return (
     <Layout>
+      <Meta />
       <Header>{data.site.siteMetadata.title}</Header>
       <Main>
         <Container>{children}</Container>

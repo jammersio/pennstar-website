@@ -1,0 +1,15 @@
+-site:
+  siteName: PennStar Land Transer
+  tagline: This is the tagline
+  pages:
+    - home
+      - hero
+      - cta
+      - featuredPosts
+      - testimonials
+      - authority
+      - latestPosts
+    - about
+    - contact
+
+

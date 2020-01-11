@@ -15,7 +15,7 @@ export const theme = {
   },
   sizes: {
     default: '90vw',
-    max: '540px'
+    max: '100vw'
   },
   styles: {
     // sets defaults for components
@@ -24,7 +24,7 @@ export const theme = {
       color: 'primary',
       fontFamily: 'body',
       fontSize: 1,
-      lineHeight: 'body'
+      lineHeight: 'body',
     },
     Header: {
       backgroundColor: 'primary',
@@ -33,7 +33,7 @@ export const theme = {
       margin: '0 auto',
       maxWidth: 'max',
       padding: 3,
-      width: 'default',
+      width: 'max',
       a: {
         color: 'inherit'
       }

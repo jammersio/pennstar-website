@@ -8,5 +8,13 @@ module.exports = {
     `gatsby-theme-default-starter`,
     `gatsby-theme-boostrap-sass`,
     `gatsby-theme-styleguide`,
+    {
+      resolve: `gatsby-theme-yaml-data`,
+      options: {
+        contentPath: `data`,
+        basePath: `/events`
+      }
+    }
+
   ]
 }
