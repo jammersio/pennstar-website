@@ -1,8 +1,8 @@
 // using gatsby-themes we are able to pass options to gatsby-config and gatsby-node...
 // refactor the following to take options:
-
+const defaults = { contentPath = `data`, basePath = `/` }
 // module.exports = {
-module.exports = ({ contentPath = `data`, basePath = `/`, }) => ({
+module.exports = ({ contentPath = `data`, basePath = `/` }) => ({
   // any options provided by the theme are provided as arguments to this function
   // -- allowing us to dynamically pass in values to our theme's gatsby-config and/or gatsby-node:
   siteMetadata: {
@@ -14,6 +14,18 @@ module.exports = ({ contentPath = `data`, basePath = `/`, }) => ({
       resolve: "gatsby-source-filesystem",
       options: {
         path: contentPath,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: contentPath !== `data` ? `data` : null,
+      },
+    },
+    {
+      resolve: "gatsby-transformer-yaml",
+      options: {
+        typeName: "Website",
       },
     },
     {

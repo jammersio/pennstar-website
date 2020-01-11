@@ -1,3 +1,4 @@
+type: site-content
 siteName: Penn Star Land Transfer
 tagline: This is a tagline
 pages:
@@ -13,7 +14,7 @@ pages:
         - hero
         - cta
         - featuredPosts
-  - about:
+  - contact:
       layout: default
       sections:
         - hero

@@ -11,8 +11,8 @@ module.exports = {
     {
       resolve: `gatsby-theme-yaml-data`,
       options: {
-        contentPath: `data`,
-        basePath: `/events`
+        contentPath: `src/events` || `data`, // defaults to root data folder
+        basePath: `/events` // path to prepend file with in url
       }
     }
 
