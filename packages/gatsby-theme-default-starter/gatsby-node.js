@@ -1,6 +1,4 @@
-const createPages = require(`./pageCreators/createPages`)
-const onCreateNode = require(`./pageCreators/onCreateNode`)
+const createNewPages = require(`./pageCreators/createNewPages`)
 
 
-exports.onCreateNode = onCreateNode.default
-exports.createPages = createPages.default
+exports.createPages = createNewPages.default

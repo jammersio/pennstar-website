@@ -1,6 +1,6 @@
 const path = require('path');
 
-module.exports = ({ sources }) => ({
+module.exports = ({ sources = [] }) => ({
   siteMetadata: {
     title: `Gatsby Default Starter`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
@@ -18,6 +18,7 @@ module.exports = ({ sources }) => ({
     },
 
     `gatsby-transformer-sharp`,
+    `gatsby-transformer-yaml-full`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,

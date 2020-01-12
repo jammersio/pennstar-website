@@ -1,0 +1,29 @@
+"pages":
+  - page: index
+    to: "/"
+    layout: default
+    "sections":
+      - section: hero
+      - section: cta
+      - section: featuredPosts
+  - page: about
+    to: "/about"
+    layout: default
+    "sections":
+      - section: hero
+      - section: cta
+      - section: featuredPosts
+  - page: services
+    to: "/services"
+    layout: default
+    "sections":
+      - section: hero
+      - section: cta
+      - section: featuredPosts
+  - page: contact
+    to: "/contact"
+    layout: default
+    "sections":
+      - section: hero
+      - section: cta
+      - section: featuredPosts

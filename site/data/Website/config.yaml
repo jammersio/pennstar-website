@@ -1,8 +1,8 @@
-- siteInfo:
-  name: Penn Star Land Transer
-  tagline: "This is a tagline"
-  pages:
-    - index
-    - about
-    - services
-    - contact
+siteInfo:
+name: Penn Star Land Transer
+tagline: "This is a tagline"
+pages:
+  - page: "index"
+  - page: "about"
+  - page: "services"
+  - page: "contact"

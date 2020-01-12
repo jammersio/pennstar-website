@@ -6,55 +6,47 @@ async function createPages({ graphql, actions }) {
 
   const result = await graphql(`
     query {
-      allContentYaml {
-        edges {
-          node {
+      allWebsiteYaml {
+        nodes {
+          pages {
             page
-            content {
-              item
-            }
             links {
               to
+            }
+            content {
+              item
             }
           }
         }
       }
-
     }
   `)
-  // const pageContent = result.data.allContentYaml.edges.map(({ node }) => node)
-  // // const sitePages = result.data.allWebsiteYaml.nodes.map((node) => node.pages.map(page => page))
-  // if (sitePages.length > 0) {
-  //   const [index, about, services, contact] = sitePages
-  //   createPage({
-  //     path: `/page-test`,
-  //     component: path.resolve(`src/templates/stringifyTemplate.js`),
-  //     context: {
-  //       sitePages: index
-  //     }
-  //   })
-  //   console.log('isArrayPages:', Array.isArray(sitePages))
-  //   // console.log(pageContent)
-  //   createPage({
-  //     path: `/${node.page}-test`,
-  //     component: path.resolve(`src/templates/stringifyTemplate.js`),
-  //     context: {
-  //       content: node.content, links: node.links,
-  //       sitePages: sitepages
-  //     }
-  //   })
-  // }
-  result.data.allContentYaml.edges.forEach(({ node }) => {
-    // console.log(node)
-    createPage({
-      path: `/${node.page}`,
-      component: path.resolve(`src/templates/pageTemplate.js`),
-      context: {
-        content: node.content, links: node.links
-      }
+
+
+  // Get Site content:
+  const siteContent = result.data.allWebsiteYaml.nodes
+  const [sitePages, contentPages] = siteContent
+
+  const pagesToRender = sitePages.pages.map(sitePage => {
+    console.log(sitePage.page)
+
+    return contentPages.pages.forEach(page => {
+      console.log(page.page)
+      page.page === sitePage.page && (
+        createPage({
+          path: `/${page.page}`,
+          component: path.resolve(`src/templates/pageTemplate.js`),
+          context: {
+            ...page
+          }
+        })
+      )
     })
   })
-  // console.log(JSON.stringify(result))
+
+
+  return
+
 }
 
 exports.default = createPages;
