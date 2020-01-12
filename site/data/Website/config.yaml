@@ -1,0 +1,29 @@
+- siteInfo:
+  siteName: Penn Star Land Transer
+  tagline: 'This is a tagline'
+  slug: page
+  routes:
+    home:
+      layout: default
+      sections:
+        - hero
+        - cta
+        - featuredPosts
+    about:
+      layout: default
+      sections:
+        - hero
+        - cta
+        - featuredPosts
+    services:
+      layout: default
+      sections:
+        - hero
+        - cta
+        - featuredPosts
+    contact:
+      layout: default
+      sections:
+        - hero
+        - cta
+        - featuredPosts

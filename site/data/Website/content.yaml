@@ -1,12 +1,18 @@
-- path: "/page1"
+- routes:
+    home
+    about
+    services
+    blog
+    contact
+- page: "home"
   content:
     - item: one item
     - item: two items
     - item: three items
   links:
-    - to: "/page2"
-    - to: "/page5"
-- path: "/page2"
+    - to: "about"
+    - to: "contact"
+- page: "about"
   content:
     - item:
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -16,8 +22,8 @@
         eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
         in culpa qui officia deserunt mollit anim id est laborum.
   links:
-    - to: "/page1"
-- path: "/page3"
+    - to: "home"
+- page: "services"
   content:
     - item: Cupcake ipsum dolor sit amet tootsie roll sesame snaps chupa chups.
         Sugar plum chupa chups topping I love carrot cake I love marshmallow dessert.
@@ -31,7 +37,7 @@
         Powder cupcake cotton candy bonbon chocolate bar marshmallow gummies cheesecake marzipan.
         Gummies soufflé candy. Candy canes muffin chocolate brownie pudding.
   links: []
-- path: "/page4"
+- page: "blog"
   content:
     - item:
         Lorem ipsum dolor amet mustache knausgaard +1, blue bottle waistcoat tbh
@@ -40,9 +46,9 @@
         humblebrag. Blue bottle put a bird on it twee prism biodiesel brooklyn. Blue
         bottle ennui tbh succulents.
   links:
-    - to: "/page5"
-    - to: "/page1"
-- path: "/page5"
+    - to: "contact"
+    - to: "home"
+- page: "contact"
   content:
     - item: St. agur blue cheese queso cheesecake.
         Cheesecake the big cheese monterey jack cheesecake monterey jack paneer halloumi rubber cheese.
@@ -58,4 +64,4 @@
         Puggorino very good spot most angery pupper I have ever seen you are doing me the shock big ol pupper porgo corgo shoober, heckin good boys lotsa pats noodle horse very taste wow thicc.
         What a nice floof long doggo blep length boy borking doggo, much ruin diet floofs borkf.
   links:
-    - to: "/page1"
+    - to: "home"
