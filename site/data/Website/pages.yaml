@@ -1,0 +1,24 @@
+- name: index
+  to: "/"
+  layout: default
+  sections: hero
+    cta
+    featuredPosts
+- name: about
+  to: "/about"
+  layout: default
+  sections: hero
+    cta
+    featuredPosts
+- name: services
+  to: "/services"
+  layout: default
+  sections: hero
+    cta
+    featuredPosts
+- name: contact
+  to: "/contact"
+  layout: default
+  sections: hero
+    cta
+    featuredPosts

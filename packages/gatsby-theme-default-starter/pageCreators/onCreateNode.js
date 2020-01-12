@@ -3,7 +3,7 @@ const _ = require(`lodash`)
 const path = require(`path`)
 
 async function onCreateNode(
-  { node, getNode, actions, loadNodeContent, createNodeId, createContentDigest },
+  { node, actions, loadNodeContent, createNodeId, createContentDigest },
   pluginOptions
 ) {
   function getType({ node, object, isArray }) {
