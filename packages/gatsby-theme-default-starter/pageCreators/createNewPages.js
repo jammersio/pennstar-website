@@ -18,29 +18,46 @@ async function createNewPages({ graphql, actions }) {
           }
         }
       }
+      contentYaml {
+        pages {
+          page
+          links {
+            to
+          }
+          content {
+            item
+          }
+        }
+      }
     }
   `)
 
 
   // Get Site content:
-  const siteContent = result.data.allPagesYaml.nodes
-  const [{ pages }] = siteContent
+  const contentLayout = result.data.allPagesYaml.nodes
+  const [{ pages: layoutPages }] = contentLayout
+  const { pages } = result.data.contentYaml
+  console.log(pages)
 
   pages.forEach(page => {
-
-    createPage({
-      path: `/${page.page}`,
-      component: path.resolve(`src/templates/pageTemplate.js`),
-      context: {
-        ...page
-      }
+    layoutPages.forEach(layout => {
+      let isPage = layout.page === page.page && true
+      createPage({
+        path: `/${layout.page}`,
+        component: path.resolve(`src/templates/pageTemplate.js`),
+        context: {
+          ...layout,
+          content: isPage && page.content,
+          links: isPage && page.links
+        }
+      })
     })
+
 
   })
 
 
   return
-
 }
 
 exports.default = createNewPages;

@@ -3,12 +3,12 @@ import { Link, graphql } from 'gatsby';
 import Layout from "../gatsby-theme-styleguide/components/layout"
 
 export default function pageTemplate(props) {
-  const { pageContext } = props
-  const { page, to, layout, sections } = pageContext
+  const { pageContext, data } = props
+  const { contextPage, to, layout, sections } = pageContext
 
-  console.log(props)
+  // console.log(pages.filter(page => page.page === contextPage))
   return (
-    <Layout>
+    <Layout title={data.site.siteMetadata.title}>
       <pre>{JSON.stringify(pageContext, null, 2)}</pre>
       <Link to={`/404.html`}>404</Link>
     </Layout>
@@ -33,12 +33,11 @@ export default function pageTemplate(props) {
 
 //🚧 page query on this page to use 'page' from context to pull in the correct data for this page
 
-export const getPageData = graphql`
+export const getPage = graphql`
   query {
     site {
       siteMetadata {
         title
-        author
       }
     }
   }
