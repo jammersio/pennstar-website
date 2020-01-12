@@ -1,7 +1,6 @@
 - siteInfo:
   siteName: Penn Star Land Transer
   tagline: 'This is a tagline'
-  slug: page
   routes:
     home:
       layout: default

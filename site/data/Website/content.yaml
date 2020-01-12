@@ -1,9 +1,3 @@
-- routes:
-    home
-    about
-    services
-    blog
-    contact
 - page: "home"
   content:
     - item: one item
