@@ -14,7 +14,7 @@ instead goto: localhost:8000/list -- which is where the event example list rende
 > - **NOTE**: createPages doesn't seem to take an options object (`verify`)
 > - [reference: gatsby-node api](https://www.gatsbyjs.org/docs/node-apis/#createPages)
 
-This theme will create an entry for each 'event' found in `site/data/*.yml`
+This theme will create an entry for each 'event' found in `site/src/events/*.yml`
 
 > **NOTE**:  this theme must be passed a config option from the consuming-site:
 >

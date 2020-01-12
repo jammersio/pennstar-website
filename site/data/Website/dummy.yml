@@ -1,5 +1,6 @@
-type: site-content
-siteName: Penn Star Land Transfer
+type: content
+slug: /content
+name: Penn Star Land Transfer
 tagline: This is a tagline
 pages:
   - index:

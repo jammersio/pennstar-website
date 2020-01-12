@@ -34,6 +34,7 @@ exports.sourceNodes = ({ actions }) => {
       endDate: Date! @dateformat @proxy(from: "end_date")
       url: String!
       slug: String!
+      type: String!
     }
   `)
 }
@@ -44,7 +45,7 @@ exports.sourceNodes = ({ actions }) => {
 
 // 🏗 refactors to add options, which are provided as the 2nd arg:
 exports.createResolvers = ({ createResolvers }, options) => {
-  const basePath = options.basePath || "/events" // sets basePath from options or defaults to "/" root
+  const basePath = options.basePath || "/" // sets basePath from options or defaults to "/" root
   // Quick-and-dirty helper to convert strings into URL-friendly slugs.
   const slugify = str => {
     const slug = str
@@ -55,14 +56,17 @@ exports.createResolvers = ({ createResolvers }, options) => {
     // checks for any sequence of 2 or more "/" in a row.
   }
   // create the actual resolver usins the helper function to slugify strings:
+  console.log('creating events resolver')
   createResolvers({
     Event: {
       slug: {
         resolve: source => slugify(source.name),
         // source = event node,
       },
+      type: options.typeName
     },
   })
+
 }
 
 
@@ -91,6 +95,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   }
 
   const events = result.data.allEvent.nodes // grab reference to all events
+  console.log(events)
 
   events.forEach(event => {
     const slug = event.slug // pulls out slug from event
