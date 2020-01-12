@@ -1,11 +1,11 @@
 import React from "react"
 import { Layout as ThemeLayout, Header, Main, Container } from "theme-ui"
 
-const Layout = ({ children }) => (
+const Layout = ({ heading, children }) => (
   <ThemeLayout>
-    <Header>Gatsby Events Theme</Header>
+    <Header>{heading || `Gatsby Events Theme`}</Header>
     <Main>
-      <Container>{children}</Container>
+      <Container>{children || `content-coming-soon`}</Container>
     </Main>
   </ThemeLayout>
 )

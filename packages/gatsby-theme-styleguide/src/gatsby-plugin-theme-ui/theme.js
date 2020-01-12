@@ -1,4 +1,7 @@
+import { tailwind } from '@theme-ui/presets';
+
 export const theme = {
+  ...tailwind,
   space: [0, 4, 8, 16, 32],
   fonts: {
     body: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif'
@@ -67,7 +70,7 @@ export const theme = {
         backgroundColor: 'gray.0'
       }
     }
-  }
+  },
 };
 
 export default theme;

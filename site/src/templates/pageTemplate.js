@@ -1,16 +1,17 @@
 import React from 'react'
-import { Link } from 'gatsby';
+import { Link, graphql } from 'gatsby';
+import Layout from "../gatsby-theme-styleguide/components/layout"
 
 export default function pageTemplate(props) {
   const { pageContext } = props
   const { page, to, layout, sections } = pageContext
 
-  // console.log(props)
+  console.log(props)
   return (
-    <>
+    <Layout>
       <pre>{JSON.stringify(pageContext, null, 2)}</pre>
       <Link to={`/404.html`}>404</Link>
-    </>
+    </Layout>
     // <div style={{ maxWidth: `960px`, margin: `1.45rem` }}>
     //   <ul>
     //     {content.map((data, index) => {
@@ -31,3 +32,14 @@ export default function pageTemplate(props) {
 }
 
 //🚧 page query on this page to use 'page' from context to pull in the correct data for this page
+
+export const getPageData = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+        author
+      }
+    }
+  }
+`
