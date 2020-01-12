@@ -1,22 +1,22 @@
 import React from "react"
-// import { useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 import { Layout, Header, Main, Container } from "theme-ui"
 import Meta from "../../components/Meta"
 
-export default ({ title, children }) => {
-  // const data = useStaticQuery(graphql`
-  //   query TitleQuery {
-  //     site {
-  //       siteMetadata {
-  //         title
-  //       }
-  //     }
-  //   }
-  // `)
+export default ({ children }) => {
+  const data = useStaticQuery(graphql`
+    query TitleQuery {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
   return (
     <Layout>
       <Meta />
-      <Header>{title || `default`}</Header>
+      <Header>{data.site.siteMetadata.title || `default`}</Header>
       <Main>
         <Container>{children}</Container>
       </Main>
@@ -24,4 +24,3 @@ export default ({ title, children }) => {
     </Layout>
   )
 }
-

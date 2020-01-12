@@ -33,11 +33,9 @@ async function createNewPages({ graphql, actions }) {
   `)
 
 
-  // Get Site content:
   const contentLayout = result.data.allPagesYaml.nodes
   const [{ pages: layoutPages }] = contentLayout
   const { pages } = result.data.contentYaml
-  console.log(pages)
 
   pages.forEach(page => {
     layoutPages.forEach(layout => {
@@ -52,10 +50,7 @@ async function createNewPages({ graphql, actions }) {
         }
       })
     })
-
-
   })
-
 
   return
 }
