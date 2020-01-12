@@ -7,7 +7,10 @@ export default function pageTemplate(props) {
 
   // console.log(props)
   return (
-    <pre>{JSON.stringify(pageContext, null, 2)}</pre>
+    <>
+      <pre>{JSON.stringify(pageContext, null, 2)}</pre>
+      <Link to={`/404.html`}>404</Link>
+    </>
     // <div style={{ maxWidth: `960px`, margin: `1.45rem` }}>
     //   <ul>
     //     {content.map((data, index) => {
@@ -27,4 +30,4 @@ export default function pageTemplate(props) {
   )
 }
 
-// page query on this page to use 'page' from context to pull in the correct data for this page🚧
+//🚧 page query on this page to use 'page' from context to pull in the correct data for this page
