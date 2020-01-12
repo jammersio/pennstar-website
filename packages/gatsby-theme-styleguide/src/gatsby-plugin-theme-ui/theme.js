@@ -2,27 +2,13 @@ import { tailwind } from '@theme-ui/presets';
 
 export const theme = {
   ...tailwind,
-  space: [0, 4, 8, 16, 32],
-  fonts: {
-    body: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif'
-  },
-  fontSizes: [16, 18, 20, 22, 27, 36],
-  lineHeights: {
-    body: 1.45,
-    heading: 1.1
-  },
-  colors: {
-    gray: ['#efefef', '#ddd', '#333', '#111'],
-    background: '#fff',
-    primary: 'rebeccapurple'
-  },
   sizes: {
+    ...tailwind.sizes,
     default: '90vw',
     max: '100vw'
   },
   styles: {
-    // sets defaults for components
-    // provided by theme-ui
+    // sets defaults for components provided by theme-ui
     Layout: {
       color: 'primary',
       fontFamily: 'body',
@@ -34,16 +20,15 @@ export const theme = {
       color: 'background',
       fontWeight: 'bold',
       margin: '0 auto',
-      maxWidth: 'max',
-      padding: 3,
       width: 'max',
+      padding: 3,
       a: {
         color: 'inherit'
       }
     },
     Main: {
       margin: '0 auto',
-      maxWidth: 'max',
+      maxWidth: 'screen',
       width: 'default'
     },
     Container: {
