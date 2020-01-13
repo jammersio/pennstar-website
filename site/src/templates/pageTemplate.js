@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby';
 import Layout from "../gatsby-theme-styleguide/components/layout"
-import { BasicLink } from "../components/Elements/Buttons"
+import { Linked } from "../components/Elements/Buttons"
 
 export default function pageTemplate(props) {
   const { pageContext } = props
@@ -10,7 +10,7 @@ export default function pageTemplate(props) {
   return (
     <Layout>
       <pre>{JSON.stringify(pageContext, null, 2)}</pre>
-      <BasicLink to={`/404.html`}>404</BasicLink>
+      <Linked to={`/404.html`} int>404</Linked>
       <div style={{ maxWidth: `960px`, margin: `1.45rem` }}>
         {contextPage && contextPage}
         <ul>
@@ -21,8 +21,8 @@ export default function pageTemplate(props) {
         <ul>
           {links && links.map((item, index) => {
             return (
-              <li key={`link_${index}`}>
-                <BasicLink to={item.to}>{item.to}</BasicLink>
+              <li key={`link_${index}`} int>
+                <Linked to={item.to}>{item.to}</Linked>
               </li>
             )
           })}

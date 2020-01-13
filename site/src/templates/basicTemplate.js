@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../gatsby-theme-styleguide/components/layout"
-import { BasicLink } from "../components/Elements/Buttons"
+import { Linked } from "../components/Elements/Buttons"
 
 const basicTemplate = props => {
   const { pageContext } = props
@@ -18,7 +18,7 @@ const basicTemplate = props => {
           {links.map((item, index) => {
             return (
               <li key={`link_${index}`}>
-                <BasicLink to={item.to}>{item.to}</BasicLink>
+                <Linked to={item.to} int>{item.to}</Linked>
               </li>
             )
           })}

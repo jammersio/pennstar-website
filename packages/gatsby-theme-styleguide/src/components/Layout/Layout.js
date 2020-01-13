@@ -1,5 +1,6 @@
 import React from "react"
 import { Layout as ThemeLayout, Header, Main, Container, Footer } from "theme-ui"
+import "../styles/styles.scss"
 
 const Layout = ({ heading, children }) => (
   <ThemeLayout>

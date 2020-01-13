@@ -13,7 +13,7 @@ module.exports = ({ sources = [] }) => ({
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: path.resolve(`src/images`),
+        path: path.resolve(`src/assets/images`),
       },
     },
 
@@ -29,7 +29,7 @@ module.exports = ({ sources = [] }) => ({
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: path.resolve(`src/images/icon.png`),
+        // icon: path.resolve(`src/assets/images/icon.png`),
         // This path is relative to the root of the site.
       },
     },

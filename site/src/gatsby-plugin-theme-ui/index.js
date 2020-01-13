@@ -1,4 +1,4 @@
-import { merge } from 'lodash'
+import React from 'react'
 import { theme as baseTheme } from "gatsby-theme-styleguide/src/gatsby-plugin-theme-ui/"
 
 
@@ -10,6 +10,10 @@ export default {
     // background: '#fff',
     // primary: 'blue'
   },
+  styles: {
+    ...baseTheme.styles,
+
+  }
   // fonts: {
   // ...baseTheme.fonts,
   //   body: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif'
