@@ -1,5 +1,5 @@
 import React from "react"
-import { Layout as ThemeLayout, Header, Main, Container } from "theme-ui"
+import { Layout as ThemeLayout, Header, Main, Container, Footer } from "theme-ui"
 
 const Layout = ({ heading, children }) => (
   <ThemeLayout>
@@ -7,6 +7,9 @@ const Layout = ({ heading, children }) => (
     <Main>
       <Container>{children || `content-coming-soon`}</Container>
     </Main>
+    <Footer>
+      © {new Date().getFullYear()} Company Name
+    </Footer>
   </ThemeLayout>
 )
 

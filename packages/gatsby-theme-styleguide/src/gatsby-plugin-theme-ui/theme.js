@@ -11,16 +11,21 @@ export const theme = {
     // sets defaults for components provided by theme-ui
     Layout: {
       color: 'primary',
-      fontFamily: 'body',
+      fontFamily: 'sans',
       fontSize: 1,
       lineHeight: 'body',
     },
+    Wrapper: {
+      display: 'flex',
+      flexDirection: 'column',
+      minHeight: '100vh',
+    },
     Header: {
       backgroundColor: 'primary',
-      color: 'background',
+      color: 'white',
       fontWeight: 'bold',
       margin: '0 auto',
-      width: 'max',
+      width: 'full',
       padding: 3,
       a: {
         color: 'inherit'
@@ -29,7 +34,16 @@ export const theme = {
     Main: {
       margin: '0 auto',
       maxWidth: 'screen',
-      width: 'default'
+      minHeight: '6em',
+      width: 'default',
+      flex: '1 1 auto'
+    },
+    Footer: {
+      width: 'full',
+      padding: '1rem',
+      backgroundColor: 'primary',
+      color: 'white',
+      traslate: 'transform(-100%)'
     },
     Container: {
       padding: 3

@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from 'gatsby';
-import { Layout, Header, Main, Container } from "theme-ui"
+import { Layout, Header, Main, Container, Footer } from "theme-ui"
 import Meta from "../../components/Meta"
 
 export default ({ children }) => {
@@ -20,7 +20,9 @@ export default ({ children }) => {
       <Main>
         <Container>{children}</Container>
       </Main>
-      {/* add footer here */}
+      <Footer>
+        © {new Date().getFullYear()} Company Name
+    </Footer>
     </Layout>
   )
 }
