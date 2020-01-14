@@ -35,14 +35,12 @@ async function createNewPages({ graphql, actions }) {
           id
           page
           section {
+            type
+            variant
             content {
-              item
-              type
-              value
-            }
-            info {
-              type
-              variant
+              className
+              as
+              children
             }
           }
         }
@@ -69,29 +67,9 @@ async function createNewPages({ graphql, actions }) {
   const mergedPages = mergeByPage(contentData, ...layoutTemplates)
   // need to filter out any extra pages from mergedPages
 
-  const finalPages = [...mergedPages].filter(pg => pageList.find(item => item.map(page => {
-    console.log(page === pg.page, page, pg.page)
+  const finalPages = pageList.map(item => mergedPages.filter(pg => item.find(page => {
     return page === pg.page
   })))
-
-
-  // const finalPages = [...mergedPages].filter(pg => [...pageList].map(item => {
-  //   return item.find(page => {
-  //     console.log(page, page === pg.page, 'page, page === pg.page')
-  //     return page === pg.page
-  //   })
-  // }))
-  console.log(JSON.stringify(finalPages))
-
-  const [pages] = pageList
-  // console.log(JSON.stringify(pages))
-  // const finalPages = mergedPages.filter(mergedPage => pageList.map(pages => {
-  //   pages.some(pg => {
-  //     return pg === mergedPage.page
-  //   })
-  // }))
-
-  /// create new array of keys -- grab the index of the non-matching values,
 
   createPage({
     path: `/dump`,
@@ -101,18 +79,17 @@ async function createNewPages({ graphql, actions }) {
     }
   })
 
-  finalPages.forEach(pageProps => {
+  finalPages.forEach((pages) => pages.forEach(page => {
+    console.log(page)
     createPage({
-      path: `/${pageProps.page}`,
+      path: `/${page.page}`,
       component: path.resolve(`src/templates/pageTemplate.js`),
       context: {
-        pageProps
+        pageProps: page
       }
     })
     return
-  })
-
-
+  }))
   return
 }
 

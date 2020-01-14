@@ -1,21 +1,20 @@
 page: "contact"
 section:
-  info:
-    type: cta
-    variant: default
+  type: cta
+  variant: default
   content:
-    - item: intro
-      type: "small"
-      value: "This is the Intro Text"
-    - item: heading
-      type: "h1"
-      value: "This is the Heading"
-    - item: tagline
-      type: "h3"
-      value: "This is the Tagline"
-    - item: description
-      type: "p"
-      value: "This is the description"
-    - item: outro
-      type: "small"
-      value: "This is the outro"
+    - className: intro
+      as: "small"
+      children: "This is the Intro Text"
+    - className: heading
+      as: "h1"
+      children: "This is the Heading"
+    - className: tagline
+      as: "h3"
+      children: "This is the Tagline"
+    - className: description
+      as: "p"
+      children: "This is the description"
+    - className: outro
+      as: "small"
+      children: "This is the outro"

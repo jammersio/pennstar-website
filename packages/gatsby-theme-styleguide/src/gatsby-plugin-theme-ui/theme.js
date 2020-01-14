@@ -44,7 +44,7 @@ export const theme = {
       traslate: `transform(-100%)`,
     },
     Container: {
-      padding: 3
+      padding: 0
     },
   },
 };

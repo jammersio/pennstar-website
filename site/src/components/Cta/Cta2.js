@@ -2,11 +2,10 @@ import React from 'react'
 import { Heading, Text } from '../Elements'
 import { Box } from '../Layout/Containers'
 
-export default function Cta({ introProps, headingProps, taglineProps, descriptionProps, outroProps, children, ...props }) {
+export default function Cta({ introProps, headingProps, taglineProps, descriptionProps, outroProps, ...props }) {
   return (
     <Box {...props}>
-      <Text
-        as={`small`}
+      <Text as={`small`}
         fontSize={[2, 3, 4]}
         {...introProps}
       />
@@ -22,15 +21,10 @@ export default function Cta({ introProps, headingProps, taglineProps, descriptio
         color={`white`}
         {...taglineProps}
       />
-      <Text
-        as={`p`}
-        {...descriptionProps}
-      />
-      <Text
-        as={`small`}
+      <Text as={`p`} {...descriptionProps} />
+      <Text as={`small`}
         {...outroProps}
       />
-      {children}
     </Box>
   )
 }

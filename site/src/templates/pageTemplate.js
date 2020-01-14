@@ -1,44 +1,43 @@
 import React from 'react'
 import { graphql } from 'gatsby';
-import Layout from "../gatsby-theme-styleguide/components/layout"
-import { Linked } from "../components/Elements/Buttons"
+import { Main, Footer, Container } from "theme-ui"
+import Layout from "../gatsby-theme-styleguide/components/layoutTemplate"
+// import { Container } from "../components/Layout/Containers"
 import Hero from "../components/Hero"
-import Cta from "../components/Cta"
+import CtaSection from "../components/Cta/CtaSection"
 
-export default function pageTemplate(props) {
+function getPropName(str) {
+  // used to map content to props.
+  return str.split(/(?=[A-Z])/)[0]
+  // splits strings at capitalLetters => returns the first item in resulting array
+}
 
-  const { pageContext } = props
-  const { pageProps: { section: { content } } } = pageContext
-  console.log('pageProps', content)
-  // const { introProps, headingProps, taglineProps, descriptionProps, outroProps } = content
+// defines initial shape of Cta component's required props:
+const ctaShape = { introProps: '', headingProps: '', taglineProps: '', descriptionProps: '', outroProps: '' }
+
+export default function pageTemplate({ children, ...props }) {
+
+  const { pageContext: { pageProps } } = props
+  const { section: { content } } = pageProps
+
+  Object.keys(ctaShape).forEach((key, i) => {
+    // if keys match update object with content
+    if (content[i].className === getPropName(key)) {
+      return ctaShape[key] = content[i]
+    }
+    return
+  })
+
   return (
     <Layout>
-
-
-
-
-      <pre>pageProps{JSON.stringify(content, null, 4)}</pre>
-      <Hero ctaProps={content} />
-
-      {/* <pre>{JSON.stringify(pageContext, null, 2)}</pre>
-      <Linked to={`/404.html`} int>404</Linked>
-      <div style={{ maxWidth: `960px`, margin: `1.45rem` }}>
-        {contextPage && contextPage}
-        <ul>
-          {content && content.map((data, index) => {
-            return <li key={`content_item_${index}`}>{data.item}</li>
-          })}
-        </ul>
-        <ul>
-          {links && links.map((item, index) => {
-            return (
-              <li key={`link_${index}`} int>
-                <Linked to={item.to}>{item.to}</Linked>
-              </li>
-            )
-          })}
-        </ul>
-      </div > */}
+      <Hero ctaProps={ctaShape} sx={{ height: `60vh` }} />
+      <Main>
+        <Container>
+          <CtaSection ctaProps={ctaShape} textAlign={`center`} />
+          {children}
+          <pre>pageProps{JSON.stringify(ctaShape, null, 4)}</pre>
+        </Container>
+      </Main>
     </Layout>
   )
 }

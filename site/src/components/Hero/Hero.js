@@ -15,6 +15,7 @@ export default ({ children, layoutProps, ctaProps, ...props }) => {
         content="Hi Guys"
         imageContent={heroImg}
         ctaProps={ctaProps}
+        {...props}
       >
       </HeroContainer>
       {children}
