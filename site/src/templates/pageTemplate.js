@@ -2,20 +2,23 @@ import React from 'react'
 import { graphql } from 'gatsby';
 import Layout from "../gatsby-theme-styleguide/components/layout"
 import { Linked } from "../components/Elements/Buttons"
+import Hero from "../components/Hero"
+import Cta from "../components/Cta"
 
 export default function pageTemplate(props) {
 
   const { pageContext } = props
-  console.log('pageProps', pageContext)
-
+  const { pageProps: { section: { content } } } = pageContext
+  console.log('pageProps', content)
+  // const { introProps, headingProps, taglineProps, descriptionProps, outroProps } = content
   return (
     <Layout>
 
 
 
 
-      <pre>pageProps{JSON.stringify(props.pageContext.pageProps, null, 4)}</pre>
-
+      <pre>pageProps{JSON.stringify(content, null, 4)}</pre>
+      <Hero ctaProps={content} />
 
       {/* <pre>{JSON.stringify(pageContext, null, 2)}</pre>
       <Linked to={`/404.html`} int>404</Linked>

@@ -2,7 +2,7 @@ siteInfo:
 name: Penn Star Land Transer
 tagline: "This is a tagline"
 pages:
-  - page: "index"
+  - page: "home"
   - page: "about"
   - page: "services"
   - page: "contact"

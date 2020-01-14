@@ -5,58 +5,54 @@ async function createNewPages({ graphql, actions }) {
   const { createPage } = actions
 
   const result = await graphql(`
-    query {
-      allConfigYaml {
-        edges {
-          node {
-            pages {
-              page
-            }
-          }
-        }
-      }
-      allLayoutYaml {
-        edges {
-          node {
-            pages {
-              page
-              layout
-              to
-              sections {
-                section
-              }
-            }
-          }
-        }
-      }
-      allContentIndexYaml {
-        edges {
-          node {
-            id
+  query MyQuery {
+    allConfigYaml {
+      edges {
+        node {
+          pages {
             page
-            section {
-              content {
-                item
-                type
-                value
-              }
-              info {
-                type
-                variant
-              }
+          }
+        }
+      }
+    }
+    allLayoutYaml {
+      edges {
+        node {
+          pages {
+            layout
+            page
+            to
+            sections {
+              section
             }
           }
         }
       }
     }
-  `)
+    allContentYaml {
+      edges {
+        node {
+          id
+          page
+          section {
+            content {
+              item
+              type
+              value
+            }
+            info {
+              type
+              variant
+            }
+          }
+        }
+      }
+    }
+  }
+`)
 
 
-  // const contentLayout = result.data.allPagesYaml.nodes
-  // const [{ pages: layoutPages }] = contentLayout
-  // console.log(layoutPages)
-  // const { pages } = result.data.contentYaml
-  const { allConfigYaml: { edges: config }, allLayoutYaml: { edges: layout }, allContentIndexYaml: { edges: data } } = result.data
+  const { allConfigYaml: { edges: config }, allLayoutYaml: { edges: layout }, allContentYaml: { edges: data } } = result.data
 
   // and array of objects -- used to decide which pages get rendered
   const pageList = config.map(({ node: { pages } }) => pages.map(page => page.page))
@@ -65,60 +61,45 @@ async function createNewPages({ graphql, actions }) {
   // actual data to render
   const contentData = data.map(({ node }) => node)
 
-
-  // remove any pages not in config:
-  // let layoutItems
-  // let contentItems
-  // const finalPages = pageList.map(page => {
-  //   layoutItems = layoutTemplates.filter(layoutPage => layoutPage.page !== page)
-  //   contentItems = contentData.filter(data => data.page !== page)
-  //   // return layoutItems.map(template => {
-  //   //   template.map(temp => {
-  //   //     return ({
-  //   //       ...contentItems.find(content => content.page === temp.page && content),
-  //   //       ...template
-  //   //     })
-  //   //   })
-  //   // })
-  // })
-
-  // function removePages(pagesToMatch, pagesToRemoveFrom) {
-  //   pagesToMatch.map(page => {
-  //     page
-  //   })
-  // }
-
-
   const mergeByPage = (a1, a2) =>
     a1.map(itm => ({
-      // does not merge properties together
       ...a2.find((item) => (item.page === itm.page) && item),
       ...itm
     }));
   const mergedPages = mergeByPage(contentData, ...layoutTemplates)
-  const finalPages = mergedPages.filter(mergedPage => pageList.map(pages => {
-    pages.some(pg => {
-      return pg.page === mergedPage.page
-    })
-  }))
+  // need to filter out any extra pages from mergedPages
 
-  // const pageProps = pageList.map(controlPage => {
-  //   // const layout = layoutTemplates.filter(layout => layout.page === controlPage && layout)
-  //   const layout = layoutTemplates.find(([pages]) => console.log(`🚨layout`, pages))
-  //   // const content = contentData.filter(content => content.page === controlPage && content)
-  //   // const content = contentData.filter(content => console.log(`🚨content`, content.page))
-  //   // console.log(layout)
-  //   // console.log(content)
+  const finalPages = [...mergedPages].filter(pg => pageList.find(item => item.map(page => {
+    console.log(page === pg.page, page, pg.page)
+    return page === pg.page
+  })))
 
-  //   return ({
-  //     layout: layoutTemplates.find(layout => layout.page === controlPage && layout),
-  //     content: contentData.find(content => content.page === controlPage && content)
+
+  // const finalPages = [...mergedPages].filter(pg => [...pageList].map(item => {
+  //   return item.find(page => {
+  //     console.log(page, page === pg.page, 'page, page === pg.page')
+  //     return page === pg.page
   //   })
-  // })
+  // }))
+  console.log(JSON.stringify(finalPages))
 
+  const [pages] = pageList
+  // console.log(JSON.stringify(pages))
+  // const finalPages = mergedPages.filter(mergedPage => pageList.map(pages => {
+  //   pages.some(pg => {
+  //     return pg === mergedPage.page
+  //   })
+  // }))
 
-  // console.log(JSON.stringify(pageProps))
+  /// create new array of keys -- grab the index of the non-matching values,
 
+  createPage({
+    path: `/dump`,
+    component: path.resolve(`src/templates/stringifyTemplate.js`),
+    context: {
+      finalPages
+    }
+  })
 
   finalPages.forEach(pageProps => {
     createPage({
@@ -132,41 +113,7 @@ async function createNewPages({ graphql, actions }) {
   })
 
 
-  // createPage({
-  //   path: `/dump`,
-  //   component: path.resolve(`src/templates/stringifyTemplate.js`),
-  //   context: {
-  //     layoutTemplates,
-  //     contentData,
-  //     pageList,
-  //     // layoutItems,
-  //     // contentItems,
-  //     finalPages,
-  //     // pageProps
-  //   }
-  // })
-
-  // pages.forEach(page => {
-  //   layoutPages.forEach(layout => {
-  //     let isPage = layout.page === page.page && true
-  //     createPage({
-  //       path: `/${layout.page}`,
-  //       component: path.resolve(`src/templates/pageTemplate.js`),
-  //       context: {
-  //         ...layout,
-  //         content: isPage && page.content,
-  //         links: isPage && page.links
-  //       }
-  //     })
-  //   })
-  // })
-
   return
 }
 
 exports.default = createNewPages;
-
-
-/*
-
-*/
