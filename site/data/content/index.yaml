@@ -1,0 +1,126 @@
+- page: "index"
+  section:
+    info:
+      type: cta
+      variant: default
+    content:
+      - item: intro
+        type: "small"
+        value: "This is the Intro Text"
+      - item: heading
+        type: "h1"
+        value: "This is the Heading"
+      - item: tagline
+        type: "h3"
+        value: "This is the Tagline"
+      - item: description
+        type: "p"
+        value: "This is the description"
+      - item: outro
+        type: "small"
+        value: "This is the outro"
+- page: "index"
+  section:
+    info:
+      type: cta
+      variant: default
+    content:
+      - item: intro
+        type: "small"
+        value: "This is the Intro Text"
+      - item: heading
+        type: "h1"
+        value: "This is the Heading"
+      - item: tagline
+        type: "h3"
+        value: "This is the Tagline"
+      - item: description
+        type: "p"
+        value: "This is the description"
+      - item: outro
+        type: "small"
+        value: "This is the outro"
+- page: "about"
+  section:
+    info:
+      type: cta
+      variant: default
+    content:
+      - item: intro
+        type: "small"
+        value: "This is the Intro Text"
+      - item: heading
+        type: "h1"
+        value: "This is the Heading"
+      - item: tagline
+        type: "h3"
+        value: "This is the Tagline"
+      - item: description
+        type: "p"
+        value: "This is the description"
+      - item: outro
+        type: "small"
+        value: "This is the outro"
+- page: "services"
+  section:
+    info:
+      type: cta
+      variant: default
+    content:
+      - item: intro
+        type: "small"
+        value: "This is the Intro Text"
+      - item: heading
+        type: "h1"
+        value: "This is the Heading"
+      - item: tagline
+        type: "h3"
+        value: "This is the Tagline"
+      - item: description
+        type: "p"
+        value: "This is the description"
+      - item: outro
+        type: "small"
+        value: "This is the outro"
+- page: "blog"
+  section:
+    info:
+      type: cta
+      variant: default
+    content:
+      - item: intro
+        type: "small"
+        value: "This is the Intro Text"
+      - item: heading
+        type: "h1"
+        value: "This is the Heading"
+      - item: tagline
+        type: "h3"
+        value: "This is the Tagline"
+      - item: description
+        type: "p"
+        value: "This is the description"
+      - item: outro
+        type: "small"
+        value: "This is the outro"
+- page: "contact"
+  section:
+    info:
+      type: cta
+      variant: default
+    content:
+      - item: intro
+        type: "small"
+        value: "This is the Intro Text"
+      - item: heading
+        type: "h1"
+        value: "This is the Heading"
+      - item: tagline
+        type: "h3"
+        value: "This is the Tagline"
+      - item: description
+        type: "p"
+        value: "This is the description"
+      - item: outro
+        type: "small"
+        value: "This is the outro"

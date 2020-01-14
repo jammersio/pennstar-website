@@ -1,11 +1,5 @@
-import Section from './Section'
-import Box from './Box'
-import Hero from './Hero'
-import Container from './Container'
+import Containers from './Containers'
 
 export {
-  Section,
-  Box,
-  Hero,
-  Container,
+  Containers
 }

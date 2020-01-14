@@ -7,7 +7,18 @@ export default function stringifyTemplate(props) {
     <Layout>
       <div style={{ maxWidth: `960px`, margin: `1.45rem` }}>
 
-        {JSON.stringify(props, null, 4)}
+
+        {/* <br />
+        pageList {JSON.stringify(props.pageContext.pageList, null, 4)}
+        <br />
+        contentData {JSON.stringify(props.pageContext.contentData, null, 4)}
+        <br />
+        layoutTemplates {JSON.stringify(props.pageContext.layoutTemplates, null, 4)}
+        <br /> */}
+        {/* context {JSON.stringify(props.pageContext, null, 4)} */}
+        pageProps {JSON.stringify(props.pageContext.pageProps, null, 4)}
+        <br />
+        {/* pages {JSON.stringify(props.pageContext.contentItems, null, 4)} */}
       </div>
     </Layout>
   )

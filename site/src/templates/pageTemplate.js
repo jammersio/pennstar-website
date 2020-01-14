@@ -4,12 +4,20 @@ import Layout from "../gatsby-theme-styleguide/components/layout"
 import { Linked } from "../components/Elements/Buttons"
 
 export default function pageTemplate(props) {
+
   const { pageContext } = props
-  const { contextPage, to, layout, sections, content, links } = pageContext
+  console.log('pageProps', pageContext)
 
   return (
     <Layout>
-      <pre>{JSON.stringify(pageContext, null, 2)}</pre>
+
+
+
+
+      <pre>pageProps{JSON.stringify(props.pageContext.pageProps, null, 4)}</pre>
+
+
+      {/* <pre>{JSON.stringify(pageContext, null, 2)}</pre>
       <Linked to={`/404.html`} int>404</Linked>
       <div style={{ maxWidth: `960px`, margin: `1.45rem` }}>
         {contextPage && contextPage}
@@ -27,7 +35,7 @@ export default function pageTemplate(props) {
             )
           })}
         </ul>
-      </div >
+      </div > */}
     </Layout>
   )
 }

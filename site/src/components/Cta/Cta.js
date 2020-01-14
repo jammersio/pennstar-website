@@ -1,36 +1,30 @@
 import React from 'react'
-import { Heading, Text } from "../Elements"
-import { Box } from "../Layout"
+import { Heading, Text } from '../Elements'
+import { Box } from '../Layout/Containers'
 
-export default function Cta({ sx, ...props }) {
+export default function Cta({ introProps, headingProps, taglineProps, descriptionProps, outroProps, ...props }) {
   return (
-    <Box>
+    <Box {...props}>
       <Text as={`small`}
-        sx={sx && sx.intro || {}}
-      >
-        {props.content.intro}
-      </Text>
+        fontSize={[2, 3, 4]}
+        {...introProps}
+      />
       <Heading
         as={`h1`}
+        fontSize={[3, 5, 6]}
         color={`secondary`}
-        sx={sx && sx.heading || {}}
-      >
-        {props.content.heading || "Testing"}
-      </Heading>
+        {...headingProps}
+      />
       <Heading
         as={`h4`}
-        fontSize={5}
+        fontSize={[2, 4, 5]}
         color={`white`}
-        sx={sx && sx.tagline || {}}
-      >
-        {props.content.tagline}
-      </Heading>
-      <Text as={`p`} sx={sx && sx.description || {}}>{props.content.description}</Text>
+        {...taglineProps}
+      />
+      <Text as={`p`} {...descriptionProps} />
       <Text as={`small`}
-        sx={sx && sx.outro || {}}
-      >
-        {props.content.outro}
-      </Text>
+        {...outroProps}
+      />
     </Box>
   )
 }

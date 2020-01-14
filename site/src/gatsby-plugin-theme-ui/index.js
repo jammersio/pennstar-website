@@ -6,14 +6,20 @@ export default {
   ...baseTheme,
   colors: {
     ...baseTheme.colors,
+    default: 'yellow',
     // gray: ['#efefef', '#ddd', '#333', '#111'],
     // background: '#fff',
     // primary: 'blue'
+  },
+  sizes: {
+    ...baseTheme.sizes,
+
   },
   styles: {
     ...baseTheme.styles,
 
   }
+
   // fonts: {
   // ...baseTheme.fonts,
   //   body: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif'
