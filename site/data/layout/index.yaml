@@ -1,5 +1,5 @@
 "pages":
-  - page: home
+  - page: index
     to: "/"
     layout: default
     "sections":

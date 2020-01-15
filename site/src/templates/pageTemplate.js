@@ -1,41 +1,77 @@
 import React from 'react'
-import { graphql } from 'gatsby';
-import { Main, Footer, Container } from "theme-ui"
-import Layout from "../gatsby-theme-styleguide/components/layoutTemplate"
-// import { Container } from "../components/Layout/Containers"
-import Hero from "../components/Hero"
-import CtaSection from "../components/Cta/CtaSection"
+import { graphql } from 'gatsby'
+import { Main } from 'theme-ui'
+import Layout from '../gatsby-theme-styleguide/components/layoutTemplate'
+import { Container } from '../components/Layout/Containers'
+import Hero from '../components/Hero'
+import CtaSection from '../components/Cta/CtaSection'
+import CardGrid from '../components/Cards/CardGrid'
+import '../styles/styles.scss'
 
-function getPropName(str) {
-  // used to map content to props.
-  return str.split(/(?=[A-Z])/)[0]
-  // splits strings at capitalLetters => returns the first item in resulting array
-}
-
-// defines initial shape of Cta component's required props:
-const ctaShape = { introProps: '', headingProps: '', taglineProps: '', descriptionProps: '', outroProps: '' }
-
-export default function pageTemplate({ children, ...props }) {
-
-  const { pageContext: { pageProps } } = props
-  const { section: { content } } = pageProps
-
-  Object.keys(ctaShape).forEach((key, i) => {
-    // if keys match update object with content
-    if (content[i].className === getPropName(key)) {
-      return ctaShape[key] = content[i]
+export const query = graphql`
+  query {
+    layout:layoutYaml(pages: {elemMatch: {page: {eq: "index"}}}) {
+      pages {
+        layout
+        sections {
+          section
+        }
+        to
+      }
     }
-    return
-  })
+    content:contentYaml(page: {eq: "index"}) {
+    page
+    section {
+      content {
+        descriptionProps {
+          as
+          children
+          className
+        }
+        headingProps {
+          as
+          children
+          className
+        }
+        introProps {
+          as
+          children
+          className
+        }
+        outroProps {
+          as
+          children
+          className
+        }
+        taglineProps {
+          as
+          children
+          className
+        }
+      }
+      type
+      variant
+    }
+  }
+  }
+`
 
+export default function pageTemplate({
+  data,
+  pageContext: { siteTitle, pageName },
+  children,
+  ...props
+}) {
+  const { layout, content: { section: { content }, page } } = data
   return (
-    <Layout>
-      <Hero ctaProps={ctaShape} sx={{ height: `60vh` }} />
+    <Layout siteTitle={siteTitle} pageTitle={pageName || ''}>
+      <Hero ctaProps={content} sx={{ height: `60vh` }} />
       <Main>
         <Container>
-          <CtaSection ctaProps={ctaShape} textAlign={`center`} />
+          <CtaSection ctaProps={content} textAlign={`center`} />
           {children}
-          <pre>pageProps{JSON.stringify(ctaShape, null, 4)}</pre>
+          <pre>pageProps{JSON.stringify(content, null, 4)}</pre>
+          <CardGrid />
         </Container>
       </Main>
     </Layout>

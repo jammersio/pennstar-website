@@ -1,34 +1,63 @@
 import React from 'react'
-import { Box as Boxy, Flex } from 'rebass'
+import { Box as Boxbass, Flex } from 'rebass'
+import { Container as Contained } from 'theme-ui'
 
 export function Box(props) {
   return (
-    <Boxy
-      width={`full`}
-      minHeight={`48`}
-      mx={`auto`}
-      px={[1, 3]}
-      bg={`gray.700`}
-      {...props}
-    />
-  )
-}
-
-export function Container(...props) {
-  return (
-    <Boxy
+    <Boxbass
       width={`full`}
       mx={`auto`}
-      px={3}
+      p={[2, 4]}
       fontSize={[1, 2, 3]}
       {...props}
     />
   )
 }
 
-export function Section(props) {
+export function Card({ innerProps, children, ...props }) {
   return (
-    <Box py={[4, 5]} {...props} />
+    <Boxbass
+      width={[`full`, 1 / 2]}
+      fontSize={[1, 2, 3]}
+      textAlign={`center`}
+      my={[0]}
+      p={[1, 3]}
+
+      {...props}
+    >
+      <Boxbass sx={{
+        boxShadow: theme => `${theme.shadows.default}`,
+        borderRadius: theme => `${theme.radii.lg}`,
+        border: theme => `${theme.borders.default}`,
+      }}
+        {...innerProps}
+      >
+        {children}
+      </Boxbass>
+    </Boxbass>
+  )
+}
+
+export function Container({ outerProps, ...props }) {
+  return (
+    <Contained
+      {...outerProps}
+    >
+      <Boxbass
+        mx={`auto`}
+        px={3}
+        {...props}
+      >
+      </Boxbass>
+    </Contained>
+  )
+}
+
+export function Section({ outerProps, ...props }) {
+  return (
+    <Boxbass  {...outerProps} >
+      <Boxbass py={[4, 5]}{...props} sx={{ position: `relative` }} />
+    </Boxbass>
   );
 };
 
@@ -40,9 +69,10 @@ export function FlexWrap(props) {
 
 export const Containers = {
   Box,
+  Card,
   Container,
+  FlexWrap,
   Section,
-  FlexWrap
 }
 
 export default Containers

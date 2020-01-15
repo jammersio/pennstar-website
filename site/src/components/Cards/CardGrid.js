@@ -1,6 +1,6 @@
 import React from 'react'
-import { FlexWrap } from '../Layout/Containers'
-import Card from "../Cards/Card"
+import { FlexWrap, Card } from '../Layout'
+import Cta from '../Cta'
 
 const defaultCards = [
   {
@@ -26,8 +26,8 @@ const defaultCards = [
     taglineProps: { children: "tagline" },
     descriptionProps: { children: "description" },
     outroProps: { children: "outro" },
-  }
-  , {
+  },
+  {
     id: 4,
     introProps: { children: "intro" },
     headingProps: { children: "heading" },
@@ -39,13 +39,16 @@ const defaultCards = [
 
 export default function CardGrid({ cards, ...props }) {
   const cardsToRender = cards ? [...cards] : [...defaultCards]
-  // console.log(cardsToRender)
   return (
     <FlexWrap
       {...props}
       mx={-4}
     >
-      {cardsToRender.map(card => <Card key={card.id} ctaProps={card} />)}
-    </FlexWrap>
+      {cardsToRender.map(card => (
+        <Card key={card.id} className="">
+          <Cta {...card} />
+        </Card>)
+      )}
+    </FlexWrap >
   )
 }

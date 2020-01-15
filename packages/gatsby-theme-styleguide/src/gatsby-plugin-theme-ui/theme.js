@@ -7,6 +7,17 @@ export const theme = {
     default: `90vw`,
     max: `100vw`,
   },
+  borderWidths: {
+    ...tailwind.spaces,
+  },
+  borderStyles: {
+    solid: `solid`,
+  },
+  borders: {
+    ...tailwind.borders,
+    'test': `1px solid red`,
+    'default': `1px solid purple`
+  },
   styles: {
     // sets defaults for components provided by theme-ui
     Layout: {
@@ -41,11 +52,13 @@ export const theme = {
       padding: `1rem`,
       backgroundColor: `primary`,
       color: `white`,
-      traslate: `transform(-100%)`,
     },
-    Container: {
-      padding: 0
-    },
+    Box: {
+
+      // margin: `0 auto`,
+      // padding: `0 1em 0 1em`,
+      // background: `gray.700`
+    }
   },
 };
 

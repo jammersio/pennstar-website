@@ -26,15 +26,17 @@ const defaultContent = {
 
 
 export default ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query TitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+  //   const data = useStaticQuery(graphql`
+  //     query TitleQuery {
+  //       site {
+  //         siteMetadata {
+  //           title
+  //         }
+  //       }
+  //     }
+  // `)
+
+
   return (
     <Layout>
       <Meta />

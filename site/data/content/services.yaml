@@ -3,18 +3,23 @@ section:
   type: cta
   variant: default
   content:
-    - className: intro
-      as: "p"
+    introProps:
+      className: intro
+      as: "small"
       children: "This is the Intro Text"
-    - className: heading
+    headingProps:
+      className: heading
       as: "h1"
       children: "This is the Heading"
-    - className: tagline
+    taglineProps:
+      className: tagline
       as: "h3"
       children: "This is the Tagline"
-    - className: description
+    descriptionProps:
+      className: description
       as: "p"
       children: "This is the description"
-    - className: outro
+    outroProps:
+      className: outro
       as: "small"
       children: "This is the outro"

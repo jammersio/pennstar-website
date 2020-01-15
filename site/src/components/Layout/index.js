@@ -1,5 +1,1 @@
-import Containers from './Containers'
-
-export {
-  Containers
-}
+export * from './Containers'

@@ -1,5 +1,6 @@
 import React from 'react'
-import { Box, FlexWrap } from '../Layout/Containers'
+import { Image } from 'rebass'
+import { Box, FlexWrap } from '../Layout/'
 import Cta from '../Cta'
 
 
@@ -18,7 +19,8 @@ function HeroContainer({
           {...ctaProps}
         />
       </Box>
-      <Box
+      <Image src={imageContent} width={[`full`, `full`, 1 / 2]} />
+      {/* <Box
         width={[`full`, `full`, 1 / 2]}
         sx={{
           backgroundImage: `url(${imageContent})`,
@@ -27,7 +29,7 @@ function HeroContainer({
         }}
         {...imageProps}
       >
-      </Box>
+      </Box> */}
     </FlexWrap>
   )
 }

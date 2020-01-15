@@ -1,8 +1,8 @@
-import React from 'react'
-import { theme as baseTheme } from "gatsby-theme-styleguide/src/gatsby-plugin-theme-ui/"
+import { merge } from 'lodash'
+import { theme as baseTheme } from 'gatsby-theme-styleguide/src/gatsby-plugin-theme-ui/'
 
 
-export default {
+export default merge({}, baseTheme, {
   ...baseTheme,
   colors: {
     ...baseTheme.colors,
@@ -18,7 +18,15 @@ export default {
   styles: {
     ...baseTheme.styles,
 
+  },
+  shadows: {
+    ...baseTheme.shadows,
+  },
+  borders: {
+    ...baseTheme.borders,
+
   }
+
 
   // fonts: {
   // ...baseTheme.fonts,
@@ -29,6 +37,6 @@ export default {
   //   body: 1.45,
   //   heading: 1.1
   // },
-}
+})
 
 // use this file to overwrite any theme styles
