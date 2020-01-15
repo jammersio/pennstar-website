@@ -1,9 +1,6 @@
 @import '~bootstrap/scss/bootstrap';
 
-.border-test {
-  border: 1px solid red;
-}
 
-.border-rounded-sm {
-  border-radius: 0.15em;
+body {
+  overflow-x: hidden;
 }

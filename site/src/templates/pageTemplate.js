@@ -9,8 +9,8 @@ import CardGrid from '../components/Cards/CardGrid'
 import '../styles/styles.scss'
 
 export const query = graphql`
-  query {
-    layout:layoutYaml(pages: {elemMatch: {page: {eq: "index"}}}) {
+  query($pageName: String!) {
+    layout:layoutYaml(pages: {elemMatch: {page: {eq:$pageName}}}) {
       pages {
         layout
         sections {
@@ -19,7 +19,7 @@ export const query = graphql`
         to
       }
     }
-    content:contentYaml(page: {eq: "index"}) {
+    content:contentYaml(page: {eq:$pageName}) {
     page
     section {
       content {
@@ -58,17 +58,18 @@ export const query = graphql`
 
 export default function pageTemplate({
   data,
-  pageContext: { siteTitle, pageName },
   children,
+  // pageName is only used to query each pages own content
+  pageContext: { pageName, pageList, siteTitle },
   ...props
 }) {
   const { layout, content: { section: { content }, page } } = data
   return (
-    <Layout siteTitle={siteTitle} pageTitle={pageName || ''}>
+    <Layout siteTitle={siteTitle} pageName={page || ''} pageList={pageList}>
       <Hero ctaProps={content} sx={{ height: `60vh` }} />
       <Main>
         <Container>
-          <CtaSection ctaProps={content} textAlign={`center`} />
+          <CtaSection ctaProps={content} textAlign="center" />
           {children}
           <pre>pageProps{JSON.stringify(content, null, 4)}</pre>
           <CardGrid />

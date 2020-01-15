@@ -16,28 +16,31 @@ export default function Cta({
       <Text
         as={`small`}
         fontSize={[1]}
+        color={`muted`}
         {...introProps}
       />
       <Heading
         as={`h1`}
         fontSize={[3, 4, 5]}
-        color={`secondary`}
+        color={`text`}
         {...headingProps}
       />
       <Heading
         as={`h4`}
         fontSize={[2, 3, 4]}
-        color={`white`}
+        color={`muted`}
         {...taglineProps}
       />
       <Text
         as={`p`}
         fontSize={[1, 2, 3]}
+        color={`text`}
         {...descriptionProps}
       />
       <Text
         as={`small`}
         fontSize={[1]}
+        color={`muted`}
         {...outroProps}
       />
       {children}

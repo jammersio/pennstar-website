@@ -2,7 +2,7 @@ import React from 'react'
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import { Link } from 'gatsby'
-import { Text, Link as StyleLink } from 'rebass'
+import { Text, Link as Linkbass, Flex } from 'rebass'
 
 
 const linkStyles = {
@@ -14,27 +14,27 @@ const linkStyles = {
   }
 }
 
-export const Linked = ({ to, children, int = false, ...props }) => (
+export const Linked = ({ to, children, int = false, linkStyles, ...props }) => (
   <>
     {!int && (
-      <StyleLink
-        sx={{ ...linkStyles }}
-        {...props}
+      <Linkbass
         href={to}
+        {...linkStyles}
+        {...props}
       >
         {children}
-      </StyleLink>
+      </Linkbass>
     )}
     {int && (
       <Link
         activeClassName='active'
         children={children}
         to={to}
-        {...props}
         className={`linkInt-tracker`}
       >
         <Text
           sx={{ ...linkStyles }}
+          {...props}
         >
           {children}
 
@@ -43,3 +43,23 @@ export const Linked = ({ to, children, int = false, ...props }) => (
     )}
   </>
 )
+
+
+export const NavLink = ({ children, ...props }) => {
+  return (
+    <Linked
+      int
+      classname="nav-link"
+      mx="3"
+      sx={{
+        color: props.active ? 'primary' : 'inherit',
+        color: props.hovered ? 'muted' : 'inherit'
+      }}
+      {...props}
+    >
+      {children}
+    </Linked>
+  )
+}
+
+export default { Linked, NavLink }

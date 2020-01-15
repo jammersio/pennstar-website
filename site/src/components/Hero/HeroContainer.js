@@ -1,6 +1,7 @@
 import React from 'react'
 import { Image } from 'rebass'
 import { Box, FlexWrap } from '../Layout/'
+import { Container } from 'theme-ui'
 import Cta from '../Cta'
 
 
@@ -19,17 +20,7 @@ function HeroContainer({
           {...ctaProps}
         />
       </Box>
-      <Image src={imageContent} width={[`full`, `full`, 1 / 2]} />
-      {/* <Box
-        width={[`full`, `full`, 1 / 2]}
-        sx={{
-          backgroundImage: `url(${imageContent})`,
-          backgroundSize: `100% 100%`,
-          backgroundRepeat: `no-repeat`
-        }}
-        {...imageProps}
-      >
-      </Box> */}
+      <Image src={imageContent} mt={[-5]} width={[`full`, `full`, 1 / 2]} />
     </FlexWrap>
   )
 }

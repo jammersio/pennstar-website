@@ -10,10 +10,11 @@ async function createNewPages({ graphql, actions }) {
         edges {
           node {
             name
-            tagline
             pages {
               page
+              to
             }
+            tagline
           }
         }
       }
@@ -24,15 +25,17 @@ async function createNewPages({ graphql, actions }) {
   const { allConfigYaml: { edges: config } } = result.data
   const [siteConfig] = config
   // and array of objects -- used to decide which pages get rendered
-  const pageList = config.map(({ node: { pages } }) => pages.map(page => page.page))
+  const pageList = config.map(({ node: { pages } }) => pages.map(page => page))
 
   pageList.forEach((pages) => pages.forEach(page => {
+    const newPageList = pages
     createPage({
       //🚧 add "to" route to config file instead of doing conditional logic here...
-      path: `${page !== "index" ? `/${page}` : "/"}`,
+      path: `${page.to}`,
       component: path.resolve(`src/templates/pageTemplate.js`),
       context: {
-        pageName: page,
+        pageName: page.page,
+        pageList: newPageList,
         siteTitle: siteConfig.node.name
       }
     })

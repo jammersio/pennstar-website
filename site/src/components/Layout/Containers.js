@@ -7,7 +7,7 @@ export function Box(props) {
     <Boxbass
       width={`full`}
       mx={`auto`}
-      p={[2, 4]}
+      py={[2, 4]}
       fontSize={[1, 2, 3]}
       {...props}
     />
@@ -22,13 +22,13 @@ export function Card({ innerProps, children, ...props }) {
       textAlign={`center`}
       my={[0]}
       p={[1, 3]}
-
       {...props}
     >
       <Boxbass sx={{
-        boxShadow: theme => `${theme.shadows.default}`,
-        borderRadius: theme => `${theme.radii.lg}`,
-        border: theme => `${theme.borders.default}`,
+        boxShadow: `default`,
+        borderRadius: `lg`,
+        border: `default`,
+
       }}
         {...innerProps}
       >
@@ -41,6 +41,7 @@ export function Card({ innerProps, children, ...props }) {
 export function Container({ outerProps, ...props }) {
   return (
     <Contained
+      sx={{ backgroundColor: `yellow` }}
       {...outerProps}
     >
       <Boxbass
@@ -53,10 +54,15 @@ export function Container({ outerProps, ...props }) {
   )
 }
 
-export function Section({ outerProps, ...props }) {
+export function Section({ fullWidth, outerProps, ...props }) {
+  const fWStyles = fullWidth ? {
+    width: `100vw`,
+    ml: `-33%`
+  } : ''
+
   return (
-    <Boxbass  {...outerProps} >
-      <Boxbass py={[4, 5]}{...props} sx={{ position: `relative` }} />
+    <Boxbass  {...outerProps} {...fWStyles} >
+      <Boxbass p={[4, 5]}{...props} sx={{ position: `relative` }} />
     </Boxbass>
   );
 };
