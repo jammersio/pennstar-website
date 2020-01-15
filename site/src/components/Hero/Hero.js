@@ -6,8 +6,8 @@ import heroImg from '../../assets/images/scrum-board.svg'
 export default ({ children, layoutProps, ctaProps, ...props }) => {
   return (
     <Section
-      bg={`blue`}
-      width={`full`}
+      bg={`background`}
+      width={[`full`]}
       {...layoutProps}
     >
       <HeroContainer

@@ -40,7 +40,9 @@ export default ({ children }) => {
   return (
     <Layout>
       <Meta />
-      <Header>{data.site.siteMetadata.title || `default`}</Header>
+      <Header>
+        {data.site.siteMetadata.title || `default`}
+      </Header>
       <Hero ctaProps={defaultContent} />
       <Main>
         <CtaSection ctaProps={defaultContent} />

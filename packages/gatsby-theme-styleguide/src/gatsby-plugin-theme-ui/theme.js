@@ -4,19 +4,17 @@ export const theme = {
   ...tailwind,
   sizes: {
     ...tailwind.sizes,
+    heroHeight: `60vh`,
+    box: `100%`,
     default: `90vw`,
     max: `100vw`,
   },
-  borderWidths: {
-    ...tailwind.spaces,
-  },
   borderStyles: {
-    solid: `solid`,
+    // solid: `solid`,
   },
-  borders: {
-    ...tailwind.borders,
-    'test': `1px solid red`,
-    'default': `1px solid purple`
+  colors: {
+    ...tailwind.colors,
+    active: `blue.3`
   },
   styles: {
     // sets defaults for components provided by theme-ui
@@ -36,8 +34,18 @@ export const theme = {
       width: `screenWidth`,
       padding: 3,
       flexShrink: 0,
+      display: `flex`,
+      justifyContent: `space-evenly`,
+      alignItems: `center`,
       a: {
-        color: `inherit`
+        color: `inherit`,
+        "&:hover": {
+          color: `primaryHover`,
+          textDecoration: `none`,
+        },
+        "&.active": {
+          color: `blue.3`
+        }
       }
     },
     Main: {
@@ -49,15 +57,20 @@ export const theme = {
     },
     Footer: {
       width: `screenWidth`,
-      padding: `1rem`,
+      padding: 3,
       backgroundColor: `primary`,
-      color: `white`,
+      color: `text`,
     },
-    Box: {
-
-      // margin: `0 auto`,
-      // padding: `0 1em 0 1em`,
-      // background: `gray.700`
+    Container: {
+      width: `full`,
+      padding: `0 space.1`,
+      margin: `0 auto`,
+      backgroundColor: `default`,
+    },
+    a: {
+      "&.hover": {
+        textDecoration: `none`
+      }
     }
   },
 };

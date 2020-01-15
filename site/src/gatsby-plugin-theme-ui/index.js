@@ -6,10 +6,8 @@ export default merge({}, baseTheme, {
   ...baseTheme,
   colors: {
     ...baseTheme.colors,
-    default: 'yellow',
-    // gray: ['#efefef', '#ddd', '#333', '#111'],
-    // background: '#fff',
-    // primary: 'blue'
+    // transparent: 'transparent',
+    // textAlt: ``
   },
   sizes: {
     ...baseTheme.sizes,
@@ -17,14 +15,14 @@ export default merge({}, baseTheme, {
   },
   styles: {
     ...baseTheme.styles,
-
   },
   shadows: {
     ...baseTheme.shadows,
   },
   borders: {
     ...baseTheme.borders,
-
+    'test': `1px solid yellow`,
+    'default': `1px solid purple`
   }
 
 
