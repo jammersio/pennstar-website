@@ -4,10 +4,12 @@ import Cta from "./Cta"
 
 export default function CtaSection({ ctaProps, ...props }) {
   return (
-    <Section bg={`primary`} minHeight={`container`} fullWidth {...props}>
+    <Section bg={`grayDark`} {...props} variant={`fullWidth`}
+      color="white"
+    >
       <Cta
         {...ctaProps}
       />
-    </Section>
+    </Section >
   )
 }

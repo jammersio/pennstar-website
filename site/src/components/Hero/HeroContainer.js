@@ -1,7 +1,6 @@
 import React from 'react'
 import { Image } from 'rebass'
 import { Box, FlexWrap } from '../Layout/'
-import { Container } from 'theme-ui'
 import Cta from '../Cta'
 
 

@@ -5,16 +5,12 @@ async function createNewPages({ graphql, actions }) {
   const { createPage } = actions
 
   const result = await graphql(`
-    query MyQuery {
-      allConfigYaml {
+    query  {
+      allConfigIndexYaml {
         edges {
           node {
-            name
-            pages {
-              page
-              to
-            }
-            tagline
+            page
+            to
           }
         }
       }
@@ -22,31 +18,29 @@ async function createNewPages({ graphql, actions }) {
   `)
 
 
-  const { allConfigYaml: { edges: config } } = result.data
-  const [siteConfig] = config
-  // and array of objects -- used to decide which pages get rendered
-  const pageList = config.map(({ node: { pages } }) => pages.map(page => page))
+  const { allConfigIndexYaml: { edges } } = result.data
 
-  pageList.forEach((pages) => pages.forEach(page => {
-    const newPageList = pages
+  const pageList = edges.map(({ node }) => node)
+
+  pageList.forEach((page) => {
+    console.log(page.page)
     createPage({
-      //🚧 add "to" route to config file instead of doing conditional logic here...
       path: `${page.to}`,
       component: path.resolve(`src/templates/pageTemplate.js`),
       context: {
+        pageList: [...pageList],
         pageName: page.page,
-        pageList: newPageList,
-        siteTitle: siteConfig.node.name
       }
     })
+    console.log(page.to)
     return
-  }))
+  })
 
   // createPage({
   //   path: `/dump`,
   //   component: path.resolve(`src/templates/stringifyTemplate.js`),
   //   context: {
-  //     finalPages
+  //     config, result
   //   }
   // })
   return

@@ -1,6 +1,5 @@
 import React from 'react'
 import { Box as Boxbass, Flex } from 'rebass'
-import { Container as Contained } from 'theme-ui'
 
 export function Box(props) {
   return (
@@ -28,7 +27,6 @@ export function Card({ innerProps, children, ...props }) {
         boxShadow: `default`,
         borderRadius: `lg`,
         border: `default`,
-
       }}
         {...innerProps}
       >
@@ -40,8 +38,9 @@ export function Card({ innerProps, children, ...props }) {
 
 export function Container({ outerProps, ...props }) {
   return (
-    <Contained
-      sx={{ backgroundColor: `yellow` }}
+    <Boxbass
+      mx='auto'
+      width={[2 / 3]}
       {...outerProps}
     >
       <Boxbass
@@ -50,18 +49,13 @@ export function Container({ outerProps, ...props }) {
         {...props}
       >
       </Boxbass>
-    </Contained>
+    </Boxbass>
   )
 }
 
 export function Section({ fullWidth, outerProps, ...props }) {
-  const fWStyles = fullWidth ? {
-    width: `100vw`,
-    ml: `-33%`
-  } : ''
-
   return (
-    <Boxbass  {...outerProps} {...fWStyles} >
+    <Boxbass  {...outerProps} >
       <Boxbass p={[4, 5]}{...props} sx={{ position: `relative` }} />
     </Boxbass>
   );
@@ -69,7 +63,7 @@ export function Section({ fullWidth, outerProps, ...props }) {
 
 export function FlexWrap(props) {
   return (
-    <Flex flexWrap='wrap' {...props} />
+    <Flex flexWrap="wrap" mx={-2} {...props} />
   )
 }
 

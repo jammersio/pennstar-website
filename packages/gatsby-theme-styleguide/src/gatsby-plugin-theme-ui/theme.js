@@ -61,12 +61,6 @@ export const theme = {
       backgroundColor: `primary`,
       color: `text`,
     },
-    Container: {
-      width: `full`,
-      padding: `0 space.1`,
-      margin: `0 auto`,
-      backgroundColor: `default`,
-    },
     a: {
       "&.hover": {
         textDecoration: `none`

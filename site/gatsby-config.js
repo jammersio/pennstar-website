@@ -1,7 +1,7 @@
 // const path = require('path');
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Themes Consumer`,
+    title: `PennStar Land Transfer`,
     description: `Testing consumption of multiple gatsby themes`,
     author: `@jammers`,
   },

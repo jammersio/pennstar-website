@@ -45,7 +45,7 @@ export default function CardGrid({ cards, ...props }) {
       mx={-4}
     >
       {cardsToRender.map(card => (
-        <Card key={card.id} className="">
+        <Card key={card.id}>
           <Cta {...card} />
         </Card>)
       )}

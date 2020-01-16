@@ -5,7 +5,8 @@ import Meta from "../../components/Meta"
 import Nav from "../../components/Nav"
 
 
-export default ({ siteTitle, pageName, pageList, children, ...props }) => {
+export default ({ pageName, pageList, navProps, children, ...props }) => {
+
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -15,14 +16,16 @@ export default ({ siteTitle, pageName, pageList, children, ...props }) => {
       }
     }
   `)
+
+
   return (
     <Layout>
       <Meta />
       <Header>
-        <Nav siteTitle={siteTitle || data.site.siteMetadata.title || `default`} pageList={pageList} />
+        <Nav siteTitle={data.site.siteMetadata.title || `default`} pageList={pageList}
+          {...navProps}
+        />
       </Header>
-
-      {pageName} -- can be removed after tested
       {children}
       <Footer>
         © {new Date().getFullYear()} Company Name
