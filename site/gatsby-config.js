@@ -1,4 +1,4 @@
-// const path = require('path');
+const path = require('path');
 
 const activeEnv =
   process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development"
@@ -19,8 +19,18 @@ module.exports = {
     ]
   },
   plugins: [
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     `gatsby-theme-boostrap-sass`,
     `gatsby-theme-styleguide`,
     `gatsby-theme-json-data`,
+    `gatsby-theme-tina-turner`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.resolve(`src/assets/images`)
+      }
+    }
   ]
 }

@@ -6,11 +6,10 @@ function FullLayout({ title, children }) {
       <Header>{title || `StyleGuide Defaults`}</Header>
       <Main>
         <Container>{children || `content-coming-soon`}</Container>
-        Tedddd
-    </Main>
+      </Main>
       <Footer>
-        © {new Date().getFullYear()} Company Name
-    </Footer>
+        © {new Date().getFullYear()} {title}
+      </Footer>
     </>
   )
 }
