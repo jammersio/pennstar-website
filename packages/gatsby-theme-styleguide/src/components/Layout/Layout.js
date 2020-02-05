@@ -1,16 +1,11 @@
 import React from "react"
-import { Layout as ThemeLayout, Header, Main, Container, Footer } from "theme-ui"
-import "../styles/styles.scss"
+import { Layout as ThemeLayout, Header } from "theme-ui"
+import "../../styles/styles.scss"
 
-const Layout = ({ heading, children }) => (
+const Layout = ({ title, children }) => (
   <ThemeLayout>
-    <Header>{heading || `Gatsby Events Theme`}</Header>
-    <Main>
-      <Container>{children || `content-coming-soon`}</Container>
-    </Main>
-    <Footer>
-      © {new Date().getFullYear()} Company Name
-    </Footer>
+    <Header>{title}</Header>
+    {children}
   </ThemeLayout>
 )
 

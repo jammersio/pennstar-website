@@ -12,9 +12,6 @@ export default merge({}, baseTheme, {
     ...baseTheme.sizes,
 
   },
-  styles: {
-    ...baseTheme.styles,
-  },
   shadows: {
     ...baseTheme.shadows,
     new: '0 8px 16px -4px rgba(0,0,0,.1), 0 0 8px -3px rgba(0,0,0,.1)'
@@ -23,6 +20,58 @@ export default merge({}, baseTheme, {
     ...baseTheme.borders,
     'test': '1px solid yellow',
     'default': '1px solid purple'
+  },
+  styles: {
+    ...baseTheme.styles,
+    Layout: {
+      color: 'text',
+      fontFamily: 'sans',
+      fontSize: 1,
+      lineHeight: 'body',
+      display: 'flex',
+      minHeight: 'screenHeight',
+    },
+    Header: {
+      backgroundColor: 'white',
+      color: 'text',
+      fontWeight: 'bold',
+      margin: '0 auto',
+      width: 'screenWidth',
+      padding: 3,
+      flexShrink: 0,
+      display: 'flex',
+      justifyContent: 'space-evenly',
+      alignItems: 'center',
+      boxShadow: 'md',
+      a: {
+        color: 'inherit',
+        "&:hover": {
+          color: 'primaryHover',
+          textDecoration: 'none',
+        },
+        "&.active": {
+          color: 'blue.3'
+        }
+      }
+    },
+    Main: {
+      margin: '0 auto',
+      maxWidth: 'full',
+      minHeight: '6em',
+      width: 'full',
+      flex: '1 1 auto'
+    },
+    Footer: {
+      width: 'screenWidth',
+      padding: 3,
+      backgroundColor: 'primary',
+      color: 'text',
+    },
+    a: {
+      "&.hover": {
+        textDecoration: 'none'
+      }
+    }
   },
   variants: {
     // ...components,
