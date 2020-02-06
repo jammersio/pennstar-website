@@ -8,7 +8,7 @@ parent: home
 element: hero
 heading: Welcome To Penn Star
 tagline: Find out more about how we can help.
-outro: '""'
+outro: ''
 buttons: 1
 button1Label: Learn More
 button1To: '#0'
