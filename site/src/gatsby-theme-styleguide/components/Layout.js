@@ -1,9 +1,11 @@
 import React from 'react'
-import { FullLayout as ThemedLayout } from 'gatsby-theme-styleguide/src/components/Layout'
+import { Layout as ThemedLayout } from 'gatsby-theme-styleguide/src/components/Layout'
+import { Header } from '../../components/Header'
 
-export default function Layout({ title, children }) {
+export default function Layout({ logo, title, pageList, children }) {
   return (
     <ThemedLayout title={title}>
+      <Header logo={logo} pageList={pageList} />
       {children}
     </ThemedLayout>
   )

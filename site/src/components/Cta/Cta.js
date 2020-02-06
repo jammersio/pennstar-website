@@ -21,7 +21,7 @@ export default function Cta({
       />
       <Heading
         as={`h1`}
-        fontSize={[3, 4, 5]}
+        fontSize={[4, 5, 6]}
         color={`text`}
         {...headingProps}
       />

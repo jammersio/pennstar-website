@@ -5,6 +5,7 @@ export const theme = {
   sizes: {
     ...tailwind.sizes,
     heroHeight: `60vh`,
+    headerHeight: `64px`,
     box: `100%`,
     default: `90vw`,
     max: `100vw`,

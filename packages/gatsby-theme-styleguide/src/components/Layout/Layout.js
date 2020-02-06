@@ -4,7 +4,7 @@ import "../../styles/styles.scss"
 
 const Layout = ({ title, children }) => (
   <ThemeLayout>
-    <Header>{title}</Header>
+    {/* <Header>{title}</Header> */}
     {children}
   </ThemeLayout>
 )

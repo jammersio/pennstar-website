@@ -12,6 +12,12 @@ export default merge({}, baseTheme, {
     ...baseTheme.sizes,
 
   },
+  fonts: {
+    ...baseTheme.fonts,
+    brand: `"Alegreya", Serif`,
+    secondary: `"Questrial", Sans-Serif`,
+    default: `"Permanent Marker", Cursive`
+  },
   shadows: {
     ...baseTheme.shadows,
     new: '0 8px 16px -4px rgba(0,0,0,.1), 0 0 8px -3px rgba(0,0,0,.1)'
@@ -42,6 +48,7 @@ export default merge({}, baseTheme, {
       display: 'flex',
       justifyContent: 'space-evenly',
       alignItems: 'center',
+      fontFamily: 'body',
       boxShadow: 'md',
       a: {
         color: 'inherit',
@@ -89,9 +96,6 @@ export default merge({}, baseTheme, {
     fullWidth: {
       width: 'screenWidth',
       right: '30%',
-    },
-    heroHeight: {
-      height: '60vh'
     },
   }
 

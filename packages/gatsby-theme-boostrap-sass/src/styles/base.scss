@@ -8,4 +8,5 @@ body {
   @include media-breakpoint-up(lg) {
     padding-top: $header-height-lg;
   }
+  background-color: $secondary;
 }

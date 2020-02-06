@@ -3,7 +3,11 @@ import { Section } from '../Layout'
 import HeroContainer from './HeroContainer'
 import heroImg from '../../assets/images/scrum-board.svg'
 
-export default ({ children, layoutProps, ctaProps, ...props }) => {
+
+
+const Hero = ({ children, layoutProps, ctaProps, ...props }) => {
+
+
   return (
     <Section
       bg={`background`}
@@ -21,4 +25,7 @@ export default ({ children, layoutProps, ctaProps, ...props }) => {
       {children}
     </Section>
   )
+
 }
+
+export default Hero

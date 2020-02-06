@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { remarkForm } from 'gatsby-tinacms-remark'
+import Layout from '../gatsby-theme-styleguide/components/Layout'
 
 function BlogPostTemplate(props) {
   return (

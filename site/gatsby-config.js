@@ -10,10 +10,10 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `Penn Star`,
-    logo: `https://fakeimg.pl/48x48/BADA55?text=PS&font=lobster`,
+    logo: `./src/assets/images/logo.svg`,
     description: `Testing consumption of multiple gatsby themes`,
     author: `@jammers`,
-    navLinks: [`Home`, `About Us`, `Services`, `Contact Us`],
+    navLinks: [{ page: 'Home', to: '/' }, { page: 'About Us', to: '/about' }, { page: 'Services', to: '/services' }, { page: 'Contact Us', to: '/contact' },],
     socialLinks: [
       { fb: `www.facebook.com/` }, { twitter: `www.twitter.com` }, { linkedin: `www.linkedin.com` }
     ]
