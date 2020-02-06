@@ -22,14 +22,6 @@ export const query = graphql`
         description
       }
     }
-    file(relativePath: {eq: "default-img.jpeg"}){
-      childImageSharp {
-        fluid(maxWidth: 1200) {
-          src
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
     hero: markdownRemark(frontmatter: {parent: {eq: "home"} element:{eq: "hero"} }) {
     ...TinaRemark
       frontmatter {
@@ -61,13 +53,11 @@ export default function ({ data, children }) {
 
   // console.log(frontmatter)
 
-  const { site: { siteMetadata }, file: { childImageSharp: { fluid } } } = data
+  const { site: { siteMetadata } } = data
 
   const [{ frontmatter: { heading, tagline, outro, buttons, button1Label, button1To, image } }] = useLocalRemarkForm(data.hero)
 
   const [{ frontmatter: { intro, description } }] = useLocalRemarkForm(data.cta1)
-
-  console.log('data', data)
 
   const heroCta = { headingProps: { children: heading, color: 'white' }, taglineProps: { children: tagline }, outroProps: { children: outro } }
 
@@ -82,10 +72,6 @@ export default function ({ data, children }) {
           <Cta introProps={{ children: intro }} descriptionProps={{ children: description }} />
         </Container>
       </Section>
-      {/* <Img fluid={fluid} />
-      <Img fluid={fluid} />
-      <Img fluid={fluid} />
-      <Img fluid={fluid} /> */}
     </Layout>
   )
 }

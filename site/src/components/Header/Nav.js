@@ -5,7 +5,6 @@ import { NavLink } from '../Buttons'
 const defaultPages = [{ page: 'Home', to: '#0' }, { page: 'Services', to: '#0' }, { page: 'CaseStudies', to: '#0' }, { page: 'Process', to: '#0' },]
 
 export function Nav({ pageList = defaultPages, children, ...props }) {
-  console.log(pageList)
   return (
     <>
       <FlexWrap as='nav' justifyContent='space-between'  {...props}>

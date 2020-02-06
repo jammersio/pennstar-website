@@ -48,7 +48,6 @@ export function ButtonLink({ to, href, children, ...props }) {
 }
 
 export function NavLink({ to = '#0,', children, color, ...props }) {
-  console.log(to)
   return (
     <ReLink
       as={Link}
@@ -66,22 +65,3 @@ export function NavLink({ to = '#0,', children, color, ...props }) {
   )
 }
 
-export function ProfileButton({
-  user = { profileImg: 'https://fakeimg.pl/48x48/' },
-  children,
-  isOpen = false,
-  toggleIsOpen = (e) => console.log(e.target),
-  ...props
-}) {
-  return (
-    <Box as={Button} onClick={toggleIsOpen} id='profile-menu'>
-      <Image
-        src={user.profileImg}
-        mr='-5'
-        sx={{ borderRadius: '100%' }}
-        {...props}
-      />
-      {isOpen && children}
-    </Box>
-  )
-}
