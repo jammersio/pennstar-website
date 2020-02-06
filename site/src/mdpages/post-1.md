@@ -7,4 +7,4 @@ slug: my-first-post
 ---
 ## Testing 1, 2, 3
 
-This is some raw markdown as body content
+This _is some raw markdown as body content_
