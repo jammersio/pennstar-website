@@ -36,6 +36,7 @@ export default merge({}, baseTheme, {
       lineHeight: 'body',
       display: 'flex',
       minHeight: 'screenHeight',
+      overflowX: 'hidden',
     },
     Header: {
       backgroundColor: 'white',

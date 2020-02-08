@@ -21,10 +21,10 @@ module.exports = {
   plugins: [
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-react-helmet`,
     `gatsby-theme-boostrap-sass`,
     `gatsby-theme-styleguide`,
     `gatsby-theme-json-data`,
-    `gatsby-theme-tina-turner`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

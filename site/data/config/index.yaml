@@ -1,8 +1,0 @@
-- page: "index"
-  to: "/"
-- page: "about"
-  to: "/about"
-- page: "services"
-  to: "/services"
-- page: "contact"
-  to: "/contact"

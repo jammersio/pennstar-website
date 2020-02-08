@@ -4,8 +4,8 @@ import { Link } from 'gatsby'
 
 import { Box, Text, Flex, Button, Link as ReLink, Image } from 'rebass'
 import { HeaderMenu } from './HeaderMenu'
-import { Brand } from '../Brand'
-import { MenuIcon } from '../SideBar'
+import { Brand } from './Brand'
+import { MenuIcon } from './SideBar'
 
 import { useScrollMenu } from '../../hooks/useScrollMenu'
 import { INDEX_ROUTE } from '../../routes'
@@ -63,7 +63,7 @@ export function Header({ logo, title = '', pageList = [] }) {
             variant='simple'
             color='white'
             className='no-text-wrap'
-            mr='2'
+            mr='1'
             sx={{
               color: 'white',
               borderRadius: 'full',

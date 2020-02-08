@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { SideBarMenuIcon, SideBarMenu } from '../SideBarMenu'
-import { OutsideClick } from '../../../hooks/useOutsideClick';
+import { OutsideClick } from '../../../../hooks/useOutsideClick';
 
 
 export function MenuIcon({ pageList = [], ...props }) {

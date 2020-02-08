@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box } from 'rebass'
-import Nav from '../../Header/Nav'
+import Nav from '../../Nav'
 import { sidebarMenuStyles, burgerStyles, burgerBarStyles } from '../side-bar-styles'
 
 export function SideBarMenuIcon({ open, setOpen, ...props }) {
