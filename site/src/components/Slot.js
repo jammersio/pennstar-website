@@ -12,7 +12,7 @@ class Slot extends Component {
   }
   addComponent = async type => {
     console.log(`Loading ${type} component...`)
-    import(`./${type}`)
+    import(`../pages/${type}`)
       .then(component =>
         this.setState({
           components: this.state.components.concat(component.default)

@@ -8,7 +8,7 @@ export function Nav({ pageList = defaultPages, children, ...props }) {
   return (
     <>
       <FlexWrap as='nav' justifyContent='space-between'  {...props}>
-        {pageList.map((page, i) => <NavLink key={i} to={page.to}>{page.page}</NavLink>)}
+        {pageList.map((page, i) => <NavLink key={i} to={page.path}>{page.page}</NavLink>)}
         {children}
       </FlexWrap>
     </>

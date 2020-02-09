@@ -1,41 +1,32 @@
-// exports.createPages = ({ actions }) => {
-//   const { createPage } = actions
-//   let routes = []
-//   async function createPagesFromContent(sourceFile) {
-//     const ymlDoc = await yaml.safeLoad(fs.readFileSync(sourceFile, "utf-8"))
-//     // console.log(ymlDoc)
-//     ymlDoc.forEach(element => {
-//       if (element.page) {
-//         createPage({
-//           path: `/${element.page}`,
-//           component: require.resolve("./src/templates/basicTemplate.js"),
-//           context: {
-//             pageContent: element.content,
-//             links: element.links,
-//           },
-//         })
-//       }
-//     })
-//     return
-//   }
-//   async function getSiteConfig(sourceFile) {
-//     const ymlDoc = await yaml.safeLoad(fs.readFileSync(sourceFile, "utf-8"))
-//     // console.log(ymlDoc)
-//     ymlDoc.forEach(element => {
-//       console.log(element.routes)
-//       // if (element.page) {
-//       //   createPage({
-//       //     path: `/${element.page}`,
-//       //     component: require.resolve("./src/templates/basicTemplate.js"),
-//       //     context: {
-//       //       pageContent: element.content,
-//       //       links: element.links,
-//       //     },
-//       //   })
-//       // }
-//     })
-//   }
-//   getSiteConfig('./data/website/config.yaml')
-//   createPagesFromContent('./data/website/content.yaml')
-//   // createRoutes('./data/website/content.yaml')
-// }
+const path = require('path')
+const data = require('./content/config.json')
+
+exports.createPages = ({ graphql, actions, reporter }) => {
+  const { createPage } = actions
+
+  return graphql(`
+    {
+      contentJson {
+        pages {
+          page
+          path
+        }
+      }
+    }
+  `).then(result => {
+    if (result.errors) throw result.errors
+    const { pages } = result.data.contentJson
+    pages.forEach(page => {
+      const pageTemplate = path.resolve(`src/templates/${page.page}.js`)
+      createPage({
+        path: page.path,
+        component: pageTemplate,
+        context: {
+          page: page.page,
+          pageList: pages
+        }
+      })
+    })
+  })
+}
+

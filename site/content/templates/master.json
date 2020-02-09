@@ -1,8 +1,8 @@
 {
   "templates": [
-    {"parentPage": "home", "elements": ["Hero", "Cta","IconCards", "Text"]},
-    {"parentPage": "about", "elements": ["Hero", "Cta","Heading", "StaffCard", "Text", "StaffCards"]},
-    {"parentPage": "services", "elements": ["Hero", "Cta","ServicesCards"]},
-    {"parentPage": "contact", "elements": ["Hero", "Cta","ContactForm"]}
+    {"home": ["Hero", "Cta","IconCards", "Text"]},
+    {"about": ["Hero", "Cta","Heading", "StaffCard", "Text", "StaffCards"]},
+    {"services": ["Hero", "Cta","ServicesCards"]},
+    {"contact": ["Hero", "Cta","ContactForm"]}
   ]
 }

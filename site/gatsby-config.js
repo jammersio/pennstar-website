@@ -13,9 +13,8 @@ module.exports = {
     logo: `./src/assets/images/logo.svg`,
     description: `Testing consumption of multiple gatsby themes`,
     author: `@jammers`,
-    navLinks: [{ page: 'Home', to: '/' }, { page: 'About Us', to: '/about' }, { page: 'Services', to: '/services' }, { page: 'Contact Us', to: '/contact' },],
     socialLinks: [
-      { fb: `www.facebook.com/` }, { twitter: `www.twitter.com` }, { linkedin: `www.linkedin.com` }
+      { fb: `www.facebook.com/` }, { twitter: `www.twitter.com` }, { instagram: `www.instagram.com` }
     ]
   },
   plugins: [

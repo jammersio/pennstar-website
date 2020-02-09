@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
-
 import { Box, Text, Flex, Button, Link as ReLink, Image } from 'rebass'
 import { HeaderMenu } from './HeaderMenu'
-import { Brand } from './Brand'
+import { Brand } from '../Brand'
 import { MenuIcon } from './SideBar'
 
 import { useScrollMenu } from '../../hooks/useScrollMenu'
@@ -20,13 +19,14 @@ const propTypes = {
 };
 
 
+
 export function Header({ logo, title = '', pageList = [] }) {
 
   const { passedScrollThreshold } = useScrollMenu(50)
 
   return (
     <>
-      <Box sx={{ ...headerStyles }}>
+      <Box as='section' sx={{ ...headerStyles }}>
         <Flex
           width='100%'
           alignItems='center'

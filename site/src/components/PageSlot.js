@@ -12,7 +12,7 @@ class PageSlot extends Component {
   }
   addPageTemplate = async page => {
     console.log(`Loading ${page} page...`)
-    import(`../pages/${page}`)
+    import(`../templates/${page}`)
       .then(page =>
         this.setState({
           pageList: this.state.pageList.concat(page.default)
@@ -24,15 +24,15 @@ class PageSlot extends Component {
   }
 
   async componentDidMount() {
-    const { pageList } = this.props
-    pageList.map(async page => await this.addPageTemplate(page))
+    const { pageList } = this.props.pageContext
+    pageList.map(async ({ page }) => await this.addPageTemplate(page))
   }
   render() {
     const { pageList } = this.state
-    const { pageProps } = this.props
+    // const { pageProps } = this.props
     if (pageList.length === 0) return <div>Loading...</div>
     const pagesElements = pageList.map(Page => (
-      <Page key={shortid()} pageProps={pageProps} />
+      <Page key={shortid()} {...this.props.pageContext} />
     ));
     return <div className="Page">{pagesElements}</div>;
   }

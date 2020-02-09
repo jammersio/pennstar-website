@@ -21,9 +21,9 @@ export function Brand({ brand = false, brandMark = false, children, ...props }) 
   // TODO: update query to fetch, fluid logo and implement gatsby's <Img /> component
 
   return (
-    <Flex>
-      {brandMark && <Image src={publicURL} {...props} sx={{ maxWidth: '36px', marginRight: '0.5em' }} />}
-      {brand && <Heading as='h1' fontSize='inherit' color='primary'  {...props} sx={{ whiteSpace: 'nowrap', textShadow: 'default' }}>
+    <Flex alignItems='center' fontFamily='brand' {...props}>
+      {brandMark && <Image src={publicURL} sx={{ maxWidth: '36px', marginRight: '0.5em' }} />}
+      {brand && <Heading as='h1' fontSize='inherit' color='primary' sx={{ whiteSpace: 'nowrap', textShadow: 'default' }}>
         {title}
       </Heading>}
     </Flex>

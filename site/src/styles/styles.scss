@@ -3,3 +3,18 @@
 @import url('https://fonts.googleapis.com/css?family=Space+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Alegreya:400,400i,500,700,800,900|Questrial&display=swap');
 
+.no-bull {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.space-left {
+  padding-left: 1em;
+}
+.space-top {
+  padding-top: 0.3em;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}

@@ -9,21 +9,16 @@ import "../styles/styles.scss"
 
 import Layout from "../gatsby-theme-styleguide/components/Layout"
 
-export default function ({ data, template, pageProps, children, ...props }) {
+export default function (props) {
 
   // const { site: { siteMetadata } } = data
   // const [markdownRemark] = useLocalRemarkForm(pageContent)
-  console.log('template', template, props, data)
-  console.log('pageProps', pageProps)
-  return (
-    <Layout
-    // add title and brand props back here.
-    >
+  console.log('props', props)
 
-      <Section bg="lightgray">
-        Test
-      </Section>
-    </Layout>
+  return (
+    <Section bg="lightgray">
+      Test
+    </Section>
   )
 }
 // $parentPage $element ($parentPage: String!, $element: String!)
