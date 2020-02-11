@@ -6,7 +6,9 @@ export default merge({}, baseTheme, {
   ...baseTheme,
   colors: {
     ...baseTheme.colors,
-
+    primary: '#2b6cb0',
+    secondary: '#718096',
+    base: '#fbf9fa'
   },
   sizes: {
     ...baseTheme.sizes,
@@ -20,7 +22,8 @@ export default merge({}, baseTheme, {
   },
   fontSizes: {
     ...baseTheme.fontSizes,
-    sm: '0.65em'
+    sm: '0.65em',
+    md: '0.85em'
   },
   shadows: {
     ...baseTheme.shadows,
@@ -44,7 +47,7 @@ export default merge({}, baseTheme, {
     },
     Header: {
       backgroundColor: 'white',
-      color: 'text',
+      // color: 'text',
       fontWeight: 'bold',
       margin: '0 auto',
       width: 'screenWidth',
@@ -56,7 +59,6 @@ export default merge({}, baseTheme, {
       fontFamily: 'body',
       boxShadow: 'md',
       a: {
-        color: 'inherit',
         "&:hover": {
           color: 'primaryHover',
           textDecoration: 'none',
@@ -80,8 +82,12 @@ export default merge({}, baseTheme, {
       color: 'text',
     },
     a: {
+      borderBottom: 'none',
       "&.hover": {
         textDecoration: 'none'
+      },
+      "&.active": {
+        borderBottom: '1px solid red'
       }
     },
   },

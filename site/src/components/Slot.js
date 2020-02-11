@@ -35,7 +35,7 @@ class Slot extends Component {
     const componentsElements = components.map((Component, i) => (
       <Component key={shortid()} {...elementProps[i]} />
     ));
-    return <div className="ifapp">{componentsElements}</div>;
+    return <div>{componentsElements}</div>;
   }
 }
 

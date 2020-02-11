@@ -1,0 +1,26 @@
+{
+  "hero": {
+    "heading": "Welcome To Penn Star",
+    "tagline": "Find out more about how we can help.",
+    "links": [
+      {"label": "Learn More", "link": "/"}
+    ]
+  },
+  "main": {
+    "sectionTitle": "WHO WE ARE",
+    "heading": "The Lehigh Valley’s Premier, Full-Service Title Settlement Provider",
+    "body": "Penn Star is a leading provider of comprehensive title insurance services for the Lehigh Valley residential and commercial real estate market. To ensure a smooth transactional experience for its customers, SteelHouse maintains strong relationships with top-rated underwriters who have strong ties to the real estate community in Pennsylvania and New Jersey."
+  },
+  "team": {
+    "sectionTitle": "MEET THE TEAM",
+    "body": "Founded by top-producing real estate agent [ADDNAME] and 20-year title industry veteran [ADDNAME], Penn Star is a title company built on the basic principles of honesty, customer service, and hard work. [ADDNAME] has been at the top of every real estate production list from very early on in his career.",
+    "body2": "As a title insurance and policy expert, [ADDNAME] has decades of experience managing all aspects of the real estate transaction lifecycle in Bucks County and looks forward to growing her business in the Lehigh Valley."
+
+  },
+  "cards": [
+    {"image": "https://i.pravatar.cc/90", "heading": "PERSON NAME", "details": "PERSON TITLE"},
+    {"image": "https://i.pravatar.cc/90", "heading": "PERSON NAME", "details": "PERSON TITLE"},
+    {"image": "https://i.pravatar.cc/90", "heading": "PERSON NAME", "details": "PERSON TITLE"},
+    {"image": "https://i.pravatar.cc/90", "heading": "PERSON NAME", "details": "PERSON TITLE"}
+  ]
+}

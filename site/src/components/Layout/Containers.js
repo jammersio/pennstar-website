@@ -17,8 +17,9 @@ export function Card({ innerProps, children, ...props }) {
   return (
     <Boxbass
       width={[`full`, 1 / 2]}
-      fontSize={[1, 2, 3]}
+      as='article'
       textAlign={`center`}
+      alignItems='stretch'
       my={[0]}
       p={[1, 3]}
       {...props}
@@ -35,10 +36,35 @@ export function Card({ innerProps, children, ...props }) {
     </Boxbass>
   )
 }
+export function ShapedCard({ innerProps, children, ...props }) {
+  return (
+    <Boxbass
+      width={[`full`, 1 / 2]}
+      as='article'
+      textAlign={`center`}
+      alignItems='stretch'
+      my={[0]}
+
+      p={[1, 3]}
+      {...props}
+    >
+      <Boxbass sx={{
+        boxShadow: `default`,
+        borderTopLeftRadius: `full`,
+        borderBottomLeftRadius: `full`,
+        borderBottomRightRadius: `full`,
+      }}
+        {...innerProps}
+      >
+        {children}
+      </Boxbass>
+    </Boxbass>
+  )
+}
 
 export function Container({ outerProps, ...props }) {
   return (
-    <Boxbass
+    <Flex
       mx='auto'
       width={[2 / 3]}
       {...outerProps}
@@ -49,7 +75,7 @@ export function Container({ outerProps, ...props }) {
         {...props}
       >
       </Boxbass>
-    </Boxbass>
+    </Flex>
   )
 }
 
@@ -70,6 +96,7 @@ export function FlexWrap(props) {
 export const Containers = {
   Box,
   Card,
+  ShapedCard,
   Container,
   FlexWrap,
   Section,

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Section } from '../Layout'
-import HeroContainer from './HeroContainer'
+import { HeroContainer } from './HeroContainer'
 import heroImg from '../../assets/images/scrum-board.svg'
 
 

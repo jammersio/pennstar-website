@@ -1,0 +1,22 @@
+{
+  "hero": {
+    "heading": "Welcome To Penn Star",
+    "tagline": "Find out more about how we can help.",
+    "links": [
+      {"label": "Learn More", "link": "/"}
+    ]
+  },
+  "main": {
+    "heading": "Dedicated To Quality Service",
+    "body": "Penn Star is a trusted provider of title insurance and settlement services for buyers, sellers, builders, mortgage companies, and developers across the Lehigh Valley region"
+  },
+  "cards": [
+    {"icon": "fas fa-square", "heading": "WHAT WE DO", "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ut iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ut iure."},
+    {"icon": "fas fa-square", "heading": "HOW WE DO IT", "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ut iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ut iure."},
+    {"icon": "fas fa-square", "heading": "WE'RE # 1", "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ut iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ut iure."}
+  ],
+  "info": {
+    "body": "As title insurance and policy experts, we have decades of experience managing all aspects of the real estate transaction life cycle. We employ a staff of dedicated individuals and work with a strong network of underwriters who are focused on ensuring a smooth transaction process from start to finish.",
+    "body2": "Our primary goal is build to strong ties to the communities and individuals we serve. We take pride in the work we do, and we are committed to providing superior title insurance and title policy services for our customers."
+  }
+}

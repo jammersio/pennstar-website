@@ -3,11 +3,12 @@ import { graphql } from 'gatsby'
 
 import { Main } from 'theme-ui'
 import { Layout as ThemedLayout } from 'gatsby-theme-styleguide/src/components/Layout'
+import Meta from '../../components/Meta'
 import { Header } from '../../components/Header'
 import { Footer } from '../../components/Footer'
 
 
-export default function Layout({ logo, title, pageList, children, ...props }) {
+export default function Layout({ logo, title, pageList, currentPath, children, ...props }) {
   const [themed, setThemed] = useState({
     default: {
       bg: 'bg',
@@ -21,6 +22,7 @@ export default function Layout({ logo, title, pageList, children, ...props }) {
 
   return (
     <ThemedLayout {...themed.default} {...props}>
+      <Meta />
       <Header logo={logo || ""} pageList={pageList || []} />
       <Main as='article' textAlign='center' className='layout'>
         {children}

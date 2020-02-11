@@ -1,0 +1,28 @@
+{
+  "hero": {
+    "image": "https://tva1.sinaimg.cn/large/0082zybpgy1gbr7he7n1vj311i0p1jsm.jpg",
+    "heading": "Our Core Services",
+    "taglineA": "Find out why we're #1 in Lehigh Valley",
+    "taglineB": "Lehigh Valley",
+    "featuredCards": [
+      {"icon": "fas fa-arrow-circle-right", "heading": "SERVICE NAME", "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ut iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ut iure.", "linkLabel":"Learn More", "link": "/"},
+      {"icon": "fas fa-arrow-circle-right", "heading": "SERVICE NAME", "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ut iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ut iure.", "linkLabel":"Learn More", "link": "/"},
+      {"icon": "fas fa-arrow-circle-right", "heading": "SERVICE NAME", "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ut iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ut iure.", "linkLabel":"Learn More", "link": "/"}
+    ]
+  },
+  "main": {
+    "heading": "A Few More Ways We Serve The Lehigh Valley",
+    "outro": "Reach Out to us Today and Get Started Now!"
+  },
+  "cards": [
+    {"image": "https://i.pravatar.cc/90", "heading": "SERVICE NAME", "details": "Service Info"},
+    {"image": "https://i.pravatar.cc/90", "heading": "SERVICE NAME", "details": "Service Info"},
+    {"image": "https://i.pravatar.cc/90", "heading": "SERVICE NAME", "details": "Service Info"},
+    {"image": "https://i.pravatar.cc/90", "heading": "SERVICE NAME", "details": "Service Info"},
+    {"image": "https://i.pravatar.cc/90", "heading": "SERVICE NAME", "details": "Service Info"},
+    {"image": "https://i.pravatar.cc/90", "heading": "SERVICE NAME", "details": "Service Info"},
+    {"image": "https://i.pravatar.cc/90", "heading": "SERVICE NAME", "details": "Service Info"},
+    {"image": "https://i.pravatar.cc/90", "heading": "SERVICE NAME", "details": "Service Info"},
+    {"image": "https://i.pravatar.cc/90", "heading": "SERVICE NAME", "details": "Service Info"}
+  ]
+}

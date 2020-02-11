@@ -20,7 +20,7 @@ const propTypes = {
 
 
 
-export function Header({ logo, title = '', pageList = [] }) {
+export function Header({ logo, title = '', pageList = [], active, ...props }) {
 
   const { passedScrollThreshold } = useScrollMenu(50)
 
@@ -51,12 +51,13 @@ export function Header({ logo, title = '', pageList = [] }) {
           <HeaderMenu
             mx='auto'
             pageList={pageList}
+            active={active}
             display={['none', 'none', 'none', 'flex']}
           />
           <Button
             as={Link}
             to={START_ROUTE}
-            minWidth='120px'
+            width='180px'
             fontSize={['0.75em']}
             display={['none', 'inline']}
             justifySelf='flex-start'
@@ -70,7 +71,7 @@ export function Header({ logo, title = '', pageList = [] }) {
               whiteSpace: 'nowrap'
             }}
           >
-            <Text color='white'>Work With Us!</Text>
+            <Text color='white'>Get Started Today!</Text>
           </Button>
           <MenuIcon pageList={pageList} />
         </Flex>

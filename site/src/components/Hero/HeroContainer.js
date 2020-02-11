@@ -1,13 +1,14 @@
 import React from 'react'
 import { Image } from 'rebass'
-import { Box, FlexWrap } from '../Layout/'
+import { Box, FlexWrap } from '../Containers'
 import Cta from '../Cta'
 
 
-function HeroContainer({
+export function HeroContainer({
   ctaProps = {},
   imageContent = {},
   imageProps = {},
+  children,
   ...props
 }) {
   return (
@@ -15,13 +16,15 @@ function HeroContainer({
       <Box
         width={[`full`, `full`, 1 / 2]}
       >
-        <Cta
-          {...ctaProps}
-        />
+        {ctaProps &&
+          <Cta
+            {...ctaProps}
+          />
+        }
+        {children}
       </Box>
       <Image src={imageContent} mt={[-5]} width={[`full`, `full`, 1 / 2]} />
     </FlexWrap>
   )
 }
 
-export default HeroContainer

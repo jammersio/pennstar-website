@@ -47,21 +47,18 @@ export function ButtonLink({ to, href, children, ...props }) {
   )
 }
 
-export function NavLink({ to = '#0,', children, color, ...props }) {
+export function NavLink({ to = '#0,', children, ...props }) {
   return (
-    <ReLink
-      as={Link}
+    <Link
+      as={ReLink}
       to={to}
-      activeClassName='active'
+      color='secondary'
+      activeStyle={{ color: 'highlight' }}
       className='nav-link'
-      color='primary'
-      sx={{
-        color: props.active ? 'primary' : 'secondary',
-      }}
       {...props}
     >
-      <Text color={color || 'inherit'} ml='2'>{children}</Text>
-    </ReLink>
+      {children}
+    </Link>
   )
 }
 
