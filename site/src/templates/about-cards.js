@@ -1,13 +1,14 @@
 import React from 'react'
-import { Flex, Box, Text, Heading, Image } from 'rebass'
+import { Box, Text, Heading, Image } from 'rebass'
 import { ShapedCard } from '../components/Layout/Containers'
+import { shortid } from '../utils'
 
 
 export const Cards = ({ cards, ...props }) => {
   return (
     <Box display={['block', 'block', 'block', 'flex']} textAlign='center' my='5'>
       {cards.map(card => (
-        <ShapedCard mx='auto' innerProps={{
+        <ShapedCard key={shortid()} mx='auto' innerProps={{
           display: 'flex',
           maxWidth: ['sm'],
           mx: 'auto'

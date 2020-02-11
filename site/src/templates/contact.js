@@ -24,7 +24,7 @@ export default function (props) {
       </Section>
       <Section bg='base' width='full'>
         <Flex mt='4' bg='gray.2' width='3xl' mx='auto' sx={{ borderRadius: 'default' }}>
-          <Box width='50%' my='4' p='4' sx={{
+          <Box width='50%' my='4' p='4' color='gray.6' sx={{
             borderRightStyle: 'solid',
             borderRightWidth: '1px',
             borderRightColor: 'gray.3'

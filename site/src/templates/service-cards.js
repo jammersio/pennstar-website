@@ -1,6 +1,7 @@
 import React from 'react'
 import { Flex, Box, Text, Heading } from 'rebass'
 import { Card } from '../components/Layout'
+import { shortid } from '../utils'
 
 
 export const ServiceCards = ({ cards, ...props }) => {
@@ -8,8 +9,8 @@ export const ServiceCards = ({ cards, ...props }) => {
     <Flex flexWrap='wrap' maxWidth='5xl' mx='auto'>
       {cards.map(card => (
         <Card
+          key={shortid()}
           width={['full', 'full', 1 / 2, 1 / 3]}
-          // maxWidth='300px'
           mx='auto'
           innerProps={{ sx: { border: 'none', boxShadow: 'default', borderRadius: 'lg' } }}
         >
@@ -20,7 +21,7 @@ export const ServiceCards = ({ cards, ...props }) => {
             alignItems='center'
             pl='2'
           >
-            <i className="fas fa-square" /><br />
+            <i className={card.icon} /><br />
             <Box as='span' ml='3'>
               <Heading fontSize='2'>{card.heading}</Heading>
               <Text fontSize='1'>{card.details}</Text>

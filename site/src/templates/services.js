@@ -58,17 +58,18 @@ export const qeury = graphql`
         heading
       }
       cards {
-        image
+        icon
         heading
         details
       }
       hero {
         featuredCards {
           linkLabel
-          icon
+          linkIcon
           link
           heading
           details
+          icon
         }
         taglineA
         taglineB

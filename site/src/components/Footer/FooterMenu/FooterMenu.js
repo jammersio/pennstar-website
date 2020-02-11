@@ -14,6 +14,7 @@ export const FooterMenu = ({ pageList, ...props }) => {
           email
           phone
           streetAddress
+          aptSuite
         }
       }
       site {
@@ -28,7 +29,7 @@ export const FooterMenu = ({ pageList, ...props }) => {
     }
   `)
 
-  const { sectionsJson: { footerStatement, contactInfo: { cityStateZip, email, phone, streetAddress } }, site: { siteMetadata: { socialLinks: { fb, twitter, instagram } } } } = data
+  const { sectionsJson: { footerStatement, contactInfo: { cityStateZip, email, phone, streetAddress, aptSuite } }, site: { siteMetadata: { socialLinks: { fb, twitter, instagram } } } } = data
   return (
     <Flex bg='lightgray' width='full' p='4'>
       <Box maxWidth='40%'>
@@ -49,6 +50,7 @@ export const FooterMenu = ({ pageList, ...props }) => {
             {phone} <br />
             {email} <br />
             {streetAddress} <br />
+            {aptSuite} <br />
             {cityStateZip} <br />
           </Flex>
         </Flex>

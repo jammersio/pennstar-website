@@ -1,7 +1,8 @@
 import React from 'react'
-import { Box, Text, Heading, Flex } from 'rebass'
+import { Box, Text, Heading } from 'rebass'
 import { FlexWrap } from '../components/Containers'
 import { Card } from '../components/Layout'
+import { shortid } from '../utils'
 
 export const Cards = ({ cards: homeCards, ...props }) => {
   return (
@@ -9,6 +10,7 @@ export const Cards = ({ cards: homeCards, ...props }) => {
 
       {homeCards.map(card => (
         <Card
+          key={shortid()}
           as='article'
           width={['full', 1 / 3]}
           maxWidth='250px'
