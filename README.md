@@ -1,4 +1,3 @@
-# PENNSTAR WEB SITE
 ## 👷‍♂️🚧🏗
 
 Jammers Internal:
