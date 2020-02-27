@@ -1,6 +1,5 @@
 import { merge } from 'lodash'
 import { theme as baseTheme } from 'gatsby-theme-styleguide/src/gatsby-plugin-theme-ui/'
-import components from "./components"
 
 export default merge({}, baseTheme, {
   ...baseTheme,
@@ -92,7 +91,6 @@ export default merge({}, baseTheme, {
     },
   },
   variants: {
-    // ...components,
     card: {
       fontSize: [1, 2, 3],
       textAlign: 'center',

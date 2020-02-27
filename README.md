@@ -1,4 +1,8 @@
-# WIP
+# PENNSTAR WEB SITE
+
+Jammers Internal:
+To preview visit repo settings and change deployed branch to "master"
+[](https://github.com/jammersio/pennstar-website/settings)
 
 ## 👷‍♂️🚧🏗
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Flex, Text, Heading } from 'rebass'
+import { Box, Flex } from 'rebass'
 import { Section } from '../components/Containers'
 import { Card as DefCard } from '../components/Layout/Containers'
 

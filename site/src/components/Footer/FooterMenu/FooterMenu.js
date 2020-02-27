@@ -1,8 +1,7 @@
 import React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
-import { Flex, Box, Image, Text } from 'rebass'
+import { Flex, Box, Text } from 'rebass'
 import { Brand } from '../../Brand'
-import { Container, FlexWrap } from '../../Containers'
 
 export const FooterMenu = ({ pageList, ...props }) => {
   const data = useStaticQuery(graphql`

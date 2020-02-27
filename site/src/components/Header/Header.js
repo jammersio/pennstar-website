@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
-import { Box, Text, Flex, Button, Link as ReLink, Image } from 'rebass'
+import { Box, Text, Flex, Button, Link as ReLink } from 'rebass'
 import { HeaderMenu } from './HeaderMenu'
 import { Brand } from '../Brand'
 import { MenuIcon } from './SideBar'

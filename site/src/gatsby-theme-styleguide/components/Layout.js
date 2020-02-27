@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { graphql } from 'gatsby'
 
 import { Main } from 'theme-ui'
 import { Layout as ThemedLayout } from 'gatsby-theme-styleguide/src/components/Layout'
@@ -9,7 +8,7 @@ import { Footer } from '../../components/Footer'
 
 
 export default function Layout({ logo, title, pageList, currentPath, children, ...props }) {
-  const [themed, setThemed] = useState({
+  const [themed] = useState({
     default: {
       bg: 'bg',
       text: 'text'

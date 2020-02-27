@@ -1,7 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
-import { Flex, Box, Image, Heading } from 'rebass'
+import { Flex, Image, Heading } from 'rebass'
 
 export function Brand({ brand = false, brandMark = false, children, ...props }) {
 

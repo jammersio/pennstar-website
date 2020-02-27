@@ -22,7 +22,7 @@ export default function (props) {
     <Layout pageList={props.pageContext.pageList} {...siteMetadata}>
       <FullHero bgImg={defaultBg}>
         <Flex mt='5' justifyContent='flex-end'>
-          <Box p='2' color='white' textAlign='right' color='secondary'>
+          <Box p='2' textAlign='right' color='secondary'>
             <Heading color='primary'>{hero.heading}</Heading>
             <Text mt='2'>{hero.tagline}</Text>
             <Text fontSize='sm' mt='3' mb='-3'><i className=" fas fa-arrow-circle-right" /><span className='space-left'>{hero.links[0].label}</span></Text>

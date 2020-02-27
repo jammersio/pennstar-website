@@ -2,7 +2,7 @@ import React from 'react'
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import { Link } from 'gatsby'
-import { Flex, Button, Text, Link as ReLink, Box, Image } from 'rebass'
+import { Flex, Button, Text, Link as ReLink, } from 'rebass'
 import { ConditionalWrapper } from '../utils'
 
 
