@@ -10,7 +10,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `Penn Star`,
-    logo: `./src/assets/images/logo.svg`,
+    logo: `src/assets/images/logo.svg`,
     description: `Testing consumption of multiple gatsby themes`,
     author: `@jammers`,
     socialLinks: [
@@ -32,5 +32,5 @@ module.exports = {
       }
     }
   ],
-  pathPrefix: "/pennstar-website",
+  pathPrefix: `/pennstar-website`,
 }
