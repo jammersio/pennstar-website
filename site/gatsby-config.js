@@ -31,5 +31,6 @@ module.exports = {
         path: path.resolve(`src/assets/images`)
       }
     }
-  ]
+  ],
+  pathPrefix: "/pennstar-website",
 }
