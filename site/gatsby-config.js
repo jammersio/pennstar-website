@@ -32,5 +32,5 @@ module.exports = {
       }
     }
   ],
-  pathPrefix: `/pennstar-website`,
+  pathPrefix: "/pennstar-website",
 }

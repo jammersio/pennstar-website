@@ -23,6 +23,7 @@
     "gatsby-theme-json-data": "*",
     "gatsby-theme-styleguide": "*",
     "gatsby-transformer-sharp": "^2.3.14",
+    "gh-pages": "^2.2.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1"
