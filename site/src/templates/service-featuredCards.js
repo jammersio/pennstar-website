@@ -6,7 +6,12 @@ import { shortid } from '../utils'
 
 export const Cards = ({ cards, ...props }) => {
   return (
-    <Box display={['block', 'block', 'block', 'flex']} flexWrap='wrap' mx='auto' maxWidth='80%'>
+    <Box
+      display={['block', 'block', 'block', 'flex']}
+      flexWrap='wrap'
+      mx='auto'
+      maxWidth='80%'
+    >
       {cards.map(card => (
         <Card
           key={shortid()}
@@ -38,7 +43,16 @@ export const Cards = ({ cards, ...props }) => {
             <Text>
               {card.details}
             </Text>
-            <Text fontSize='md' mt='3' mb='-3'><i className={card.linkIcon} /><span className='space-left '>{card.linkLabel}</span></Text>
+            <Text
+              fontSize='md'
+              mt='3'
+              mb='-3'
+            >
+              <i className={card.linkIcon} />
+              <span className='space-left '>
+                {card.linkLabel}
+              </span>
+            </Text>
           </Box>
         </Card>
       ))}

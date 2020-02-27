@@ -39,16 +39,21 @@ const defaultCards = [
 
 export default function CardGrid({ cards, ...props }) {
   const cardsToRender = cards ? [...cards] : [...defaultCards]
+
   return (
     <FlexWrap
       {...props}
       mx={-4}
     >
       {cardsToRender.map(card => (
-        <Card key={card.id}>
-          <Cta {...card} />
+        <Card
+          key={card.id}
+        >
+          <Cta
+            {...card}
+          />
         </Card>)
       )}
-    </FlexWrap >
+    </FlexWrap>
   )
 }

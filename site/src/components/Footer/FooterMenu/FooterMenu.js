@@ -28,24 +28,53 @@ export const FooterMenu = ({ pageList, ...props }) => {
     }
   `)
 
-  const { sectionsJson: { footerStatement, contactInfo: { cityStateZip, email, phone, streetAddress, aptSuite } }, site: { siteMetadata: { socialLinks: { fb, twitter, instagram } } } } = data
+  const {
+    sectionsJson: {
+      footerStatement,
+      contactInfo: { cityStateZip, email, phone, streetAddress, aptSuite }
+    },
+    site: {
+      siteMetadata: { socialLinks: { fb, twitter, instagram } }
+    } } = data
+
   return (
-    <Flex bg='lightgray' width='full' p='4'>
-      <Box maxWidth='40%'>
+    <Flex
+      bg='lightgray'
+      width='full'
+      p='4'
+    >
+      <Box
+        maxWidth='40%'
+      >
         <Brand brand brandMark />
-        <Text fontSize='sm'>
+        <Text
+          fontSize='sm'
+        >
           {footerStatement}
         </Text>
       </Box>
-      <Box ml='auto'>
-        <Text color='gray.6'>Contact us</Text>
+      <Box
+        ml='auto'
+      >
+        <Text
+          color='gray.6'
+        >
+          Contact us
+        </Text>
         <Flex>
-          <Flex fontSize='sm' flexDirection='column'>
+          <Flex
+            fontSize='sm'
+            flexDirection='column'
+          >
             Phone: <br />
             Email: <br />
             Address: <br />
           </Flex>
-          <Flex fontSize='sm' flexDirection='column' ml='3'>
+          <Flex
+            fontSize='sm'
+            flexDirection='column'
+            ml='3'
+          >
             {phone} <br />
             {email} <br />
             {streetAddress} <br />
@@ -54,10 +83,20 @@ export const FooterMenu = ({ pageList, ...props }) => {
           </Flex>
         </Flex>
       </Box>
-      <Box ml='auto'>
-        <Text color='gray.6'>Quick Links</Text>
-        <Box fontSize='sm'>
-          <ul className='no-bull'>
+      <Box
+        ml='auto'
+      >
+        <Text
+          color='gray.6'
+        >
+          Quick Links
+        </Text>
+        <Box
+          fontSize='sm'
+        >
+          <ul
+            className='no-bull'
+          >
             <li><Link to='/'>Home</Link></li>
             <li><Link to='/about'>About Us</Link></li>
             <li><Link to='/services'>Services</Link></li>

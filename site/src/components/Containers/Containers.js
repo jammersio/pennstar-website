@@ -16,12 +16,15 @@ export function Box(props) {
 }
 
 export function Container({ innerProps = {}, children, ...props }) {
+
   return (
     <Boxbass
       sx={{ ...containerStyles }}
       {...props}
     >
-      <Boxbass {...innerProps}>
+      <Boxbass
+        {...innerProps}
+      >
         {children}
       </Boxbass>
     </Boxbass>
@@ -30,8 +33,14 @@ export function Container({ innerProps = {}, children, ...props }) {
 
 export function Section({ outerProps = {}, ...props }) {
   return (
-    <Boxbass  {...outerProps}>
-      <Boxbass p={[4, 5]} sx={{ position: `relative` }}{...props} />
+    <Boxbass
+      {...outerProps}
+    >
+      <Boxbass
+        p={[4, 5]}
+        sx={{ position: `relative` }}
+        {...props}
+      />
     </Boxbass>
   );
 };

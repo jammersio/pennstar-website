@@ -18,8 +18,6 @@ const propTypes = {
   pageList: PropTypes.array.isRequired,
 };
 
-
-
 export function Header({ logo, title = '', pageList = [], active, ...props }) {
 
   const { passedScrollThreshold } = useScrollMenu(50)
@@ -71,7 +69,11 @@ export function Header({ logo, title = '', pageList = [], active, ...props }) {
               whiteSpace: 'nowrap'
             }}
           >
-            <Text color='white'>Get Started Today!</Text>
+            <Text
+              color='white'
+            >
+              Get Started Today!
+            </Text>
           </Button>
           <MenuIcon pageList={pageList} />
         </Flex>

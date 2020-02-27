@@ -63,7 +63,6 @@ export function SideBarMenu({ open, pageList = [], ...props }) {
       <Nav
         flexDirection='column'
         alignItems='center'
-        // sx={{ zIndex: 3001 }}
         color='white'
         pageList={pageList}
       />

@@ -26,7 +26,6 @@ function Meta({ description, lang, meta, title }) {
   const metaDescription = description || site.siteMetadata.description
   title = title ? title : site.siteMetadata.title
   // TODO: include logo
-  // const { logo } = site.siteMetadata
 
   return (
     <Helmet
@@ -59,7 +58,6 @@ function Meta({ description, lang, meta, title }) {
         {
           property: `og:image`,
           // TODO: include logo
-          // content: logo,
         },
         {
           property: `og:type`,

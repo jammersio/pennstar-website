@@ -10,7 +10,6 @@ export const sidebarMenuStyles = {
   padding: 5,
   top: 0,
   right: '-7em',
-  // transform: 'translate3d(100%, 0 , 0)',
   transition: 'transform .3s cubic-bezier(0, .52, 0, 1)',
   zIndex: 0,
   boxShadow: 'default',
@@ -36,9 +35,6 @@ export const sidebarMenuStyles = {
 
 export const burgerStyles = {
   // https://github.com/maximakymenko/react-burger-menu-article-app/
-  // position: 'fixed',
-  // top: '1.3em',
-  // right: '2em',
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'space-around',

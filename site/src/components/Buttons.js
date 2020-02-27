@@ -8,7 +8,12 @@ import { ConditionalWrapper } from '../utils'
 
 export function IconButton({ icon = `fa fa-circle-o`, to, href, children, ...props }) {
   const IconWrapper = ({ icon, children }) => (
-    <Flex alignItems='inherit' justifyContent='inherit' flexDirection='inherit' color='inherit'>
+    <Flex
+      alignItems='inherit'
+      justifyContent='inherit'
+      flexDirection='inherit'
+      color='inherit'
+    >
       <i className={icon} />
       <Text pr='1'>{children}</Text>
     </Flex>

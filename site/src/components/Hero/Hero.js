@@ -3,10 +3,7 @@ import { Section } from '../Layout'
 import { HeroContainer } from './HeroContainer'
 import heroImg from '../../assets/images/scrum-board.svg'
 
-
-
 const Hero = ({ children, layoutProps, ctaProps, ...props }) => {
-
 
   return (
     <Section

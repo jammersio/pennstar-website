@@ -14,35 +14,41 @@ const linkStyles = {
   }
 }
 
-export const Linked = ({ to, children, int = false, linkStyles, ...props }) => (
-  <>
-    {!int && (
-      <Linkbass
-        href={to}
-        {...linkStyles}
-        {...props}
-      >
-        {children}
-      </Linkbass>
-    )}
-    {int && (
-      <Link
-        activeClassName='active'
-        children={children}
-        to={to}
-        className={`linkInt-tracker`}
-      >
-        <Text
-          sx={{ ...linkStyles }}
+export const Linked = ({
+  to,
+  children,
+  int = false,
+  linkStyles,
+  ...props
+}) => (
+    <>
+      {!int && (
+        <Linkbass
+          href={to}
+          {...linkStyles}
           {...props}
         >
           {children}
+        </Linkbass>
+      )}
+      {int && (
+        <Link
+          activeClassName='active'
+          children={children}
+          to={to}
+          className={`linkInt-tracker`}
+        >
+          <Text
+            sx={{ ...linkStyles }}
+            {...props}
+          >
+            {children}
 
-        </Text>
-      </Link>
-    )}
-  </>
-)
+          </Text>
+        </Link>
+      )}
+    </>
+  )
 
 
 export const NavLink = ({ children, ...props }) => {

@@ -27,19 +27,30 @@ export function Footer(props) {
         sx={{ ...footerStyles }}
         {...props}
       >
-        <Flex fontSize='sm'>
-          <Link to={INDEX_ROUTE}>
+        <Flex
+          fontSize='sm'
+        >
+          <Link
+            to={INDEX_ROUTE}
+          >
             <Brand
               fontSize='1'
               color='white'
-              // display='inline'
               fontFamily={'sans'}
               brand
             />
           </Link>
-          <span className='space-top'>&nbsp;&nbsp;&nbsp;&copy;&nbsp;{new Date().getFullYear()}&nbsp;All&nbsp;rights&nbsp;reserved.</span>
+          <span
+            className='space-top'>
+            &nbsp;&nbsp;&nbsp;&copy;&nbsp;
+            {new Date().getFullYear()}
+            &nbsp;All&nbsp;rights&nbsp;reserved.
+          </span>
         </Flex>
-        <Box fontSize='sm' ml='auto'>
+        <Box
+          fontSize='sm'
+          ml='auto'
+        >
           {defaultFooterLinks.map(link => (
             <ReLink key={link.id} href={link.link} mr='2'>{link.title}</ReLink>
           ))}
@@ -48,4 +59,3 @@ export function Footer(props) {
     </>
   )
 }
-

@@ -9,6 +9,7 @@ export const FullHero = ({ bgImg = defaultBg, children, ...props }) => {
       as='section'
       width={['screenWidth']}
       height='heroHeight'
+      minHeight='heroHeight'
       outerProps={{
         sx: {
           background: 'linear-gradient(180deg, #606060 0%, rgba(255, 255, 255, 0) 100%)',

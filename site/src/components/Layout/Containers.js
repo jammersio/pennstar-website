@@ -82,14 +82,22 @@ export function Container({ outerProps, ...props }) {
 export function Section({ fullWidth, outerProps, ...props }) {
   return (
     <Boxbass  {...outerProps} >
-      <Boxbass p={[4, 5]}{...props} sx={{ position: `relative` }} />
+      <Boxbass
+        p={[4, 5]}
+        {...props}
+        sx={{ position: `relative` }}
+      />
     </Boxbass>
   );
 };
 
 export function FlexWrap(props) {
   return (
-    <Flex flexWrap="wrap" mx={-2} {...props} />
+    <Flex
+      flexWrap="wrap"
+      mx={-2}
+      {...props}
+    />
   )
 }
 

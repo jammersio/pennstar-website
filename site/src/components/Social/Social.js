@@ -20,9 +20,12 @@ export function Social({ channels, ...props }) {
       }
     }
   `)
-  console.log('socialLinks', socialLinks)
   return socialLinks.map((channel, i) => (
-    <ReLink key={i} href={channel.link} color='inherit'>
+    <ReLink
+      key={i}
+      href={channel.link}
+      color='inherit'
+    >
       <i className={`fab fa-${channel.title} pr-2`} />
     </ReLink>
   ))

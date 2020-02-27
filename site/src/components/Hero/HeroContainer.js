@@ -23,7 +23,11 @@ export function HeroContainer({
         }
         {children}
       </Box>
-      <Image src={imageContent} mt={[-5]} width={[`full`, `full`, 1 / 2]} />
+      <Image
+        src={imageContent}
+        mt={[-5]}
+        width={[`full`, `full`, 1 / 2]}
+      />
     </FlexWrap>
   )
 }

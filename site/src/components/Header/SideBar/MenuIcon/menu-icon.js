@@ -9,12 +9,22 @@ export function MenuIcon({ pageList = [], ...props }) {
 
   return (
     <>
-      <OutsideClick controls={{
-        toggle: open,
-        handleToggle: () => setOpen(false)
-      }}>
-        <SideBarMenuIcon open={open} setOpen={setOpen} aria-controls={menuId} />
-        <SideBarMenu open={open} setOpen={setOpen} id={menuId} pageList={pageList} />
+      <OutsideClick
+        controls={{
+          toggle: open,
+          handleToggle: () => setOpen(false)
+        }}>
+        <SideBarMenuIcon
+          open={open}
+          setOpen={setOpen}
+          aria-controls={menuId}
+        />
+        <SideBarMenu
+          open={open}
+          setOpen={setOpen}
+          id={menuId}
+          pageList={pageList}
+        />
       </OutsideClick>
     </>
   )
