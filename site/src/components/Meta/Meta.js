@@ -82,7 +82,9 @@ function Meta({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <script src="https://kit.fontawesome.com/900da20747.js" crossorigin="anonymous" />
+    </Helmet>
   )
 }
 
@@ -90,6 +92,7 @@ Meta.defaultProps = {
   lang: `en`,
   meta: [],
   description: ``,
+  // TODO: include logo
 }
 
 Meta.propTypes = {
@@ -97,6 +100,7 @@ Meta.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
+  // TODO: include logo
 }
 
 export default Meta
