@@ -46,11 +46,10 @@ export function stringUtils(str, cmd) {
 
 
 function slugify(string) {
-  // https://gist.github.com/hagemann/382adfc57adbd5af078dc93feef01fe1
+  //https://gist.github.com/hagemann/382adfc57adbd5af078dc93feef01fe1
   const a = 'àáâäæãåāăąçćčđďèéêëēėęěğǵḧîïíīįìłḿñńǹňôöòóœøōõőṕŕřßśšşșťțûüùúūǘůűųẃẍÿýžźż·/_,:;'
   const b = 'aaaaaaaaaacccddeeeeeeeegghiiiiiilmnnnnoooooooooprrsssssttuuuuuuuuuwxyyzzz------'
   const p = new RegExp(a.split('').join('|'), 'g')
-
   return string.toString().toLowerCase()
     .replace(/\s+/g, '-') // Replace spaces with -
     .replace(p, c => b.charAt(a.indexOf(c))) // Replace special characters

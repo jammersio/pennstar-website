@@ -1,11 +1,16 @@
 # PENNSTAR WEB SITE
-
-Jammers Internal:
-To preview visit repo settings and change deployed branch to "master"
-[](https://github.com/jammersio/pennstar-website/settings)
-
 ## 👷‍♂️🚧🏗
 
+Jammers Internal:
+To preview visit repo settings and change deployed branch to "gh-pages"
+[](https://github.com/jammersio/pennstar-website/settings)
+
+To deploy from master run:
+```shell
+yarn workspace site deploy
+```
+
+---
 
 ```shell
 yarn
@@ -20,5 +25,3 @@ Alternatively you could edit any of the themes itself using:
 ```shell
   yarn workspace gatsby-theme-[theme-name] develop
 ```
-
-🚨 **NOTE**: Any themes consuming options, can't be run as above, -- this is because they require options to be passed in from the [consuming-site]'s gatsby-config.
