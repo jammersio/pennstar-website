@@ -23,7 +23,7 @@ export default function (props) {
           <Image display={['none', null, null, 'block']} src={hero.image} width='40%' mt='200px' sx={{ borderRadius: 'lg', maxHeight: '300px' }} />
           <Box mt='6' color='secondary' textAlign={['center', null, null, 'right']} position='relative' width='100%'>
             <Heading fontSize='6' color='primary' mr='6'>{hero.heading}</Heading>
-            <Text mt='2' display='inline'>{main.outro}&nbsp;</Text><Text color='highlight' display='inline' mr='6'>Lehigh Valley</Text>
+            <Text mt='2' display='inline'>{main.outro}&nbsp;</Text><Text color='highlight' display='inline' mr='6'>Lehigh Valley Now</Text>
             <Cards cards={hero.featuredCards} />
           </Box>
         </Flex>
