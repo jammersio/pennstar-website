@@ -2,10 +2,11 @@
 ## 👷‍♂️🚧🏗
 
 Jammers Internal:
-To preview visit repo settings and change deployed branch to "gh-pages"
-[](https://github.com/jammersio/pennstar-website/settings)
 
-To deploy from master run:
+🛑 To preview visit repo [settings](https://github.com/jammersio/pennstar-website/settings) and change deployed branch to "gh-pages"
+
+
+🚥 To deploy from master run:
 ```shell
 yarn workspace site deploy
 ```
