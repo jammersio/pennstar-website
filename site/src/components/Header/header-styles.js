@@ -40,7 +40,7 @@ export const flexContainerStyles = {
   display: 'flex',
   justifyContent: ['space-around', null, null, 'space-between'],
   alignItems: '72px',
-  px: [null, null, null, 6],
+  px: [4, 0, 0, 6],
   py: 1,
   boxShadow: 'boxShadow',
   maxHeight: 'headerHeight',
@@ -55,17 +55,27 @@ export const headerMenuStyles = {
 }
 
 export const buttonStyles = {
+  minWidth: '170px',
+  backgroundColor: 'primary',
+  color: 'white',
+  px: 3,
+  py: 2,
+  borderRadius: 'full',
+  whiteSpace: 'nowrap',
   appearance: 'none',
   fontSize: '0.75em',
   display: ['none', 'flex'],
   alignItems: 'center',
   alignSelf: 'center',
-  variant: 'simple',
-  color: 'white',
-  whiteSpace: 'nowrap',
+  '& a': {
+    color: 'white',
+    '&:hover': {
+      color: 'white',
+      textDecoration: 'none'
+    }
+  },
   '&:hover': {
-    color: 'base',
-    textDecoration: 'none'
+    backgroundColor: 'primaryHover'
   }
 }
 
