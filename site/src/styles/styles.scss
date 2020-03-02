@@ -12,9 +12,14 @@
   padding-left: 1em;
 }
 .space-top {
-  padding-top: 0.3em;
+  padding-top: 1.2em;
 }
 
 .no-wrap {
   white-space: nowrap;
+}
+
+.text-stroke {
+  -webkit-text-stroke-width: 0.35px;
+  -webkit-text-stroke-color: rgba(255,255,255, 0.35);
 }

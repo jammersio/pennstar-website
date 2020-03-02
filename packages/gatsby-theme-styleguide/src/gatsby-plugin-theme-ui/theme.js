@@ -15,7 +15,7 @@ export const theme = {
   },
   colors: {
     ...tailwind.colors,
-    active: `blue.3`
+    // active: `blue.6`
   },
   styles: {
     //localized styles to site.

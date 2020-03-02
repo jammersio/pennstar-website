@@ -1,82 +1,51 @@
 import React from 'react';
 import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
-import { Box, Text, Flex, Button, Link as ReLink } from 'rebass'
+import { Box, Flex, Link as ReLink } from 'rebass'
 import { HeaderMenu } from './HeaderMenu'
 import { Brand } from '../Brand'
 import { MenuIcon } from './SideBar'
 
 import { useScrollMenu } from '../../hooks/useScrollMenu'
-import { INDEX_ROUTE } from '../../routes'
-import { START_ROUTE } from '../../routes'
 
-import { headerStyles } from './header-styles'
+import { headerStyles, flexContainerStyles, headerMenuStyles } from './header-styles'
 
 const propTypes = {
   logo: PropTypes.string,
   title: PropTypes.string,
   pageList: PropTypes.array.isRequired,
+  active: PropTypes.string,
 };
 
-export function Header({ logo, title = '', pageList = [], active, ...props }) {
+export function Header({ logo, title = '', pageList = [], active = '', ...props }) {
 
   const { passedScrollThreshold } = useScrollMenu(50)
 
   return (
     <>
-      <Box as='section' sx={{ ...headerStyles }}>
-        <Flex
-          width='100%'
-          alignItems='center'
-          justifyContent={['space-evenly']}
-          px={[4, null, 6]}
+      <Box sx={{ ...headerStyles }}>
+        <Box
           sx={{
-            pr: 4,
-            boxShadow: 'boxShadow',
+            ...flexContainerStyles,
             backgroundColor: passedScrollThreshold ? 'white' : 'transparent',
           }}
         >
-          <ReLink
-            as={Link}
-            to={INDEX_ROUTE}
-            mr='auto'
-            fontSize={[2, null, 3, 4]}
-            fontFamily={'brand'}
-            fontWeight={'bold'}
-          >
+          <Box width='50%'>
             {<Brand brand brandMark /> || title}
-          </ReLink>
-          <HeaderMenu
-            mx='auto'
-            pageList={pageList}
-            active={active}
-            display={['none', 'none', 'none', 'flex']}
-          />
-          <Button
-            as={Link}
-            to={START_ROUTE}
-            width='180px'
-            fontSize={['0.75em']}
-            display={['none', 'inline']}
-            justifySelf='flex-start'
-            variant='simple'
-            color='white'
-            className='no-text-wrap'
-            mr='1'
+          </Box>
+          <Flex
+            className='navBar'
             sx={{
-              color: 'white',
-              borderRadius: 'full',
-              whiteSpace: 'nowrap'
+              ...headerMenuStyles
             }}
+            {...props}
           >
-            <Text
-              color='white'
-            >
-              Get Started Today!
-            </Text>
-          </Button>
+            <HeaderMenu
+              pageList={pageList}
+              active={active}
+            />
+          </Flex>
           <MenuIcon pageList={pageList} />
-        </Flex>
+        </Box>
       </Box>
     </>
   );

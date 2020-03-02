@@ -1,21 +1,24 @@
 import React from 'react'
-import { FlexWrap } from '../../Containers'
+import { Link } from 'gatsby'
+import { Button } from 'rebass'
 import { Nav } from '../Nav'
-
-export function HeaderMenu({ pageList = [], ...props }) {
+import { CONTACT_ROUTE } from '../../../routes'
+import { buttonStyles } from '../header-styles'
+export function HeaderMenu({ pageList = [], active = '', ...props }) {
   return (
-    <FlexWrap
-      className='navbar'
-      {...props}
-    >
+    <>
       <Nav
-        fontSize={[0, 1]}
-        display={['none', 'none', 'flex']}
-        justifyContent='flex-end'
+        active={active}
         pageList={pageList}
-        ml='auto'
       />
-    </FlexWrap>
+      <Button
+        as={Link}
+        to={CONTACT_ROUTE}
+        sx={{ ...buttonStyles }}>
+        Get Started Today!
+      </Button>
+
+    </>
   )
 }
 

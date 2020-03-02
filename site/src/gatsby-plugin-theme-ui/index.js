@@ -6,8 +6,9 @@ export default merge({}, baseTheme, {
   colors: {
     ...baseTheme.colors,
     primary: '#2b6cb0',
+    highlight: '#2b6cb0',
     secondary: '#718096',
-    base: '#fbf9fa'
+    base: '#fbf9fa',
   },
   sizes: {
     ...baseTheme.sizes,
@@ -50,22 +51,13 @@ export default merge({}, baseTheme, {
       fontWeight: 'bold',
       margin: '0 auto',
       width: 'screenWidth',
-      padding: 3,
+      padding: [0, 0, 0, 3],
       flexShrink: 0,
       display: 'flex',
       justifyContent: 'space-evenly',
       alignItems: 'center',
       fontFamily: 'body',
       boxShadow: 'md',
-      a: {
-        "&:hover": {
-          color: 'primaryHover',
-          textDecoration: 'none',
-        },
-        "&.active": {
-          color: 'blue.3'
-        }
-      }
     },
     Main: {
       margin: '0 auto',
@@ -85,9 +77,6 @@ export default merge({}, baseTheme, {
       "&.hover": {
         textDecoration: 'none'
       },
-      "&.active": {
-        borderBottom: '1px solid red'
-      }
     },
   },
   variants: {
@@ -107,7 +96,4 @@ export default merge({}, baseTheme, {
       right: '30%',
     },
   }
-
 })
-
-// use this file to overwrite any theme styles

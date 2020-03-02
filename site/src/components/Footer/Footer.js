@@ -20,7 +20,7 @@ export function Footer(props) {
         width='full'
         color='white'
         alignItems='center'
-        fontSize='1'
+        fontSize='2'
         height='headerHeight'
         flexDirection={['column', 'row']}
         justifyContent={['flex-start']}
@@ -34,14 +34,15 @@ export function Footer(props) {
             to={INDEX_ROUTE}
           >
             <Brand
-              fontSize='1'
               color='white'
               fontFamily={'sans'}
               brand
             />
           </Link>
           <span
-            className='space-top'>
+            className='space-top'
+
+          >
             &nbsp;&nbsp;&nbsp;&copy;&nbsp;
             {new Date().getFullYear()}
             &nbsp;All&nbsp;rights&nbsp;reserved.

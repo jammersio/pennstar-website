@@ -45,7 +45,7 @@ export default function (props) {
           >
             <Heading
               color='primary'
-              fontSize='5'
+              fontSize='6'
               sx={{ ...textShadow }}
             >
               {hero.heading}

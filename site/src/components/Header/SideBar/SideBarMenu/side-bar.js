@@ -14,6 +14,7 @@ export function SideBarMenuIcon({ open, setOpen, ...props }) {
       aria-label="Toggle menu"
       aria-expanded={isExpanded}
       display={['flex', 'flex', 'flex', 'none']}
+      mt='2'
       sx={{ ...burgerStyles }}
       {...props}
     >

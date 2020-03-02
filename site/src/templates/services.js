@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-
 import { Flex, Box, Text, Heading, Image } from 'rebass'
 import { Cards } from './service-featuredCards'
 import { ServiceCards } from './service-cards'
@@ -28,13 +27,21 @@ export default function (props) {
           justifyContent='flex-end'
           position='relative'
         >
-          <Image
-            display={['none', null, null, 'block']}
-            src={hero.image}
-            width='40%'
-            mt='200px'
-            sx={{ borderRadius: 'lg', maxHeight: '300px' }}
-          />
+          <Box
+            position='absolute'
+            height='0'
+            pl="5em"
+            mt='-50%'
+            pt='56.25%'
+
+          >
+            <Image
+              display={['none', null, null, 'block']}
+              src={hero.image}
+              width='70%'
+              sx={{ borderRadius: 'lg' }}
+            />
+          </Box>
           <Box
             mt='6'
             color='secondary'

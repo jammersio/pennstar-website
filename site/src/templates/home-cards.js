@@ -13,7 +13,7 @@ export const Cards = ({ cards: homeCards, ...props }) => {
           key={shortid()}
           as='article'
           width={['full', 1 / 3]}
-          maxWidth='250px'
+          maxWidth='300px'
           mx='auto'
         >
           <Box
@@ -21,6 +21,8 @@ export const Cards = ({ cards: homeCards, ...props }) => {
             fontSize='64px'
             py='3'
             sx={{
+              borderTopWidth: '4px',
+              borderTopWidth: '4px',
               borderTopLeftRadius: 'lg',
               borderTopRightRadius: 'lg'
             }}
@@ -32,6 +34,7 @@ export const Cards = ({ cards: homeCards, ...props }) => {
             fontSize='0.55em'
             bg='gray.1'
             sx={{
+              borderBottomWidth: '4px',
               borderBottomLeftRadius: 'lg',
               borderBottomRightRadius: 'lg'
             }}>

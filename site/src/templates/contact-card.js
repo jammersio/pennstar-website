@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Flex } from 'rebass'
 import { Section } from '../components/Containers'
-import { Card as DefCard } from '../components/Layout/Containers'
+import { Card as DefCard } from '../components/Layout'
 
 export const Card = ({ card, ...props }) => {
   return (

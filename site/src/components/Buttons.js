@@ -1,10 +1,8 @@
-import React from 'react'
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import { Link } from 'gatsby'
 import { Flex, Button, Text, Link as ReLink, } from 'rebass'
 import { ConditionalWrapper } from '../utils'
-
 
 export function IconButton({ icon = `fa fa-circle-o`, to, href, children, ...props }) {
   const IconWrapper = ({ icon, children }) => (
@@ -52,18 +50,4 @@ export function ButtonLink({ to, href, children, ...props }) {
   )
 }
 
-export function NavLink({ to = '#0,', children, ...props }) {
-  return (
-    <Link
-      as={ReLink}
-      to={to}
-      color='secondary'
-      activeStyle={{ color: 'highlight' }}
-      className='nav-link'
-      {...props}
-    >
-      {children}
-    </Link>
-  )
-}
 

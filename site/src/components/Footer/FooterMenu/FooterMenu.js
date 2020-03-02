@@ -3,6 +3,15 @@ import { Link, useStaticQuery, graphql } from 'gatsby'
 import { Flex, Box, Text } from 'rebass'
 import { Brand } from '../../Brand'
 
+
+const highlightStyles = {
+  textTransform: 'uppercase',
+  borderBottomWidth: '2px',
+  borderBottomColor: 'blue.6',
+  borderBottomStyle: 'solid',
+  mb: 2
+}
+
 export const FooterMenu = ({ pageList, ...props }) => {
   const data = useStaticQuery(graphql`
     query  {
@@ -34,12 +43,14 @@ export const FooterMenu = ({ pageList, ...props }) => {
       contactInfo: { cityStateZip, email, phone, streetAddress, aptSuite }
     },
     site: {
-      siteMetadata: { socialLinks: { fb, twitter, instagram } }
+      siteMetadata: { socialLinks: {
+        // fb, twitter, instagram
+      } }
     } } = data
 
   return (
     <Flex
-      bg='lightgray'
+      bg='gray.2'
       width='full'
       p='4'
     >
@@ -48,7 +59,8 @@ export const FooterMenu = ({ pageList, ...props }) => {
       >
         <Brand brand brandMark />
         <Text
-          fontSize='sm'
+          fontSize='md'
+          mt='3'
         >
           {footerStatement}
         </Text>
@@ -58,25 +70,29 @@ export const FooterMenu = ({ pageList, ...props }) => {
       >
         <Text
           color='gray.6'
+          sx={{
+            ...highlightStyles
+          }}
         >
           Contact us
         </Text>
         <Flex>
           <Flex
-            fontSize='sm'
+            fontSize='md'
             flexDirection='column'
+            color='gray.5'
           >
             Phone: <br />
             Email: <br />
             Address: <br />
           </Flex>
           <Flex
-            fontSize='sm'
+            fontSize='md'
             flexDirection='column'
             ml='3'
           >
-            {phone} <br />
-            {email} <br />
+            <a href={phone}>{phone}</a>
+            <a href={email}>{email}</a>
             {streetAddress} <br />
             {aptSuite} <br />
             {cityStateZip} <br />
@@ -88,11 +104,16 @@ export const FooterMenu = ({ pageList, ...props }) => {
       >
         <Text
           color='gray.6'
+          mr='5'
+          sx={{
+            ...highlightStyles
+          }}
         >
           Quick Links
         </Text>
         <Box
-          fontSize='sm'
+          fontSize='md'
+          pr='2'
         >
           <ul
             className='no-bull'
