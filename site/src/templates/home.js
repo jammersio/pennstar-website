@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import { Flex, Box, Text, Heading } from 'rebass'
 
 import { Section, Container } from '../components/Containers'
@@ -54,23 +54,36 @@ export default function (props) {
             >
               {hero.tagline}
             </Text>
-            <Text
-              fontSize='sm'
-              mt='3'
-              mb='-3'
-              sx={{ ...textShadow }}
-            >
-              {hero.links[0].label}
-              <span>
-                <i className="space-left fas fa-arrow-circle-right" />
-              </span>
-            </Text>
             <hr
               style={{
                 borderColor: 'white',
                 boxShadow: '2xl'
               }}
             />
+            <Text
+              fontSize='md'
+              mt='3'
+              mb='-3'
+              sx={{
+                '& a': {
+                  color: 'white',
+                  ...textShadow,
+                  '&:hover': {
+                    color: 'primaryHover',
+                    textDecoration: 'none'
+                  }
+                }
+              }}
+            >
+              <Link to={hero.links[0].link}>
+                {hero.links[0].label}
+                <span>
+                  <i className="space-left fas fa-arrow-circle-right" />
+                </span>
+              </Link>
+
+            </Text>
+
           </Box>
         </Flex>
       </FullHero>
@@ -82,16 +95,18 @@ export default function (props) {
           maxWidth='3xl'
           mx='auto'
         >
-          <Heading>{main.heading}</Heading>
+          <Heading color='primary'>
+            {main.heading}
+          </Heading>
           <Text mt='3'>{main.body}</Text>
         </Container>
       </Section>
       <Section bg='base'>
         <Cards cards={cards} />
         <Container
-          px='4'
+          px={[1, null, null, '4']}
           my='4'
-          maxWidth='4xl'
+          maxWidth={['full', null, null, '4xl']}
           mx='auto'
         >
           <Text>

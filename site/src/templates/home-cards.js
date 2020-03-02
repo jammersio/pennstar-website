@@ -12,8 +12,8 @@ export const Cards = ({ cards: homeCards, ...props }) => {
         <Card
           key={shortid()}
           as='article'
-          width={['full', 1 / 3]}
-          maxWidth='300px'
+          width={['full', null, null, 1 / 3]}
+          maxWidth={['full', null, null, '300px']}
           mx='auto'
         >
           <Box
