@@ -13,7 +13,6 @@ export const brandStyles = {
   },
   '& h1': {
     fontSize: [3, null, null, null, 5],
-    // color: 'gray.4',
     whiteSpace: 'nowrap',
     textShadow: 'default',
     ...textShadow
