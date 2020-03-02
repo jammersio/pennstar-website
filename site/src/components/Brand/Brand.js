@@ -1,8 +1,17 @@
 import React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
-import { Flex, Image, Heading } from 'rebass'
+import { Flex, Box, Image, Heading } from 'rebass'
 import { brandStyles } from './brand-styles'
 import { INDEX_ROUTE } from '../../routes'
+
+
+const linkStyles = {
+  color: 'gray.4',
+  '&:hover': {
+    color: 'primary',
+    textDecoration: 'none'
+  }
+}
 
 export function Brand({ brand = false, brandMark = false, children, ...props }) {
 
@@ -24,7 +33,7 @@ export function Brand({ brand = false, brandMark = false, children, ...props }) 
 `)
 
   return (
-    <Link to={INDEX_ROUTE}>
+    <Box as={Link} to={INDEX_ROUTE} sx={{ ...linkStyles }}>
       <Flex sx={{ ...brandStyles }} {...props}>
         {brandMark &&
           <Image src={publicURL} />}
@@ -33,6 +42,6 @@ export function Brand({ brand = false, brandMark = false, children, ...props }) 
             {title}
           </Heading>}
       </Flex>
-    </Link >
+    </Box>
   )
 }

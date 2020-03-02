@@ -39,14 +39,16 @@ export function Footer(props) {
               brand
             />
           </Link>
-          <span
-            className='space-top'
-
+          <Box
+            as='span'
+            sx={{
+              pt: 1
+            }}
           >
             &nbsp;&nbsp;&nbsp;&copy;&nbsp;
             {new Date().getFullYear()}
             &nbsp;All&nbsp;rights&nbsp;reserved.
-          </span>
+          </Box>
         </Flex>
         <Box
           fontSize='sm'
