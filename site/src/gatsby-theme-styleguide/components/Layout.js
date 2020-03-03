@@ -27,6 +27,8 @@ export default function Layout({ logo, title, pageList, currentPath, children, .
         styles={css({
           "*": {
             boxSizing: `inherit`,
+            margin: 0,
+            padding: 0,
             "&:before": {
               boxSizing: `inherit`,
             },
@@ -38,12 +40,11 @@ export default function Layout({ logo, title, pageList, currentPath, children, .
             fontSize: `18px`,
           },
           body: {
-            margin: 0,
-            padding: 0,
             boxSizing: `border-box`,
             textRendering: `optimizeLegibility`,
             WebkitFontSmoothing: `antialiased`,
             MozOsxFontSmoothing: `grayscale`,
+
           },
           "::selection": {
             backgroundColor: `blue.2`,
@@ -53,7 +54,7 @@ export default function Layout({ logo, title, pageList, currentPath, children, .
       />
       <Meta title={title} />
       <Header logo={logo || ""} pageList={pageList || []} />
-      <Main as='article' textAlign='center' className='layout'>
+      <Main as='main' textAlign='center' className='layout'>
         {children}
       </Main>
       <Footer />

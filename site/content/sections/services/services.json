@@ -2,7 +2,7 @@
   "hero": {
     "image": "https://tva1.sinaimg.cn/large/0082zybpgy1gbr7he7n1vj311i0p1jsm.jpg",
     "heading": "Our Core Services",
-    "taglineA": "Find out why we're #1 in Lehigh Valley",
+    "taglineA": "Find out why we're #1 in",
     "taglineB": "Lehigh Valley",
     "featuredCards": [
       {"icon": "fas fa-square", "heading": "SERVICE NAME", "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ut iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ut iure.", "linkLabel":"Learn More", "link": "/", "linkIcon": "fas fa-arrow-circle-right"},

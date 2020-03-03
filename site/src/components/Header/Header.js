@@ -22,7 +22,7 @@ export function Header({ logo, title = '', pageList = [], active = '', ...props 
 
   return (
     <>
-      <Box sx={{ ...headerStyles }}>
+      <Box as='header' sx={{ ...headerStyles }}>
         <Box
           sx={{
             ...flexContainerStyles,

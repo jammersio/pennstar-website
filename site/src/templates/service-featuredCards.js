@@ -10,21 +10,24 @@ import { shortid } from '../utils'
 export const Cards = ({ cards, ...props }) => {
   return (
     <Box
-      display={['block', null, null, 'flex']}
-      mx='auto'
+      display={['block', null, 'flex']}
+      flexWrap={'wrap'}
+      ml='auto'
+      width={['full']}
       {...props}
     >
       {cards.map(card => (
         <Card
           key={shortid()}
-          width={['70%', null, null, 1 / 3]}
+          width={['full', null, 1 / 3]}
           mx={'auto'}
         >
           <Box
             bg='gray.1'
             fontSize='64px'
             textAlign='left'
-            pl='2'
+            mt='5'
+            p={[4, 2, null, 3]}
             sx={{
               borderTopLeftRadius: 'lg',
               borderTopRightRadius: 'lg'

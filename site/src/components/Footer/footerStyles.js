@@ -10,8 +10,7 @@ export const footerStyles = {
   '& h3': {
     display: ['none', null, null, 'block'],
     color: 'white',
-    fontSize: [3],
-    // mt: '-0.3px',
+    fontSize: [2],
     '&:hover': {
       color: 'primaryHover',
     },

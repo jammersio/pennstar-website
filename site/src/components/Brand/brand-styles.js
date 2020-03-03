@@ -5,7 +5,7 @@ const textShadow = {
 const headingStyles = {
   fontFamily: 'brand',
   fontWeight: 'bold',
-  color: 'primary',
+  color: 'inherit',
   fontSize: [3, null, null, null, 5],
   whiteSpace: 'nowrap',
   textShadow: 'default',

@@ -6,25 +6,25 @@ const defaultBg = 'https://cdn.pixabay.com/photo/2015/10/20/18/57/furniture-9982
 
 export const FullHero = ({
   bgImg = defaultBg,
-  backgroundSize = '100%',
+  backgroundSize = ['contain', null, null, 'cover'],
   backgroundPosition = 'top left',
   rounded = 'false',
+  outerProps = {},
   children,
   ...props
 }) => {
   return (
     <Section
       as='section'
-      width={['screenWidth']}
-      minHeight='heroHeight'
-      p='0'
-      outerProps={{
+      className='hero-holder'
+      minHeight='heroHeight' outerProps={{
         sx: {
           // background: 'linear-gradient(180deg, #606060 0%, rgba(255, 255, 255, 0) 100%)',
           backgroundImage: `url(${bgImg})`,
           backgroundSize: backgroundSize,
           backgroundPosition: backgroundPosition,
           backgroundRepeat: 'no-repeat',
+          ...outerProps
         }
       }}
       {...props}

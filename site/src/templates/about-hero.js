@@ -9,7 +9,7 @@ const textShadow = {
 
 const heroStyles = {
   justifyContent: 'flex-end',
-  mt: 5,
+  mt: 4,
   mr: 5,
   px: 2,
   py: 6,

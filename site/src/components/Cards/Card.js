@@ -13,7 +13,7 @@ export function Card({ innerProps, children, ...props }) {
       {...props}
     >
       <Box sx={{
-        boxShadow: `default`,
+        boxShadow: `neu`,
         borderRadius: `lg`,
       }}
         {...innerProps}

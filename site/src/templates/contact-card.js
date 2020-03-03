@@ -6,7 +6,10 @@ import { Card as DefCard } from '../components/Cards'
 export const Card = ({ card, ...props }) => {
   return (
     <Section
-      sx={{ position: 'absolute', top: '5%', right: '10%' }}
+      sx={{
+        position: ['absolute'],
+        top: ['5%', '15%'], right: ['', '10%']
+      }}
     >
       <DefCard
         minWidth='sm'

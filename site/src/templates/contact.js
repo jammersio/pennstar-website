@@ -1,4 +1,6 @@
 import React from 'react'
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
 import { graphql } from 'gatsby'
 import { Box, Flex, Text, Heading } from 'rebass'
 
@@ -6,6 +8,7 @@ import { Section } from '../components/Containers'
 import { Card } from './contact-card'
 import { ContactForm } from './contact-form'
 import Layout from "../gatsby-theme-styleguide/components/Layout"
+import { FullHero } from '../components/Hero/FullHero';
 
 export default function (props) {
 
@@ -19,21 +22,25 @@ export default function (props) {
       pageList={props.pageContext.pageList}
       {...siteMetadata}
     >
-      <Card
-        card={card}
-      />
+
       <Section
-        width='100vw'
-        height='45vh'
+        as='section'
+        width='full'
+        className='contact-section'
         bg='gray.2'
-        sx={{ margin: 0, padding: 0 }}
+        p='0'
+      // sx={{ margin: 0, padding: 0 }}
       >
-        <Box width='100vw' ml={-5} >
+        <Card
+          card={card}
+        />
+        <Box >
           <iframe
-            title="map"
+            title='map'
             src={map}
-            frameBorder="0"
-            style={{ border: 'none', width: '100%', height: '40vh' }}
+            frameBorder='0'
+            // p='0'
+            sx={{ border: 'none', width: 'full', height: '45vh', mt: 5, zIndex: -1 }}
             allowFullScreen={false}
           />
         </Box>
@@ -41,6 +48,7 @@ export default function (props) {
       <Section
         bg='base'
         width='full'
+        className='contact-form'
       >
         <Flex
           mt={'2', null, null, '4'}
