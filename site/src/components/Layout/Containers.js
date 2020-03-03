@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box as Boxbass, Flex } from 'rebass'
+import { Box as Boxbass, Flex, Heading, Text, Image } from 'rebass'
 
 export function Box(props) {
   return (
@@ -36,27 +36,48 @@ export function Card({ innerProps, children, ...props }) {
     </Boxbass>
   )
 }
-export function ShapedCard({ innerProps, children, ...props }) {
+export function ShapedCard({ innerProps, image = 'https://i.pravatar.cc/90', heading, details, children, ...props }) {
+
+
+  const cardStyles = {
+    width: ['full', null, null, 1 / 3],
+    textAlign: 'center',
+    alignItems: 'stretch',
+    my: [0],
+    p: [1, 3]
+  }
+
+  const innerStyles = {
+    display: 'flex',
+    width: ['full', null, null, '1/3'],
+    mx: 'auto',
+    boxShadow: `default`,
+    borderTopLeftRadius: `full`,
+    borderBottomLeftRadius: `full`,
+    borderBottomRightRadius: `full`,
+  }
+
   return (
     <Boxbass
-      width={[`full`, 1 / 2]}
       as='article'
-      textAlign={`center`}
-      alignItems='stretch'
-      my={[0]}
-
-      p={[1, 3]}
+      sx={{ ...cardStyles }}
       {...props}
     >
-      <Boxbass sx={{
-        boxShadow: `default`,
-        borderTopLeftRadius: `full`,
-        borderBottomLeftRadius: `full`,
-        borderBottomRightRadius: `full`,
-      }}
-        {...innerProps}
-      >
+      <Boxbass sx={{ ...innerProps, ...innerStyles }}>
         {children}
+        <Boxbass sx={{ borderRadius: 'full' }}>
+          <Image src={image} />
+        </Boxbass>
+        {heading && details && (
+          <Boxbass
+            ml='1em'
+            my='auto'
+            textAlign='left'
+          >
+            <Heading>{heading}</Heading>
+            <Text>{details}</Text>
+          </Boxbass>
+        )}
       </Boxbass>
     </Boxbass>
   )

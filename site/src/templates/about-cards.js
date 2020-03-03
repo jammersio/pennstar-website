@@ -1,46 +1,28 @@
 import React from 'react'
 import { Box, Text, Heading, Image } from 'rebass'
-import { ShapedCard } from '../components/Layout/Containers'
+import { ShapedCard } from '../components/Cards'
 import { shortid } from '../utils'
 
 
 export const Cards = ({ cards, ...props }) => {
   return (
     <Box
-      display={['block', 'block', 'block', 'flex']}
-      textAlign='center'
+      display={['block', null, null, 'flex']}
+      textAlign='left'
+      width={['full', null, null, '80%']}
+      px={['2', null, null, '4']}
       my='5'
+      mx='auto'
     >
       {cards.map(card => (
         <ShapedCard
           key={shortid()}
-          mx='auto'
-          innerProps={{
-            display: 'flex',
-            maxWidth: ['sm'],
-            mx: 'auto'
-          }}
-        >
-          <Box>
-            <Image
-              src={card.image}
-              sx={{
-                borderRadius: 'full'
-              }} />
-          </Box>
-          <Box
-            ml='2em'
-            my='auto'
-            textAlign='left'
-          >
-            <Heading>
-              {card.heading}
-            </Heading>
-            <Text>
-              {card.details}
-            </Text>
-          </Box>
-        </ShapedCard>
+          image={card.image}
+          name={card.heading}
+          title={card.details}
+          my={['4', null, null, '0px']}
+          maxWidth='md'
+        />
       ))}
     </Box>
   )
