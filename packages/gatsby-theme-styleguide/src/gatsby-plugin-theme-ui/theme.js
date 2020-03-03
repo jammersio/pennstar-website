@@ -10,15 +10,8 @@ export const theme = {
     default: `90vw`,
     max: `100vw`,
   },
-  borderStyles: {
-    // solid: `solid`,
-  },
   colors: {
     ...tailwind.colors,
-    // active: `blue.6`
-  },
-  styles: {
-    //localized styles to site.
   },
 };
 

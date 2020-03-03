@@ -49,14 +49,12 @@ export default merge({}, baseTheme, {
       maxWidth: 'screenWidth',
       width: 'screeWidth',
       minHeight: 'screenHeight',
-      border: 'default',
     },
     Main: {
       mx: 'auto',
       width: 'full',
       minHeight: '6em',
       flex: '1 1 auto',
-      border: 'default'
     },
     a: {
       borderBottom: 'none',

@@ -3,7 +3,9 @@ import PropTypes from 'prop-types'
 import { Box, Flex } from 'rebass'
 import { HeaderMenu } from './HeaderMenu'
 import { Brand } from '../Brand'
-import { MenuIcon } from './SideBar'
+import { Nav } from './Nav'
+// import { MenuIcon } from './SideBar'
+import { Sidebar } from './Sidebar2'
 
 import { useScrollMenu } from '../../hooks/useScrollMenu'
 
@@ -44,7 +46,22 @@ export function Header({ logo, title = '', pageList = [], active = '', ...props 
               active={active}
             />
           </Flex>
-          <MenuIcon pageList={pageList} />
+          {/* <MenuIcon pageList={pageList} /> */}
+        </Box>
+        <Box sx={{
+          display: ['inline-block', null, null, 'none'],
+          width: '50%'
+        }}>
+          <Sidebar>
+            <Nav
+              className='side-nav'
+              display='flex'
+              flexDirection='column'
+              alignItems='flex-start'
+              color='white'
+              pageList={pageList}
+            />
+          </Sidebar>
         </Box>
       </Box>
     </>
