@@ -4,12 +4,6 @@ import { Section } from '../Containers'
 const defaultBg = `url("https://cdn.pixabay.com/photo/2015/10/20/18/57/furniture-998265_960_720.jpg")`
 
 
-const fullHeroStyles = {
-  width: ['screenWidth'],
-  height: 'heroHeight',
-  minHeight: 'heroHeight',
-}
-
 export const FullHero = ({ bgImg = defaultBg, children, ...props }) => {
   return (
     <Section

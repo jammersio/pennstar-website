@@ -1,7 +1,7 @@
 import React from 'react'
-import { Flex, Box, Text } from 'rebass'
+import { Box } from 'rebass'
 
-export const FooterTopLayout = ({ column1, column2, column3, ...props }) => {
+export const FooterMenuLayout = ({ column1, column2, column3, ...props }) => {
   return (
     <Box
       display={['block', null, null, 'flex']}

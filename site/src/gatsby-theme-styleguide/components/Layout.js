@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 /** @jsx jsx */
 import { css, jsx, Main } from 'theme-ui'
 import { Global } from "@emotion/core"
@@ -51,7 +51,7 @@ export default function Layout({ logo, title, pageList, currentPath, children, .
           },
         })}
       />
-      <Meta />
+      <Meta title={title} />
       <Header logo={logo || ""} pageList={pageList || []} />
       <Main as='article' textAlign='center' className='layout'>
         {children}

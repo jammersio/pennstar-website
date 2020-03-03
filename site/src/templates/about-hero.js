@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { FullHero } from '../components/Hero/FullHero'
-import { Flex, Box, Text, Heading, Image } from 'rebass'
+import { Flex, Box, Text, Heading } from 'rebass'
 
 const textShadow = {
   textShadow: '1px 1px 1px rgba(255, 255, 255, 0.55)'

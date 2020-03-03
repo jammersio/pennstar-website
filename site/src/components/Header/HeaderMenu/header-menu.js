@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { Box, Button } from 'rebass'
+import { Box } from 'rebass'
 import { Nav } from '../Nav'
 import { CONTACT_ROUTE } from '../../../routes'
 import { buttonStyles } from '../header-styles'

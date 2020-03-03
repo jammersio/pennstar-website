@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { Box, Flex, Text, Heading, Button } from 'rebass'
+import { Box, Flex, Text, Heading } from 'rebass'
 
 import { Section } from '../components/Containers'
 import { Card } from './contact-card'

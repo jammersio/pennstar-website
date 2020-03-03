@@ -1,16 +1,27 @@
 export const footerStyles = {
-  bg: 'gray.8',
+  bg: 'primary',
   width: 'full',
-  textAlign: 'center',
   color: 'white',
-  a: {
-    color: 'inherit',
-    "&:hover": {
-      color: 'secondaryHover',
-      textDecoration: 'none',
+  px: [2, 4],
+  fontSize: [2],
+  justifyContent: 'center',
+  alignItems: 'center',
+  height: 'headerHeight',
+  '& h3': {
+    display: ['none', null, null, 'block'],
+    color: 'white',
+    fontSize: [3],
+    // mt: '-0.3px',
+    '&:hover': {
+      color: 'primaryHover',
     },
-    "&.active": {
-      color: 'active'
-    }
+  },
+  '& span': {
+    pt: 1,
+    fontSize: 'sm',
+  },
+  '& a': {
+    // styles privacy links
+    color: 'inherit',
   },
 }

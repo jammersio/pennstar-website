@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types'
-import { Box, Flex, Link as ReLink } from 'rebass'
+import { Box, Flex } from 'rebass'
 import { HeaderMenu } from './HeaderMenu'
 import { Brand } from '../Brand'
 import { MenuIcon } from './SideBar'

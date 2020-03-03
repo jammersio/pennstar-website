@@ -4,16 +4,14 @@ import { Flex, Box, Image, Heading } from 'rebass'
 import { brandStyles } from './brand-styles'
 import { INDEX_ROUTE } from '../../routes'
 
-
 const linkStyles = {
   color: 'gray.4',
   '&:hover': {
-    color: 'primary',
-    textDecoration: 'none'
-  }
+    textDecoration: 'none',
+  },
 }
 
-export function Brand({ brand = false, brandMark = false, children, ...props }) {
+export function Brand({ brand = false, as = 'h1', brandMark = false, children, ...props }) {
 
   const {
     site: { siteMetadata: { title } },
@@ -33,12 +31,12 @@ export function Brand({ brand = false, brandMark = false, children, ...props }) 
 `)
 
   return (
-    <Box as={Link} to={INDEX_ROUTE} sx={{ ...linkStyles }}>
+    <Box as={Link} to={INDEX_ROUTE} sx={{ ...linkStyles, }}>
       <Flex sx={{ ...brandStyles }} {...props}>
         {brandMark &&
           <Image src={publicURL} />}
         {brand &&
-          <Heading as='h1'>
+          <Heading as={as}>
             {title}
           </Heading>}
       </Flex>

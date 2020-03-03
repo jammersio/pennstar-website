@@ -11,10 +11,6 @@ import Layout from "../gatsby-theme-styleguide/components/Layout"
 const defaultBg = `url("https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80")`
 
 
-const textShadow = {
-  textShadow: '1px 1px 1px rgba(255, 255, 255, 0.55)'
-}
-
 const mainSectionStyles = {
   bg: 'base',
   textAlign: 'center',

@@ -1,2 +1,2 @@
 export * from './FooterMenu';
-export * from './FooterTopLayout';
+export * from './FooterMenuLayout';

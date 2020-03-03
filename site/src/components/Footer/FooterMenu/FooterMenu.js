@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import { Flex, Box, Text } from 'rebass'
-import { FooterTopLayout } from './FooterTopLayout'
+import { FooterMenuLayout } from './FooterMenuLayout'
 import { Brand } from '../../Brand'
 
 const highlightStyles = {
@@ -14,7 +14,7 @@ const highlightStyles = {
 
 const Column1 = ({ body }) => (
   <Box>
-    <Brand brand brandMark />
+    <Brand as='h3' brand brandMark />
     <Text
       fontSize='md'
       mt='3'
@@ -130,7 +130,7 @@ export const FooterMenu = ({ pageList, ...props }) => {
 
   return (
 
-    <FooterTopLayout
+    <FooterMenuLayout
       column1={
         <Column1 body={footerStatement} />
       }
@@ -152,7 +152,7 @@ export const FooterMenu = ({ pageList, ...props }) => {
       }
     >
 
-    </FooterTopLayout>
+    </FooterMenuLayout>
 
   )
 }

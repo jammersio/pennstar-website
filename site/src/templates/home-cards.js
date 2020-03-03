@@ -22,7 +22,6 @@ export const Cards = ({ cards: homeCards, ...props }) => {
             py='3'
             sx={{
               borderTopWidth: '4px',
-              borderTopWidth: '4px',
               borderTopLeftRadius: 'lg',
               borderTopRightRadius: 'lg'
             }}
