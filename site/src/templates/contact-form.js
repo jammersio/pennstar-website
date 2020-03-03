@@ -4,7 +4,11 @@ import { Box, Button } from 'rebass'
 
 export const ContactForm = ({ form, ...props }) => {
   return (
-    <Box width='50%' as='form' p='4'>
+    <Box
+      width={['full', null, null, '50%']}
+      as='form'
+      p='4'
+    >
       <label>{form.fields[0]}</label>
       <input style={{ width: '100%' }} />
       <label>{form.fields[1]}</label>

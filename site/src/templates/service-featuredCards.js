@@ -1,4 +1,7 @@
 import React from 'react'
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
+import { Link } from 'gatsby'
 import { Box, Text, Heading } from 'rebass'
 import { Card } from '../components/Cards'
 import { shortid } from '../utils'
@@ -7,15 +10,15 @@ import { shortid } from '../utils'
 export const Cards = ({ cards, ...props }) => {
   return (
     <Box
-      display={['block', 'block', 'block', 'flex']}
-      flexWrap='wrap'
+      display={['block', null, null, 'flex']}
       mx='auto'
-      maxWidth='80%'
+      {...props}
     >
       {cards.map(card => (
         <Card
           key={shortid()}
-          width={['full', null, null, 1 / 3]}
+          width={['70%', null, null, 1 / 3]}
+          mx={'auto'}
         >
           <Box
             bg='gray.1'
@@ -27,15 +30,16 @@ export const Cards = ({ cards, ...props }) => {
               borderTopRightRadius: 'lg'
             }}
           >
-            <i className={card.icon} /><br />
-            <Heading fontSize='3'>{card.heading}</Heading>
+            <i className={card.icon} sx={{ color: 'gray.3' }} /><br />
+            <Heading fontSize='3' color='primary'>{card.heading}</Heading>
           </Box>
-          <Box p='2'
-            fontSize='0.55em'
-            textAlign='left'
-            pt='3'
-            bg='gray.1'
 
+          <Box
+            bg='gray.1'
+            textAlign='left'
+            fontSize='0.75em'
+            px='3'
+            py='3'
             sx={{
               borderBottomLeftRadius: 'lg',
               borderBottomRightRadius: 'lg'
@@ -44,14 +48,21 @@ export const Cards = ({ cards, ...props }) => {
               {card.details}
             </Text>
             <Text
-              fontSize='md'
-              mt='3'
-              mb='-3'
+              as={Link}
+              to={card.link}
+              color='gray.8'
+              fontSize='0'
+              sx={{
+                '&:hover': {
+                  textDecoration: 'underline',
+                  cursor: 'pointer',
+                }
+              }}
             >
-              <i className={card.linkIcon} />
-              <span className='space-left '>
+              <span sx={{ my: 2, pr: 2 }}>
                 {card.linkLabel}
               </span>
+              <i className={card.linkIcon} />
             </Text>
           </Box>
         </Card>

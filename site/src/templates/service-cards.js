@@ -1,4 +1,6 @@
 import React from 'react'
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
 import { Flex, Box, Text, Heading } from 'rebass'
 import { Card } from '../components/Cards'
 import { shortid } from '../utils'
@@ -6,7 +8,7 @@ import { shortid } from '../utils'
 
 export const ServiceCards = ({ cards, ...props }) => {
   return (
-    <Flex flexWrap='wrap' maxWidth='5xl' mx='auto'>
+    <Flex flexWrap='wrap' maxWidth='5xl' mx='auto' {...props}>
       {cards.map(card => (
         <Card
           key={shortid()}
@@ -21,9 +23,9 @@ export const ServiceCards = ({ cards, ...props }) => {
             alignItems='center'
             pl='2'
           >
-            <i className={card.icon} /><br />
+            <i className={card.icon} sx={{ color: 'gray.3' }} /><br />
             <Box as='span' ml='3'>
-              <Heading fontSize='2'>{card.heading}</Heading>
+              <Heading fontSize='2' color='primary'>{card.heading}</Heading>
               <Text fontSize='1'>{card.details}</Text>
             </Box>
           </Flex>

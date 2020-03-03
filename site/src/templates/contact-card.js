@@ -10,6 +10,7 @@ export const Card = ({ card, ...props }) => {
     >
       <DefCard
         minWidth='sm'
+
         innerProps={{
           sx: {
             border: 'none',
@@ -31,7 +32,8 @@ export const Card = ({ card, ...props }) => {
         >
           {card.heading}
         </Box>
-        <Flex
+        <Box
+          display={['flex']}
           py='2'
           bg='white'
           sx={{
@@ -40,11 +42,12 @@ export const Card = ({ card, ...props }) => {
             borderBottomRightRadius: 'lg'
           }}
         >
-          <Flex p='2' fontSize='sm' sx={{
-            borderRightStyle: 'solid',
-            borderRightWidth: 'px',
-            borderRightColor: 'gray.3',
-          }}>
+          <Flex p='2' fontSize='sm'
+            sx={{
+              borderRightStyle: 'solid',
+              borderRightWidth: 'px',
+              borderRightColor: 'gray.3',
+            }}>
             <Box
               as='span'
               className="fa-stack"
@@ -69,12 +72,12 @@ export const Card = ({ card, ...props }) => {
             <Box>
               <Box
                 as='span'
-                className="fa-stack"
+                className='fa-stack'
                 style={{ verticalAlign: 'top' }}
                 color='blue.4'
               >
-                <i className="fas fa-circle fa-stack-2x"></i>
-                <i className="fas fa-phone-alt fa-stack-1x fa-inverse"></i>
+                <i className='fas fa-circle fa-stack-2x'></i>
+                <i className='fas fa-phone-alt fa-stack-1x fa-inverse'></i>
               </Box>
               {card.phone}
             </Box>
@@ -85,13 +88,13 @@ export const Card = ({ card, ...props }) => {
                 style={{ verticalAlign: 'top' }}
                 color='blue.4'
               >
-                <i className="fas fa-circle fa-stack-2x"></i>
-                <i className="far fa-envelope fa-stack-1x fa-inverse"></i>
+                <i className='fas fa-circle fa-stack-2x'></i>
+                <i className='far fa-envelope fa-stack-1x fa-inverse'></i>
               </Box>
               {card.email}
             </Box>
           </Flex>
-        </Flex>
+        </Box>
       </DefCard>
     </Section>
   )

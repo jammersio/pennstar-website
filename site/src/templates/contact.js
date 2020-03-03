@@ -43,25 +43,26 @@ export default function (props) {
         width='full'
       >
         <Flex
-          mt='4'
+          mt={'2', null, null, '4'}
           bg='gray.2'
-          width='3xl'
+          width={['90%', null, null, '70%']}
           mx='auto'
+          flexDirection={['column', null, null, 'row']}
           sx={{ borderRadius: 'default' }}
         >
           <Box
-            width='50%'
+            width={['full', null, null, '50%']}
             my='4'
             p='4'
             color='gray.6'
             sx={{
-              borderRightStyle: 'solid',
+              borderRightStyle: ['none', null, null, 'solid'],
               borderRightWidth: '1px',
               borderRightColor: 'gray.3'
             }}>
             <Heading
               fontSize='5'
-              mb='3'
+            // mb='3'
             >
               {form.heading}
             </Heading>

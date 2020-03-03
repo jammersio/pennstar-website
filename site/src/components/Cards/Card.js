@@ -7,7 +7,7 @@ export function Card({ innerProps, children, ...props }) {
       width={[`full`, 1 / 2]}
       as='article'
       textAlign={`center`}
-      alignItems='stretch'
+      // alignItems='stretch'
       my={[0]}
       p={[1, 3]}
       {...props}
@@ -15,7 +15,6 @@ export function Card({ innerProps, children, ...props }) {
       <Box sx={{
         boxShadow: `default`,
         borderRadius: `lg`,
-        border: `default`,
       }}
         {...innerProps}
       >

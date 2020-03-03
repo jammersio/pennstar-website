@@ -4,6 +4,7 @@ import { Flex, Box, Text, Heading, Image } from 'rebass'
 import { Cards } from './service-featuredCards'
 import { ServiceCards } from './service-cards'
 import { Section, Container } from '../components/Containers'
+import { FullHero } from '../components/Hero'
 
 import Layout from "../gatsby-theme-styleguide/components/Layout"
 
@@ -27,54 +28,46 @@ export default function (props) {
           justifyContent='flex-end'
           position='relative'
         >
-          <Box
-            position='absolute'
-            height='0'
-            pl="5em"
-            mt='-50%'
-            pt='56.25%'
-
+          <FullHero
+            bgImg={hero.image}
+            backgroundSize={['0%', null, '50%']}
+            backgroundPosition={'center  left'}
           >
-            <Image
-              display={['none', null, null, 'block']}
-              src={hero.image}
-              width='70%'
-              sx={{ borderRadius: 'lg' }}
-            />
-          </Box>
-          <Box
-            mt='6'
-            color='secondary'
-            textAlign={['center', null, null, 'right']}
-            position='relative'
-            width='100%'
-          >
-            <Heading
-              fontSize='6'
-              color='primary'
-              mr='6'
+            <Box
+              mt='6'
+              color='secondary'
+              textAlign={['center', null, null, 'right']}
+              position='relative'
+              width='100%'
             >
-              {hero.heading}
-            </Heading>
-            <Text
-              mt='2'
-              display='inline'
-              mr='6'
-              mb='4'
-            >
-              {main.outro}&nbsp;
+              <Heading
+                fontSize='6'
+                color='primary'
+                mr='6'
+              >
+                {hero.heading}
+              </Heading>
+              <Text
+                mt='2'
+                display='inline'
+                mr='6'
+                mb='4'
+              >
+                {main.outro}&nbsp;
             </Text>
-            <Cards
-              cards={hero.featuredCards}
-            />
-          </Box>
+              <Cards
+                cards={hero.featuredCards}
+              />
+            </Box>
+          </FullHero>
+
         </Flex>
       </Container>
       <Section
         textAlign='center'
         mx='auto'
       >
-        <Heading>{main.heading}</Heading>
+        <Heading color='primary'>{main.heading}</Heading>
         <Text my='4'>{main.outro}</Text>
         <ServiceCards cards={cards} />
       </Section>

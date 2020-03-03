@@ -8,7 +8,7 @@ import { Cards } from '../templates/about-cards'
 
 import Layout from "../gatsby-theme-styleguide/components/Layout"
 
-const defaultBg = `url("https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80")`
+const defaultBg = 'https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80'
 
 
 const mainSectionStyles = {

@@ -10,7 +10,7 @@ import Layout from "../gatsby-theme-styleguide/components/Layout"
 import "../styles/styles.scss"
 
 
-const defaultBg = `url("https://cdn.pixabay.com/photo/2015/10/20/18/57/furniture-998265_960_720.jpg")`
+const defaultBg = 'https://cdn.pixabay.com/photo/2015/10/20/18/57/furniture-998265_960_720.jpg'
 
 const textShadow = {
   textShadow: '1px 1px 1px rgba(0, 0, 0, 0.55)'
