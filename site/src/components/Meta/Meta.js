@@ -3,8 +3,6 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-
-
 function Meta({ description, lang, meta, title }) {
 
   // TODO: add logo to query and include in meta below.
