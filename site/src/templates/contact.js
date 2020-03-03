@@ -29,7 +29,6 @@ export default function (props) {
         className='contact-section'
         bg='gray.2'
         p='0'
-      // sx={{ margin: 0, padding: 0 }}
       >
         <Card
           card={card}
@@ -39,7 +38,6 @@ export default function (props) {
             title='map'
             src={map}
             frameBorder='0'
-            // p='0'
             sx={{ border: 'none', width: 'full', height: '45vh', mt: 5, zIndex: -1 }}
             allowFullScreen={false}
           />
@@ -70,7 +68,6 @@ export default function (props) {
             }}>
             <Heading
               fontSize='5'
-            // mb='3'
             >
               {form.heading}
             </Heading>

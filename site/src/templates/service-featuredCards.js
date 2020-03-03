@@ -11,7 +11,7 @@ export const Cards = ({ cards, ...props }) => {
   return (
     <Box
       display={['block', null, 'flex']}
-      flexWrap={'wrap'}
+      flexWrap='wrap'
       ml='auto'
       width={['full']}
       {...props}
@@ -21,6 +21,7 @@ export const Cards = ({ cards, ...props }) => {
           key={shortid()}
           width={['full', null, 1 / 3]}
           mx={'auto'}
+          textAlign={['center']}
         >
           <Box
             bg='gray.1'

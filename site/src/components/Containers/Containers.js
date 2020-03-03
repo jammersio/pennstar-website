@@ -45,15 +45,15 @@ export function Section({ outerProps = {}, ...props }) {
   );
 };
 
-export function FlexWrap({ responsive = true, ...props }) {
+export function FlexWrap({ ...props }) {
   return (
     <Box
       display='flex'
       flexWrap='wrap'
       mx={-2}
       width='full'
-      variant={responsive && 'boxes.responsiveFlex'}
-      position='relative' {...props} />
+      position='relative' {...props}
+    />
   )
 }
 

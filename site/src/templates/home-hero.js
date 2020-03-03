@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import { FullHero } from '../components/Hero/FullHero'
 import { Flex, Box, Text, Heading } from 'rebass'
 
-const defaultBg = 'https://cdn.pixabay.com/photo/2015/10/20/18/57/furniture-998265_960_720.jpg'
+const defaultBg = 'https://images.pexels.com/photos/3228692/pexels-photo-3228692.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260'
 
 const textShadow = {
   textShadow: '1px 1px 1px rgba(0, 0, 0, 0.55)'
@@ -13,19 +13,19 @@ export const HomeHero = ({ hero }) => {
   return (
     <FullHero
       bgImg={defaultBg}
+      outerProps={{ boxShadow: 'insetDark' }}
     >
       <Flex
-        ml='5'
+        ml={[0, 5]}
         width='full'
         className='homeHero-Fcontainer'
       >
         <Box
-          px='2'
           color='white'
           py='6'
         >
           <Heading
-            fontSize='6'
+            fontSize={[3, 5, 6]}
             sx={{ ...textShadow }}
           >
             {hero.heading}

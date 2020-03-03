@@ -12,18 +12,18 @@ export const ServiceCards = ({ cards, ...props }) => {
       {cards.map(card => (
         <Card
           key={shortid()}
-          width={['full', 'full', 1 / 2, 1 / 3]}
+          width={['full', '1/2', 1 / 2, 1 / 3]}
           mx='auto'
-          innerProps={{ sx: { border: 'none', boxShadow: 'default', borderRadius: 'lg' } }}
+          innerProps={{ sx: { border: 'none', boxShadow: 'neu', borderRadius: 'lg' } }}
         >
           <Flex
             bg='gray.1'
             fontSize='64px'
-            textAlign='left'
-            alignItems='center'
+            textAlign={['left']}
+            alignItems={['center']}
             pl='2'
           >
-            <i className={card.icon} sx={{ color: 'gray.3' }} /><br />
+            <i className={card.icon} sx={{ color: 'gray.3' }} /> <br />
             <Box as='span' ml='3'>
               <Heading fontSize='2' color='primary'>{card.heading}</Heading>
               <Text fontSize='1'>{card.details}</Text>

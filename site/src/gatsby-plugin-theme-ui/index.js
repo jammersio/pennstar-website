@@ -29,7 +29,9 @@ export default merge({}, baseTheme, {
     ...baseTheme.shadows,
     new: '0 8px 16px -4px rgba(0,0,0,.1), 0 0 8px -3px rgba(0,0,0,.1)',
     neu: `26px 26px 52px #cfdfe9,
-    - 26px - 26px 52px #e1f1fd`
+    - 26px - 26px 52px #e1f1fd`,
+    insetLight: 'inset 0 0 0 1000px rgba(255,255,255,.2)',
+    insetDark: 'inset 0 0 0 1000px rgba(0,0,0,.2)'
   },
   borders: {
     ...baseTheme.borders,
@@ -48,21 +50,6 @@ export default merge({}, baseTheme, {
       width: 'screeWidth',
       minHeight: 'screenHeight',
       border: 'default',
-      // overflowX: 'hidden',
-    },
-    Header: {
-      // backgroundColor: 'white',
-      // // color: 'text',
-      // fontWeight: 'bold',
-      // margin: '0 auto',
-      // width: 'screenWidth',
-      // padding: [0, 0, 0, 3],
-      // flexShrink: 0,
-      // display: 'flex',
-      // justifyContent: 'space-evenly',
-      // alignItems: 'center',
-      // fontFamily: 'body',
-      // boxShadow: 'md',
     },
     Main: {
       mx: 'auto',
@@ -71,12 +58,6 @@ export default merge({}, baseTheme, {
       flex: '1 1 auto',
       border: 'default'
     },
-    Footer: {
-      // width: 'screenWidth',
-      // padding: 3,
-      // backgroundColor: 'primary',
-      // color: 'text',
-    },
     a: {
       borderBottom: 'none',
       "&.hover": {
@@ -84,21 +65,4 @@ export default merge({}, baseTheme, {
       },
     },
   },
-  variants: {
-    card: {
-      fontSize: [1, 2, 3],
-      textAlign: 'center',
-      marginTop: 0,
-      marginBottom: 0,
-      padding: [1, 3],
-    },
-    cardInner: {
-      borderRadius: 'lg',
-      boxShadow: '0 8px 16px -4px rgba(0,0,0,.1), 0 0 8px -3px rgba(0,0,0,.1)'
-    },
-    fullWidth: {
-      width: 'screenWidth',
-      right: '30%',
-    },
-  }
 })

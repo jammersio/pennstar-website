@@ -39,7 +39,6 @@ const Column2 = ({ title, info }) => (
         fontSize='md'
         flexDirection='column'
         color='gray.5'
-
       >
         Phone: <br />
         Email: <br />
