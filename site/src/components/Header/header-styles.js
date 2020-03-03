@@ -15,7 +15,7 @@ export const headerStyles = {
   display: 'flex',
   justifyContent: 'flex-end',
   ml: 'auto',
-  '& nav': {
+  '& .header-nav': {
     fontSize: [0, 0, 1],
     display: ['none', 'none', 'flex'],
     a: {

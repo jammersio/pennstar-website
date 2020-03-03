@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Text, Heading } from 'rebass'
 import { FlexWrap } from '../components/Containers'
-import { Card } from '../components/Layout'
+import { Card } from '../components/Cards'
 import { shortid } from '../utils'
 
 export const Cards = ({ cards: homeCards, ...props }) => {

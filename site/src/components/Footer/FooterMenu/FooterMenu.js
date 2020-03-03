@@ -148,7 +148,7 @@ export const FooterMenu = ({ pageList, ...props }) => {
       }
 
       column3={
-        <Column3 title={"Quick Links"} />
+        <Column3 title={"Links"} />
       }
     >
 

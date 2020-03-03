@@ -1,34 +1,37 @@
+const textShadow = {
+  textShadow: '1px 1px 1px rgba(0, 0, 0, 0.25)'
+}
+
 export const sidebarMenuStyles = {
   position: 'fixed',
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  backgroundColor: 'primary',
-  // transform: set via component -- requires props
-  height: 'full',
-  textAlign: 'left',
-  padding: 5,
   top: 0,
-  right: '-7em',
+  height: 'full',
+  minWidth: '33%',
+  px: [1, 2, null, 5],
+  pt: 5,
+  boxShadow: 'default',
+  backgroundColor: 'base',
   transition: 'transform .3s cubic-bezier(0, .52, 0, 1)',
   zIndex: 0,
-  boxShadow: 'default',
-  a: {
-    fontSize: [2, 3, 5],
-    textTransform: 'uppercase',
-    padding: '2rem 0',
-    fontWeight: 'bold',
-    letterSpacing: '0.5rem',
-    color: 'white',
-    textDecoration: 'none',
-    transition: 'color 0.3s linear',
-    textAlign: ['inherit', 'inherit', 'center'],
-    "&:hover": {
-      color: 'primaryHover'
-    },
-    "&:focus": {
-      outline: 'none',
-      border: 'none',
+  '& .side-nav': {
+    ...textShadow,
+    a: {
+      fontSize: ['.5rem', 0, 1, 2],
+      textTransform: 'uppercase',
+      py: [3, 4],
+      fontWeight: 'bold',
+      letterSpacing: '0.5rem',
+      color: 'gray.4',
+      textDecoration: 'none',
+      transition: 'color 0.3s linear',
+      textAlign: [null, null, 'center'],
+      "&:hover": {
+        color: 'primaryHover'
+      },
+      "&:focus": {
+        outline: 'none',
+        border: 'none',
+      }
     }
   }
 }

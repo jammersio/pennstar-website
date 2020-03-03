@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-
 import { Flex, Box, Text, Heading, Image } from 'rebass'
 import { Section, Container } from '../components/Containers'
 import { ShapedCard } from '../components/Cards'
-import { FullHero } from '../components/Hero/FullHero'
+// import { FullHero } from '../components/Hero/FullHero'
+import { AboutHero } from '../templates/about-hero'
 import { Cards } from '../templates/about-cards'
 
 import Layout from "../gatsby-theme-styleguide/components/Layout"
@@ -14,43 +14,6 @@ const defaultBg = `url("https://images.unsplash.com/photo-1524758631624-e2822e30
 
 const textShadow = {
   textShadow: '1px 1px 1px rgba(255, 255, 255, 0.55)'
-}
-
-const heroStyles = {
-  justifyContent: 'flex-end',
-  mt: 5,
-  mr: 5,
-  px: 2,
-  py: 6,
-  textAlign: 'right',
-  color: 'secondary',
-  '& .hero-box': {
-    '& > h2': {
-      color: 'primary',
-      fontSize: 6,
-      ...textShadow
-    },
-    '& .tagline': {
-      color: 'white',
-      mt: 2,
-      ...textShadow
-    },
-  }
-}
-
-const heroLinkStyles = {
-  fontSize: 'md',
-  mt: '3',
-  mb: '-3',
-  ...textShadow,
-  '& a': {
-    color: 'white',
-    ...textShadow,
-    '&:hover': {
-      color: 'primaryHover',
-      textDecoration: 'none'
-    }
-  }
 }
 
 const mainSectionStyles = {
@@ -78,32 +41,8 @@ export default function (props) {
       pageList={props.pageContext.pageList}
       {...siteMetadata}
     >
-      <FullHero bgImg={defaultBg}>
-        <Flex sx={{ ...heroStyles }}>
-          <Box className='hero-box'>
-            <Heading as='h2' className='heading'>
-              {hero.heading}
-            </Heading>
-            <Text as='p' className='tagline'>
-              {hero.tagline}
-            </Text>
-            <hr
-              style={{ borderColor: 'white' }}
-            />
-            <Text
-              sx={{ ...heroLinkStyles }}
-            >
-              <Link to={hero.links[0].link}>
-                {hero.links[0].label}
-                <span>
-                  <i className="space-left fas fa-arrow-circle-right" />
-                </span>
-              </Link>
-            </Text>
-          </Box>
-          <Box />
-        </Flex>
-      </FullHero>
+
+      <AboutHero hero={hero} bgImg={defaultBg} />
 
       <Section
         as='section'
@@ -144,14 +83,6 @@ export default function (props) {
             {team.sectionTitle}
           </Text>
 
-          {/* <Box sx={{ ...singleCardContainerStyles }}>
-          <ShapedCard
-            image={card1.image}
-            heading={card1.heading}
-            details={card1.details}
-          />
-        </Box> */}
-
           <ShapedCard
             image={card1.image}
             name={card1.heading}
@@ -160,6 +91,7 @@ export default function (props) {
             textAlign='left'
             maxWidth='sm'
           />
+
           <Text
             maxWidth='3xl'
             textAlign='left'

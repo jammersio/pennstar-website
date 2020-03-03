@@ -13,7 +13,7 @@ export function SideBarMenuIcon({ open, setOpen, ...props }) {
       onClick={() => setOpen(!open)}
       aria-label="Toggle menu"
       aria-expanded={isExpanded}
-      display={['flex', 'flex', 'flex', 'none']}
+      display={['flex', null, null, 'none']}
       mt='2'
       sx={{ ...burgerStyles }}
       {...props}
@@ -48,23 +48,27 @@ export function SideBarMenu({ open, pageList = [], ...props }) {
   const tabIndex = open ? -1 : 0;
   return (
     <Box
-      display={['flex', 'flex', 'flex', 'none']}
-      width={[1 / 3]} // correlates to the transform below
       as='aside'
+      className='nav-holder'
+      width={['40%']} // correlates to the transform below
       open={open}
       aria-hidden={!tabIndex}
       tabIndex={tabIndex}
       sx={{
-        transform: open ? 'translate3d(-33%, 0 , 0)' : 'translate3d(100%, 0 , 0)',
+        transform: open ? 'translate3d(-40%, 0 , 0)' : 'translate3d(100%, 0 , 0)',
         display: open ? 'flex' : 'none',
+        flexDirection: 'column',
         ...sidebarMenuStyles
       }}
       {...props}
     >
       <Nav
+        className='side-nav'
+        display='flex'
         flexDirection='column'
-        alignItems='center'
+        alignItems='flex-start'
         color='white'
+        // fontSize={[1, 2]}
         pageList={pageList}
       />
     </Box >

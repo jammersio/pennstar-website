@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Text, Heading, Image } from 'rebass'
+import { Box } from 'rebass'
 import { ShapedCard } from '../components/Cards'
 import { shortid } from '../utils'
 

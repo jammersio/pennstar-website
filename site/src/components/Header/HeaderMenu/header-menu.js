@@ -8,6 +8,7 @@ export function HeaderMenu({ pageList = [], active = '', ...props }) {
   return (
     <>
       <Nav
+        className='header-nav'
         active={active}
         pageList={pageList}
       />

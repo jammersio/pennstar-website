@@ -1,6 +1,6 @@
 import React from 'react'
 import { Flex, Box, Text, Heading } from 'rebass'
-import { Card } from '../components/Layout'
+import { Card } from '../components/Cards'
 import { shortid } from '../utils'
 
 
