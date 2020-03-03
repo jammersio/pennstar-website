@@ -14,7 +14,7 @@ export function Box(props) {
 }
 
 
-export function Container({ outerProps, ...props }) {
+export function Container({ outerProps = {}, children, ...props }) {
   return (
     <Flex
       mx='auto'
@@ -26,6 +26,7 @@ export function Container({ outerProps, ...props }) {
         px={3}
         {...props}
       >
+        {children}
       </Boxbass>
     </Flex>
   )
@@ -55,6 +56,7 @@ export function FlexWrap(props) {
 
 export const Containers = {
   Box,
+  Section,
   Container,
   FlexWrap,
   Section,

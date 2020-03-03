@@ -1,6 +1,6 @@
 import React from 'react'
 import { Heading, Text } from '../Elements'
-import { Box } from '../Layout'
+import { Box } from '../Containers'
 
 export default function Cta({
   intro,

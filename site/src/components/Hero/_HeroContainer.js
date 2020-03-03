@@ -1,7 +1,7 @@
 import React from 'react'
 import { Image } from 'rebass'
 import { Box, FlexWrap } from '../Containers'
-import Cta from '../Cta'
+import Cta from '../_Cta'
 
 
 export function HeroContainer({

@@ -1,9 +1,8 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
-import { Flex, Box, Text, Heading, Image } from 'rebass'
+import { graphql } from 'gatsby'
+import { Text, Heading } from 'rebass'
 import { Section, Container } from '../components/Containers'
 import { ShapedCard } from '../components/Cards'
-// import { FullHero } from '../components/Hero/FullHero'
 import { AboutHero } from '../templates/about-hero'
 import { Cards } from '../templates/about-cards'
 

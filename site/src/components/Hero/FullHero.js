@@ -1,5 +1,5 @@
 import React from 'react'
-import { Section } from '../Layout'
+import { Section } from '../Containers'
 
 const defaultBg = `url("https://cdn.pixabay.com/photo/2015/10/20/18/57/furniture-998265_960_720.jpg")`
 
