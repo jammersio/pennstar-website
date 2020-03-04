@@ -14,7 +14,7 @@ export const HomeHero = ({ hero }) => {
     <FullHero
       bgImg={defaultBg}
       backgroundSize='cover'
-      backgroundPosition='center left'
+      backgroundPosition={['bottom left', null, null, 'center left']}
       outerProps={{ boxShadow: 'insetDark' }}
     >
       <Flex

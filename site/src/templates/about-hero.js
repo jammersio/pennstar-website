@@ -46,7 +46,11 @@ const heroLinkStyles = {
 
 export const AboutHero = ({ hero, bgImg }) => {
   return (
-    <FullHero bgImg={bgImg} outerProps={{ boxShadow: 'insetDark' }}>
+    <FullHero
+      bgImg={bgImg}
+      backgroundPosition={['center left', null, null, 'center left']}
+      outerProps={{ boxShadow: 'insetDark' }}
+    >
       <Flex sx={{ ...heroStyles }}>
         <Box className='hero-box'>
           <Heading

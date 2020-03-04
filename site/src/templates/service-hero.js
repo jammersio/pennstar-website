@@ -14,7 +14,7 @@ export const ServiceHero = ({ hero }) => {
     <FullHero
       bgImg={defaultbg || hero.image}
       backgroundSize='cover'
-      backgroundPosition={'center  left'}
+      backgroundPosition={['top left', null, null, 'center left']}
       outerProps={{ boxShadow: 'insetLight' }}
     >
       <Flex
