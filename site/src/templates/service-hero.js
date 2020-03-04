@@ -3,21 +3,26 @@ import { Flex, Box, Text, Heading, Image } from 'rebass'
 import { Cards } from './service-featuredCards'
 import { FullHero } from '../components/Hero'
 
+const defaultbg = "https://www.lifeofpix.com/wp-content/uploads/2019/02/310-jira00830-nam-1600x1045.jpg"
+
 const textShadow = {
   textShadow: '1px 1px 1px rgba(0, 0, 0, 0.25)'
 }
 
 export const ServiceHero = ({ hero }) => {
   return (
-    <Flex
-      justifyContent='flex-end'
-      position='relative'
-      width='full'
+    <FullHero
+      bgImg={defaultbg || hero.image}
+      // outerProps={{ boxShadow: 'insetDark' }}
+      // backgroundSize={['0%', null, '100% 100%', '30%']}
+      backgroundSize='cover'
+      backgroundPosition={'center  left'}
+      outerProps={{ boxShadow: 'insetDark' }}
     >
-      <FullHero
-        bgImg={hero.image}
-        backgroundSize={['0%', null, '100% 100%', '30%']}
-        backgroundPosition={'center  left'}
+      <Flex
+        justifyContent='flex-end'
+        position='relative'
+        width='full'
       >
         <Box
           mt={[5, null, null, 4]}
@@ -34,10 +39,10 @@ export const ServiceHero = ({ hero }) => {
             {hero.heading}
           </Heading>
           <Text
-            mt='2'
+            mt='5'
             display='inline'
             textAlign='center'
-            color={['white', null, null, 'inherit']}
+            color={['white']}
             mb='4'
             sx={{ ...textShadow }}
           >
@@ -50,8 +55,8 @@ export const ServiceHero = ({ hero }) => {
             />
           </Box>
         </Box>
-      </FullHero>
+      </Flex>
+    </FullHero>
 
-    </Flex>
   )
 }

@@ -9,7 +9,8 @@ export const Cards = ({ cards, ...props }) => {
     <Box
       display={['block', null, null, 'flex']}
       textAlign='left'
-      width={['full', null, null, '80%']}
+      width={['full', null, null, '70%']}
+      maxWidth={'1200px'}
       px={['2', null, null, '4']}
       my='5'
       mx='auto'

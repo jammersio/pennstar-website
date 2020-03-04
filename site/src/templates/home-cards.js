@@ -15,6 +15,7 @@ export const Cards = ({ cards: homeCards, ...props }) => {
           width={['full', null, null, 1 / 3]}
           maxWidth={['full', null, null, '300px']}
           mx='auto'
+          boxShadow='neu'
         >
           <Box
             bg='gray.3'

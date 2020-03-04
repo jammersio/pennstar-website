@@ -1,2 +1,1 @@
-export * from './SideBarMenu'
-export * from './MenuIcon'
+export * from './Sidebar'

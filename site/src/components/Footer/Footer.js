@@ -15,7 +15,7 @@ export function Footer(props) {
     <>
       <FooterMenu />
       <Flex sx={{ ...footerStyles }}{...props}>
-        <Flex>
+        <Flex alignItems={'center'}>
           <Brand
             as='h3'
             color='white'

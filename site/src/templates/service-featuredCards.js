@@ -14,14 +14,17 @@ export const Cards = ({ cards, ...props }) => {
       flexWrap='wrap'
       ml='auto'
       width={['full']}
+      className='featuredCards'
       {...props}
     >
       {cards.map(card => (
         <Card
           key={shortid()}
           width={['full', null, 1 / 3]}
+          maxWidth='400px'
           mx={'auto'}
           textAlign={['center']}
+          boxShadow='neuGray'
         >
           <Box
             bg='gray.1'
@@ -34,7 +37,7 @@ export const Cards = ({ cards, ...props }) => {
               borderTopRightRadius: 'lg'
             }}
           >
-            <i className={card.icon} sx={{ color: 'gray.3' }} /><br />
+            <i className={card.icon} sx={{ color: 'gray.3', fontSize: 8 }} /><br />
             <Heading fontSize='3' color='primary'>{card.heading}</Heading>
           </Box>
 
@@ -48,13 +51,13 @@ export const Cards = ({ cards, ...props }) => {
               borderBottomLeftRadius: 'lg',
               borderBottomRightRadius: 'lg'
             }}>
-            <Text>
+            <Text mb='3'>
               {card.details}
             </Text>
             <Text
               as={Link}
               to={card.link}
-              color='gray.8'
+              color='blue.4'
               fontSize='0'
               sx={{
                 '&:hover': {
@@ -63,7 +66,7 @@ export const Cards = ({ cards, ...props }) => {
                 }
               }}
             >
-              <span sx={{ my: 2, pr: 2 }}>
+              <span sx={{ pr: 2 }}>
                 {card.linkLabel}
               </span>
               <i className={card.linkIcon} />

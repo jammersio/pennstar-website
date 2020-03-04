@@ -4,8 +4,7 @@ import { Box, Flex } from 'rebass'
 import { HeaderMenu } from './HeaderMenu'
 import { Brand } from '../Brand'
 import { Nav } from './Nav'
-// import { MenuIcon } from './SideBar'
-import { Sidebar } from './Sidebar2'
+import { Sidebar } from './SideBar'
 
 import { useScrollMenu } from '../../hooks/useScrollMenu'
 
@@ -31,7 +30,7 @@ export function Header({ logo, title = '', pageList = [], active = '', ...props 
             backgroundColor: passedScrollThreshold ? 'white' : 'transparent',
           }}
         >
-          <Box width='50%'>
+          <Box width='50%' ml={[0, 4, null, 0]}>
             {<Brand brand brandMark /> || title}
           </Box>
           <Flex
@@ -46,11 +45,9 @@ export function Header({ logo, title = '', pageList = [], active = '', ...props 
               active={active}
             />
           </Flex>
-          {/* <MenuIcon pageList={pageList} /> */}
         </Box>
         <Box sx={{
           display: ['inline-block', null, null, 'none'],
-          width: '50%'
         }}>
           <Sidebar>
             <Nav

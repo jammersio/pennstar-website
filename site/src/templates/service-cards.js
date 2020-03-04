@@ -14,7 +14,7 @@ export const ServiceCards = ({ cards, ...props }) => {
           key={shortid()}
           width={['full', '1/2', 1 / 2, 1 / 3]}
           mx='auto'
-          innerProps={{ sx: { border: 'none', boxShadow: 'neu', borderRadius: 'lg' } }}
+          boxShadow='neuSm'
         >
           <Flex
             bg='gray.1'

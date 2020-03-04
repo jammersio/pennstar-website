@@ -6,7 +6,7 @@ const defaultBg = 'https://cdn.pixabay.com/photo/2015/10/20/18/57/furniture-9982
 
 export const FullHero = ({
   bgImg = defaultBg,
-  backgroundSize = ['cover', null, null, 'cover'],
+  backgroundSize = ['cover'],
   backgroundPosition = 'top left',
   rounded = 'false',
   outerProps = {},

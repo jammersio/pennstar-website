@@ -5,7 +5,7 @@ export default merge({}, baseTheme, {
   ...baseTheme,
   colors: {
     ...baseTheme.colors,
-    primary: '#2b6cb0',
+    primary: '#63B3ED',
     highlight: '#2b6cb0',
     secondary: '#718096',
     base: '#fbf9fa',
@@ -28,8 +28,14 @@ export default merge({}, baseTheme, {
   shadows: {
     ...baseTheme.shadows,
     new: '0 8px 16px -4px rgba(0,0,0,.1), 0 0 8px -3px rgba(0,0,0,.1)',
-    neu: `26px 26px 52px #cfdfe9,
-    - 26px - 26px 52px #e1f1fd`,
+    neu: `20px 20px 60px #d5d4d5,
+    -20px -20px 60px #ffffff`,
+    neuDark: `10px 10px 20px #e9e8e9,
+    -10px -10px 20px #ffffff`,
+    neuSm: `7px 7px 14px #f1eff0,
+    -7px -7px 14px #ffffff;`,
+    neuGray: `7px 7px 14px #7b7c7d,
+    -7px -7px 14px #858687`,
     insetLight: 'inset 0 0 0 1000px rgba(255,255,255,.2)',
     insetDark: 'inset 0 0 0 1000px rgba(0,0,0,.2)'
   },

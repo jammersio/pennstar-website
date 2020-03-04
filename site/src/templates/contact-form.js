@@ -15,7 +15,11 @@ export const ContactForm = ({ form, ...props }) => {
       <input style={{ width: '100%' }} />
       <label>{form.fields[2]}</label>
       <textarea style={{ width: '100%' }} />
-      <Button mt='2' sx={{ float: 'right' }}>Send</Button>
+      <Button mt='2' sx={{
+        float: 'right', bg: 'blue.4'
+      }}>
+        Send
+      </Button>
     </Box>
   )
 }

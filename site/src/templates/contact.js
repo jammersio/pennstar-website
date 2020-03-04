@@ -52,19 +52,21 @@ export default function (props) {
           mt={'2', null, null, '4'}
           bg='gray.2'
           width={['90%', null, null, '70%']}
+          maxWidth='900px'
           mx='auto'
           flexDirection={['column', null, null, 'row']}
-          sx={{ borderRadius: 'default' }}
+          sx={{ borderRadius: 'default', boxShadow: 'outline' }}
         >
           <Box
             width={['full', null, null, '50%']}
-            my='4'
+            my={['2', null, null, '4']}
             p='4'
             color='gray.6'
+            textAlign={['center', null, null, 'left']}
             sx={{
               borderRightStyle: ['none', null, null, 'solid'],
               borderRightWidth: '1px',
-              borderRightColor: 'gray.3'
+              borderRightColor: 'gray.3',
             }}>
             <Heading
               fontSize='5'

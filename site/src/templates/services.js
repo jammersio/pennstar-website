@@ -21,11 +21,8 @@ export default function (props) {
       pageList={props.pageContext.pageList}
       {...siteMetadata}
     >
-      <Box
-        bg='gray.2'
-      >
-        <ServiceHero hero={hero} />
-      </Box>
+
+      <ServiceHero hero={hero} />
       <Section
         textAlign='center'
         mx='auto'

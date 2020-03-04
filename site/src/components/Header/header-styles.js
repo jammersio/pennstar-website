@@ -38,7 +38,7 @@ export const headerStyles = {
 export const flexContainerStyles = {
   width: 'full',
   display: 'flex',
-  justifyContent: ['space-around', null, null, 'space-between'],
+  justifyContent: ['space-between', null, null, 'space-between'],
   alignItems: '72px',
   px: [4, 0, 0, 6],
   py: 1,
@@ -56,7 +56,7 @@ export const headerMenuStyles = {
 
 export const buttonStyles = {
   minWidth: '170px',
-  backgroundColor: 'primary',
+  bg: 'blue.4',
   color: 'white',
   px: 3,
   py: 2,
