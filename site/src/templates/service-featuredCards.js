@@ -24,7 +24,7 @@ export const Cards = ({ cards, ...props }) => {
           maxWidth='400px'
           mx={'auto'}
           textAlign={['center']}
-          boxShadow='neuGray'
+          boxShadow='outline'
         >
           <Box
             bg='gray.1'

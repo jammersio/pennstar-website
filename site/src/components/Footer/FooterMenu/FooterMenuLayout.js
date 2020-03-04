@@ -3,37 +3,43 @@ import { Box } from 'rebass'
 
 export const FooterMenuLayout = ({ column1, column2, column3, ...props }) => {
   return (
-    <Box
-      display={['block', null, null, null, 'flex']}
-      bg='muted'
-      width='full'
-      px={[0, 0, 0, 6]}
-    >
+    <Box sx={{
+      bg: 'muted',
+      width: 'full',
+      py: 5,
+    }}>
       <Box
-        width={['full', null, null, null, '50%']}
-        p='4'
-        mr='5'
-      >
-        {column1}
-      </Box>
-      <Box
-        display={['block', 'flex']}
-        justifyContent='space-between'
-        width={['full', null, null, null, '50%']}
+        display={['block', null, null, null, 'flex']}
+        maxWidth={['full', null, null, '80%']}
+        mx='auto'
+        px={[0, 0, 0, 6]}
       >
         <Box
-          height={'full'}
-          width={['full', '55%']}
+          width={['full', null, null, null, '50%']}
           p='4'
+          mr='5'
         >
-          {column2}
+          {column1}
         </Box>
         <Box
-          height={'full'}
-          width={['full', '45%']}
-          p='4'
+          display={['block', 'flex']}
+          justifyContent='space-between'
+          width={['full', null, null, null, '50%']}
         >
-          {column3}
+          <Box
+            height={'full'}
+            width={['full', '55%']}
+            p='4'
+          >
+            {column2}
+          </Box>
+          <Box
+            height={'full'}
+            width={['full', '45%']}
+            p='4'
+          >
+            {column3}
+          </Box>
         </Box>
       </Box>
     </Box>

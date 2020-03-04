@@ -31,7 +31,7 @@ export function Header({ logo, title = '', pageList = [], active = '', ...props 
           }}
         >
           <Box width='50%' ml={[0, 4, null, 0]}>
-            {<Brand brand brandMark /> || title}
+            {<Brand brand brandMark color='primary' /> || title}
           </Box>
           <Flex
             className='navBar'

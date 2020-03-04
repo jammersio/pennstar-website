@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { Box, Text, Heading } from 'rebass'
-import { Section, Container } from '../components/Containers'
+import { Section } from '../components/Containers'
 import { ServiceCards } from './service-cards'
 import { ServiceHero } from './service-hero'
 

@@ -4,6 +4,7 @@ import { Box, Image, Heading, Text } from 'rebass'
 const cardOuterContainerStyles = {
   position: 'relative',
   maxWidth: 'md',
+  minWidth: '300px',
   boxShadow: 'neuDark',
   borderTopLeftRadius: 'full',
   borderBottomLeftRadius: 'full',
@@ -37,12 +38,12 @@ export const ShapedCard = ({
   ...props
 }) => (
     <Box sx={{ ...cardOuterContainerStyles }}>
-      <Box sx={{ ...cardInnerContainerStyles }} {...props}>
+      <Box as='article' sx={{ ...cardInnerContainerStyles }} {...props}>
         <Box className='img-box' sx={{ ...imageBoxStyles, boxShadow: 'outline' }}>
           <Image src={image} />
         </Box>
         <Box sx={{ position: 'relative', width: '80%', px: [4, null, null, 2] }}>
-          <Heading fontSize={['2', null, '3']} my='1'>{name}</Heading>
+          <Heading fontSize={['2', null, null, '3']} my='1'>{name}</Heading>
           <Text py='1'>{title}</Text>
         </Box>
       </Box>

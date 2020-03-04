@@ -11,7 +11,7 @@ const headingStyles = {
   textShadow: 'default',
   ...textShadow,
   '&:hover': {
-    color: 'primary',
+    color: 'highlight',
     textDecoration: 'none',
   },
 }

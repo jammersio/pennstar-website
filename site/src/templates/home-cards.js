@@ -1,4 +1,6 @@
 import React from 'react'
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
 import { Box, Text, Heading } from 'rebass'
 import { FlexWrap } from '../components/Containers'
 import { Card } from '../components/Cards'
@@ -27,12 +29,15 @@ export const Cards = ({ cards: homeCards, ...props }) => {
               borderTopRightRadius: 'lg'
             }}
           >
-            <i className={card.icon} /><br />
+            <i className={card.icon} sx={{ color: 'gray.4', fontSize: 8 }} /><br />
             <Heading>{card.heading}</Heading>
           </Box>
           <Box p='2'
             fontSize='0.55em'
             bg='gray.1'
+            textAlign={['left', null, null, 'inherit']}
+            px={[4, null, null, 2]}
+            py={[3]}
             sx={{
               borderBottomWidth: '4px',
               borderBottomLeftRadius: 'lg',

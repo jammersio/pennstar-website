@@ -14,25 +14,29 @@ export function Footer(props) {
   return (
     <>
       <FooterMenu />
-      <Flex sx={{ ...footerStyles }}{...props}>
-        <Flex alignItems={'center'}>
-          <Brand
-            as='h3'
-            color='white'
-            brand
-          />
-          <Box as='span'>
-            &nbsp;&nbsp;&nbsp;&copy;&nbsp;
+      <Box sx={{
+        width: 'full', bg: 'primary', mx: 'auto'
+      }} {...props}>
+        <Box sx={{ ...footerStyles }}>
+          <Flex alignItems={'center'}>
+            <Brand
+              as='h3'
+              color='white'
+              brand
+            />
+            <Box as='span'>
+              &nbsp;&nbsp;&nbsp;&copy;&nbsp;
             {new Date().getFullYear()}
-            &nbsp;All&nbsp;rights&nbsp;reserved.
+              &nbsp;All&nbsp;rights&nbsp;reserved.
           </Box>
-        </Flex>
-        <Box fontSize='sm' ml='auto'>
-          {defaultFooterLinks.map(link => (
-            <ReLink key={link.id} href={link.link} mr='2'>{link.title}</ReLink>
-          ))}
+          </Flex>
+          <Box fontSize='sm' ml='auto'>
+            {defaultFooterLinks.map(link => (
+              <ReLink key={link.id} href={link.link} mr='2'>{link.title}</ReLink>
+            ))}
+          </Box>
         </Box>
-      </Flex>
+      </Box>
     </>
   )
 }

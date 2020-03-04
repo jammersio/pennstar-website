@@ -1,12 +1,14 @@
 export const footerStyles = {
-  bg: 'primary',
   width: 'full',
   color: 'white',
   px: [2, 4],
   fontSize: [2],
+  display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
   height: 'headerHeight',
+  maxWidth: ['full', null, null, '90%'],
+  mx: 'auto',
   '& h3': {
     display: ['none', null, null, 'block'],
     color: 'white',

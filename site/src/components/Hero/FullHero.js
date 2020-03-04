@@ -19,10 +19,12 @@ export const FullHero = ({
       className='hero-holder'
       outerProps={{
         sx: {
+          minHeight: '60vh',
           backgroundImage: `url(${bgImg})`,
           backgroundSize: backgroundSize,
           backgroundPosition: backgroundPosition,
           backgroundRepeat: 'no-repeat',
+          mx: 'auto',
           ...outerProps
         }
       }}

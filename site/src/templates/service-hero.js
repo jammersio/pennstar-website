@@ -13,11 +13,9 @@ export const ServiceHero = ({ hero }) => {
   return (
     <FullHero
       bgImg={defaultbg || hero.image}
-      // outerProps={{ boxShadow: 'insetDark' }}
-      // backgroundSize={['0%', null, '100% 100%', '30%']}
       backgroundSize='cover'
       backgroundPosition={'center  left'}
-      outerProps={{ boxShadow: 'insetDark' }}
+      outerProps={{ boxShadow: 'insetLight' }}
     >
       <Flex
         justifyContent='flex-end'
@@ -42,7 +40,7 @@ export const ServiceHero = ({ hero }) => {
             mt='5'
             display='inline'
             textAlign='center'
-            color={['white']}
+            color={['text', null, null, 'white']}
             mb='4'
             sx={{ ...textShadow }}
           >

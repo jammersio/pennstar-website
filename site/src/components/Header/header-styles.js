@@ -1,5 +1,5 @@
 const textShadow = {
-  textShadow: '1px 1px 1px rgba(0, 0, 0, 0.25)'
+  textShadow: '1px 1px 1px rgba(255, 255, 255, 0.25)'
 }
 
 export const headerStyles = {
@@ -19,15 +19,15 @@ export const headerStyles = {
     fontSize: [0, 0, 1],
     display: ['none', 'none', 'flex'],
     a: {
-      color: 'base',
+      color: 'white',
       "&.navlink": {
+        color: 'blue.3',
         fontSize: [null, null, 1, null, 2],
         pr: 3,
         textTransform: 'uppercase',
-        color: 'gray.6',
         ...textShadow,
         "&:hover": {
-          color: 'blue.4',
+          color: 'blue.6',
           textDecoration: 'none',
         },
       },

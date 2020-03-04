@@ -67,7 +67,6 @@ const Column3 = ({ title }) => (
   <>
     <Text
       color='gray.6'
-      mr='5'
       sx={{
         ...highlightStyles
       }}

@@ -9,10 +9,9 @@ export const Cards = ({ cards, ...props }) => {
     <Box
       display={['block', null, null, 'flex']}
       textAlign='left'
-      width={['full', null, null, '70%']}
+      width={['70%', null, null, 'full']}
       maxWidth={'1200px'}
-      px={['2', null, null, '4']}
-      my='5'
+      my={['1', null, null, '5']}
       mx='auto'
     >
       {cards.map(card => (
@@ -22,7 +21,6 @@ export const Cards = ({ cards, ...props }) => {
           name={card.heading}
           title={card.details}
           my={['4', null, null, '0px']}
-          maxWidth='md'
         />
       ))}
     </Box>

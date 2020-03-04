@@ -13,16 +13,19 @@ export const HomeHero = ({ hero }) => {
   return (
     <FullHero
       bgImg={defaultBg}
+      backgroundSize='cover'
+      backgroundPosition='center left'
       outerProps={{ boxShadow: 'insetDark' }}
     >
       <Flex
         ml={[0, 5]}
         width='full'
-        className='homeHero-Fcontainer'
       >
         <Box
           color='white'
-          py='6'
+          py='7'
+          width={['70%', null, null, '35%']}
+          mr={[0, null, null, 'auto']}
         >
           <Heading
             fontSize={[3, 5, 6]}
