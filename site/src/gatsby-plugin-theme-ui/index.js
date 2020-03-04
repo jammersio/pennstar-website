@@ -6,7 +6,7 @@ export default merge({}, baseTheme, {
   colors: {
     ...baseTheme.colors,
     primary: '#63B3ED',
-    highlight: 'blue.3',
+    highlight: 'black',
     secondary: '#718096',
     base: '#fbf9fa',
   },

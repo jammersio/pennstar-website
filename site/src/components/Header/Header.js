@@ -28,6 +28,7 @@ export function Header({ logo, title = '', pageList = [], active = '', ...props 
           sx={{
             ...flexContainerStyles,
             backgroundColor: passedScrollThreshold ? 'white' : 'transparent',
+            boxShadow: passedScrollThreshold ? 'lg' : 'none',
           }}
         >
           <Box width='50%' ml={[0, 4, null, 0]}>

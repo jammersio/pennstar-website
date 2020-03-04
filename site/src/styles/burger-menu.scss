@@ -6,6 +6,9 @@
   right: 36px;
   top: 12px;
 }
+.bm-burger-button:focus {
+  outline: 'none'
+}
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
@@ -14,7 +17,7 @@
 
 /* Color/shape of burger icon bars on hover*/
 .bm-burger-bars-hover {
-  background: #a90000;
+  background: rgb(40, 156, 238);
 }
 
 /* Position and sizing of clickable cross button */
@@ -25,7 +28,7 @@
 
 /* Color/shape of close button cross */
 .bm-cross {
-  background: #bdc3c7;
+  background: #ffffff;
 }
 
 /*
@@ -39,7 +42,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* General sidebar styles */
 .bm-menu {
-  background: #63B3ED;
+  background: rgb(127, 197, 247);
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
 }
@@ -54,6 +57,9 @@ Note: Beware of modifying this element as it can break the animations - you shou
   color: #b8b7ad;
   padding: 0.8em;
 }
+.bm-item-list:focus {
+  outline: 'none';
+}
 
 /* Individual item */
 .bm-item {
@@ -63,4 +69,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* Styling of overlay */
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
+}
+
+.side-nav:focus {
+  outline: none;
 }

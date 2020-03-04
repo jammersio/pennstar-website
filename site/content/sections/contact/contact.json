@@ -13,6 +13,6 @@
   "form": {
     "heading": "Get Started Today",
     "tagline": "Fill out the form, and we'll be in touch!",
-    "fields": ["Name", "Email", "Message"]
+    "fields": ["Name", "Email","Phone", "Message"]
   }
 }

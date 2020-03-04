@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Flex } from 'rebass'
+import { Box, Flex, Link as ReLink } from 'rebass'
 import { Section } from '../components/Containers'
 import { Card as DefCard } from '../components/Cards'
 
@@ -8,12 +8,12 @@ export const Card = ({ card, ...props }) => {
     <Section
       sx={{
         position: ['absolute'],
-        top: ['5%', '15%'], right: ['', '10%']
+        top: ['5%', '15%'],
+        right: ['', '10%']
       }}
     >
       <DefCard
-        minWidth='sm'
-
+        minWidth={['md', null, null, 'md']}
         innerProps={{
           sx: {
             border: 'none',
@@ -45,7 +45,7 @@ export const Card = ({ card, ...props }) => {
             borderBottomRightRadius: 'lg'
           }}
         >
-          <Flex p='2' fontSize='sm'
+          <Flex p='2' fontSize={['md']}
             sx={{
               borderRightStyle: 'solid',
               borderRightWidth: 'px',
@@ -69,7 +69,7 @@ export const Card = ({ card, ...props }) => {
           <Flex
             p='2'
             flexDirection='column'
-            fontSize='sm'
+            fontSize={['md']}
             textAlign='left'
           >
             <Box>
@@ -82,7 +82,9 @@ export const Card = ({ card, ...props }) => {
                 <i className='fas fa-circle fa-stack-2x'></i>
                 <i className='fas fa-phone-alt fa-stack-1x fa-inverse'></i>
               </Box>
-              {card.phone}
+              <ReLink href={`tel:${card.phone}`}>
+                {card.phone}
+              </ReLink>
             </Box>
             <Box mt='3'>
               <Box
@@ -94,7 +96,9 @@ export const Card = ({ card, ...props }) => {
                 <i className='fas fa-circle fa-stack-2x'></i>
                 <i className='far fa-envelope fa-stack-1x fa-inverse'></i>
               </Box>
-              {card.email}
+              <ReLink href={`mailto:${card.email}`}>
+                {card.email}
+              </ReLink>
             </Box>
           </Flex>
         </Box>

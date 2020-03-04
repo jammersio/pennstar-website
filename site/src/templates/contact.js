@@ -52,10 +52,10 @@ export default function (props) {
           mt={'2', null, null, '4'}
           bg='gray.2'
           width={['90%', null, null, '70%']}
-          maxWidth='900px'
+          maxWidth='750px'
           mx='auto'
           flexDirection={['column', null, null, 'row']}
-          sx={{ borderRadius: 'default', boxShadow: 'outline' }}
+          sx={{ borderRadius: 'default', boxShadow: 'neuDark' }}
         >
           <Box
             width={['full', null, null, '50%']}
@@ -69,6 +69,7 @@ export default function (props) {
               borderRightColor: 'gray.3',
             }}>
             <Heading
+              mt={[0, null, null, 5]}
               fontSize='5'
             >
               {form.heading}

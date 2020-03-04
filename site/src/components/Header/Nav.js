@@ -13,11 +13,12 @@ export function NavLink({ to = '#0,', children, ...props }) {
     <Link
       as={Link}
       to={to}
-      activeStyle={{ color: 'highlight' }}
+      activeClassName={'active'}
       className='navlink'
       {...props}
     >
       {children}
+      <span sx={{ display: 'none' }}></span>
     </Link>
   )
 }

@@ -15,7 +15,7 @@ export function Footer(props) {
     <>
       <FooterMenu />
       <Box sx={{
-        width: 'full', bg: 'primary', mx: 'auto'
+        width: 'full', bg: 'primary'
       }} {...props}>
         <Box sx={{ ...footerStyles }}>
           <Flex alignItems={'center'}>

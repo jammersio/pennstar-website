@@ -34,18 +34,20 @@ const Column2 = ({ title, info }) => (
     >
       {title}
     </Text>
-    <Flex>
-      <Flex
+    {/* <Flex> */}
+    {/* <Flex
         fontSize='md'
         flexDirection='column'
         color='gray.5'
+        mr='4'
+        flexShrink='0'
       >
         Phone: <br />
         Email: <br />
         Address: <br />
-      </Flex>
-      {info}
-    </Flex>
+      </Flex> */}
+    {info}
+    {/* </Flex> */}
   </>
 )
 
@@ -53,10 +55,10 @@ const Col2Info = ({ phone, email, streetAddress, aptSuite, cityStateZip }) => (
   <Flex
     fontSize='md'
     flexDirection='column'
-    ml={['5', null, null, '3']}
+  // ml={['5', null, null, '3']}
   >
-    <a href={phone}>{phone}</a>
-    <a href={email}>{email}</a>
+    <a href={`tel:${phone}`}>{phone}</a>
+    <a href={`mailto:${email}`}>{email}</a>
     {streetAddress} <br />
     {aptSuite} <br />
     {cityStateZip} <br />
