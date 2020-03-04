@@ -2,21 +2,22 @@ import React from 'react'
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import { Box, Text, Heading } from 'rebass'
-import { FlexWrap } from '../components/Containers'
-import { Card } from '../components/Cards'
-import { shortid } from '../utils'
+import { FlexWrap } from '../../components/Containers'
+import { Card } from '../../components/Cards'
+import { shortid } from '../../utils'
 
 export const Cards = ({ cards: homeCards, ...props }) => {
   return (
     <FlexWrap maxWidth="5xl" mx='auto'>
-
       {homeCards.map(card => (
         <Card
           key={shortid()}
           as='article'
           width={['full', null, null, 1 / 3]}
-          maxWidth={['full', null, null, '300px']}
-          mx='auto'
+          maxWidth={['500px']}
+          my={[3, null, null, 0]}
+          px={[0, null, null, 3]}
+          mx={['auto']}
           boxShadow='neu'
         >
           <Box
@@ -33,10 +34,10 @@ export const Cards = ({ cards: homeCards, ...props }) => {
             <Heading>{card.heading}</Heading>
           </Box>
           <Box p='2'
-            fontSize='0.55em'
             bg='gray.1'
+            fontSize='0.55em'
             textAlign={['left', null, null, 'inherit']}
-            px={[4, null, null, 2]}
+            px={[4, null, null, 4]}
             py={[3]}
             sx={{
               borderBottomWidth: '4px',

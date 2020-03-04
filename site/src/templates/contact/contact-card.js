@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Flex, Link as ReLink } from 'rebass'
-import { Section } from '../components/Containers'
-import { Card as DefCard } from '../components/Cards'
+import { Section } from '../../components/Containers'
+import { Card as DefCard } from '../../components/Cards'
 
 export const Card = ({ card, ...props }) => {
   return (

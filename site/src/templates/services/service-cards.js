@@ -2,8 +2,8 @@ import React from 'react'
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import { Flex, Box, Text, Heading } from 'rebass'
-import { Card } from '../components/Cards'
-import { shortid } from '../utils'
+import { Card } from '../../components/Cards'
+import { shortid } from '../../utils'
 
 
 export const ServiceCards = ({ cards, ...props }) => {
@@ -12,8 +12,9 @@ export const ServiceCards = ({ cards, ...props }) => {
       {cards.map(card => (
         <Card
           key={shortid()}
-          width={['full', '1/2', 1 / 2, 1 / 3]}
+          width={['full', 1 / 2, 1 / 3]}
           mx='auto'
+          p={[3]}
           boxShadow='neuSm'
         >
           <Flex

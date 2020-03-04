@@ -8,14 +8,13 @@ const defaultPages = [{
   page: 'Process', to: '#0'
 }]
 
-export function NavLink({ to = '#0,', linkShadow = { linkShadow }, children, ...props }) {
+export function NavLink({ to = '#0', children, ...props }) {
   return (
     <Link
       as={Link}
       to={to}
       activeClassName={'active'}
       className='navlink'
-      sx={{ ...linkShadow }}
       {...props}
     >
       {children}
@@ -24,7 +23,7 @@ export function NavLink({ to = '#0,', linkShadow = { linkShadow }, children, ...
   )
 }
 
-export function Nav({ pageList = defaultPages, active = '', linkShadow, children, ...props }) {
+export function Nav({ pageList = defaultPages, active = '', children, ...props }) {
   return (
     <>
       <Box
@@ -33,7 +32,7 @@ export function Nav({ pageList = defaultPages, active = '', linkShadow, children
 
         {...props}
       >
-        {pageList.map((page, i) => <NavLink key={i} linkShadow={linkShadow} to={page.path}>{page.page}</NavLink>)}
+        {pageList.map((page, i) => <NavLink key={i} to={page.path}>{page.page}</NavLink>)}
         {children}
       </Box>
     </>

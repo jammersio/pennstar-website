@@ -1,15 +1,10 @@
-const textShadow = {
-  textShadow: '1px 1px 1px rgba(0, 0, 0, 0.25)',
-}
-
 const headingStyles = {
   fontFamily: 'brand',
   fontWeight: 'bold',
   color: 'inherit',
   fontSize: [3, null, null, null, 5],
   whiteSpace: 'nowrap',
-  textShadow: 'default',
-  ...textShadow,
+  textShadow: 'textShadowDark',
   '&:hover': {
     color: 'highlight',
     textDecoration: 'none',

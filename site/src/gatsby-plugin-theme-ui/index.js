@@ -9,10 +9,10 @@ export default merge({}, baseTheme, {
     highlight: 'black',
     secondary: '#718096',
     base: '#fbf9fa',
+    alphaShade: 'linear-gradient(180deg, rgba(185,185,185,1) 10%, rgba(255,255,255,0.258140756302521) 67%)'
   },
   sizes: {
     ...baseTheme.sizes,
-
   },
   fonts: {
     ...baseTheme.fonts,
@@ -37,7 +37,12 @@ export default merge({}, baseTheme, {
     neuGray: `7px 7px 14px #7b7c7d,
     -7px -7px 14px #858687`,
     insetLight: 'inset 0 0 0 1000px rgba(255,255,255,.2)',
-    insetDark: 'inset 0 0 0 1000px rgba(0,0,0,.4)'
+    insetDark: 'inset 0 0 0 1000px rgba(0,0,0,.4)',
+    headerShadow: '-2px 5px 5px rgba(87, 87, 87, 0.08)',
+    textShadowLight: '-2px 0px 4px rgba(178, 178, 178, 0.25)',
+    textShadowDark: '1px 1px 1px rgba(0, 0, 0, 0.25)',
+    outlineXl: '0 0 0 6px rgba(66, 153, 225, 0.5)',
+
   },
   borders: {
     ...baseTheme.borders,

@@ -1,18 +1,14 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { FullHero } from '../components/Hero/FullHero'
 import { Flex, Box, Text, Heading } from 'rebass'
+import { FullHero } from '../../components/Hero/FullHero'
 
 const defaultBg = 'https://images.pexels.com/photos/3228692/pexels-photo-3228692.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260'
-
-const textShadow = {
-  textShadow: '1px 1px 1px rgba(0, 0, 0, 0.55)'
-}
 
 export const HomeHero = ({ hero }) => {
   return (
     <FullHero
-      bgImg={defaultBg}
+      bgImg={hero.image || defaultBg}
       backgroundSize='cover'
       backgroundPosition={['bottom left', null, null, 'center left']}
       outerProps={{ boxShadow: 'insetDark' }}
@@ -34,7 +30,7 @@ export const HomeHero = ({ hero }) => {
           <Heading
             fontSize={[3, 5, 6]}
             color='primary'
-            sx={{ ...textShadow }}
+            sx={{ textShadow: 'textShadowDark' }}
           >
             {hero.heading}
           </Heading>
@@ -42,7 +38,7 @@ export const HomeHero = ({ hero }) => {
             mt='2'
             fontSize='2'
             color='base'
-            sx={{ ...textShadow, fontWeight: 'bold' }}
+            sx={{ textShadow: 'textShadowDark', fontWeight: 'bold' }}
           >
             {hero.tagline}
           </Text>
@@ -60,7 +56,7 @@ export const HomeHero = ({ hero }) => {
               '& a': {
                 color: 'base',
                 fontWeight: 'bold',
-                ...textShadow,
+                textShadow: 'textShadowDark',
                 '&:hover': {
                   color: 'primaryHover',
                   textDecoration: 'none'

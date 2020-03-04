@@ -3,8 +3,8 @@ import React from 'react'
 import { jsx } from 'theme-ui'
 import { Link } from 'gatsby'
 import { Box, Text, Heading } from 'rebass'
-import { Card } from '../components/Cards'
-import { shortid } from '../utils'
+import { Card } from '../../components/Cards'
+import { shortid } from '../../utils'
 
 
 export const Cards = ({ cards, ...props }) => {
@@ -24,7 +24,7 @@ export const Cards = ({ cards, ...props }) => {
           maxWidth='400px'
           mx={'auto'}
           textAlign={['center']}
-          boxShadow='outline'
+          boxShadow='outlineXl'
         >
           <Box
             bg='gray.1'
@@ -37,7 +37,14 @@ export const Cards = ({ cards, ...props }) => {
               borderTopRightRadius: 'lg'
             }}
           >
-            <i className={card.icon} sx={{ color: 'gray.3', fontSize: 8 }} /><br />
+            <i
+              className={card.icon}
+              sx={{
+                color: 'gray.3',
+                fontSize: 8,
+              }}
+            />
+            <br />
             <Heading fontSize='3' color='primary'>{card.heading}</Heading>
           </Box>
 

@@ -1,23 +1,15 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
-import { Flex, Box, Text, Heading } from 'rebass'
+import { graphql } from 'gatsby'
+import { Text, Heading } from 'rebass'
 
 import { Section, Container } from '../components/Containers'
-import { Cards } from './home-cards.js'
-import { HomeHero } from './home-hero.js'
+import { Cards } from './home/home-cards.js'
+import { HomeHero } from './home/home-hero.js'
 
 import Layout from "../gatsby-theme-styleguide/components/Layout"
 import "../styles/styles.scss"
 
-const textShadow = {
-  textShadow: '1px 1px 1px rgba(0, 0, 0, 0.25)'
-}
-const textShadow2 = {
-  textShadow: '-2px 0px 4px rgba(255, 255, 255, 0.25)'
-}
-
 export default function (props) {
-
   const {
     site: { siteMetadata },
     homeJson: { hero, main, cards, info }
@@ -26,16 +18,15 @@ export default function (props) {
   return (
     <Layout
       pageList={props.pageContext.pageList}
-      linkShadow={textShadow}
       {...siteMetadata}
     >
       <HomeHero hero={hero} />
       <Section bg='base'>
         <Container
           textAlign='center'
+          maxWidth='3xl'
           px='4'
           mt='4'
-          maxWidth='3xl'
           mx='auto'
         >
           <Heading color='primary'>

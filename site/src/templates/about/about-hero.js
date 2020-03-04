@@ -1,11 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { FullHero } from '../components/Hero/FullHero'
 import { Flex, Box, Text, Heading } from 'rebass'
-
-const textShadow = {
-  textShadow: '1px 1px 1px rgba(0, 0, 0, 0.35)'
-}
+import { FullHero } from '../../components/Hero/FullHero'
 
 const heroStyles = {
   justifyContent: 'flex-end',
@@ -21,12 +17,12 @@ const heroStyles = {
     '& > h2': {
       color: 'primary',
       fontSize: 6,
-      ...textShadow
+      textShadow: 'textShadowDark',
     },
     '& .tagline': {
       color: 'white',
       mt: 2,
-      ...textShadow
+      textShadow: 'textShadowDark',
     },
   }
 }
@@ -35,10 +31,10 @@ const heroLinkStyles = {
   fontSize: 'md',
   mt: '3',
   mb: '-3',
-  ...textShadow,
+  textShadow: 'textShadowDark',
   '& a': {
     color: 'white',
-    ...textShadow,
+    textShadow: 'textShadowDark',
     '&:hover': {
       color: 'primaryHover',
       textDecoration: 'none'

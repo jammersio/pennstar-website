@@ -3,12 +3,10 @@ import React from 'react'
 import { jsx } from 'theme-ui'
 import { graphql } from 'gatsby'
 import { Box, Flex, Text, Heading } from 'rebass'
-
 import { Section } from '../components/Containers'
-import { Card } from './contact-card'
-import { ContactForm } from './contact-form'
+import { Card } from './contact/contact-card'
+import { ContactForm } from './contact/contact-form'
 import Layout from "../gatsby-theme-styleguide/components/Layout"
-import { FullHero } from '../components/Hero/FullHero';
 
 export default function (props) {
 

@@ -15,7 +15,6 @@ const cardOuterContainerStyles = {
 const cardInnerContainerStyles = {
   display: 'flex',
   alignItems: 'center',
-  // my: 4,
 }
 
 const imageBoxStyles = {

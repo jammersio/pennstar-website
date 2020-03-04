@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box } from 'rebass'
-import { ShapedCard } from '../components/Cards'
-import { shortid } from '../utils'
+import { ShapedCard } from '../../components/Cards'
+import { shortid } from '../../utils'
 
 
 export const Cards = ({ cards, ...props }) => {

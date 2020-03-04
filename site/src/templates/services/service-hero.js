@@ -1,18 +1,14 @@
 import React from 'react'
 import { Flex, Box, Text, Heading, Image } from 'rebass'
+import { FullHero } from '../../components/Hero'
 import { Cards } from './service-featuredCards'
-import { FullHero } from '../components/Hero'
 
 const defaultbg = "https://www.lifeofpix.com/wp-content/uploads/2019/02/310-jira00830-nam-1600x1045.jpg"
-
-const textShadow = {
-  textShadow: '1px 1px 1px rgba(0, 0, 0, 0.25)'
-}
 
 export const ServiceHero = ({ hero }) => {
   return (
     <FullHero
-      bgImg={defaultbg || hero.image}
+      bgImg={hero.image || defaultbg}
       backgroundSize='cover'
       backgroundPosition={['top left', null, null, 'center left']}
       outerProps={{ boxShadow: 'insetLight' }}
@@ -38,7 +34,7 @@ export const ServiceHero = ({ hero }) => {
           <Heading
             fontSize='6'
             color='primary'
-            sx={{ ...textShadow }}
+            sx={{ textShadow: "textShadowDark" }}
           >
             {hero.heading}
           </Heading>
@@ -48,7 +44,7 @@ export const ServiceHero = ({ hero }) => {
             textAlign='center'
             color={['text', null, null, 'white']}
             mb='4'
-            sx={{ ...textShadow }}
+            sx={{ textShadow: "textShadowDark" }}
           >
             {hero.taglineA}&nbsp;{hero.taglineB}
           </Text>

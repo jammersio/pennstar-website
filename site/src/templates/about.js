@@ -3,19 +3,13 @@ import { graphql } from 'gatsby'
 import { Text, Heading } from 'rebass'
 import { Section, Container } from '../components/Containers'
 import { ShapedCard } from '../components/Cards'
-import { AboutHero } from '../templates/about-hero'
-import { Cards } from '../templates/about-cards'
+import { AboutHero } from '../templates/about/about-hero'
+import { Cards } from '../templates/about/about-cards'
 
 import Layout from "../gatsby-theme-styleguide/components/Layout"
 
+// ❌
 const defaultBg = 'https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80'
-
-const textShadow = {
-  textShadow: '1px 1px 1px rgba(0, 0, 0, 0.25)'
-}
-const textShadow2 = {
-  textShadow: '-2px 0px 4px rgba(178, 178, 178, 0.25)'
-}
 
 
 const mainSectionStyles = {
@@ -41,11 +35,10 @@ export default function (props) {
   return (
     <Layout
       pageList={props.pageContext.pageList}
-      linkShadow={textShadow2}
       {...siteMetadata}
     >
 
-      <AboutHero hero={hero} bgImg={defaultBg} />
+      <AboutHero hero={hero} bgImg={hero.image || defaultBg} />
 
       <Section
         as='section'
