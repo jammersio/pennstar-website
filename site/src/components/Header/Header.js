@@ -17,18 +17,26 @@ const propTypes = {
   active: PropTypes.string,
 };
 
-export function Header({ logo, title = '', pageList = [], active = '', ...props }) {
+export function Header({ logo, title = '', pageList = [], active = '', linkShadow, ...props }) {
 
   const { passedScrollThreshold } = useScrollMenu(50)
 
   return (
     <>
-      <Box as='header' sx={{ ...headerStyles }}>
+      <Box as='header'
+        sx={{
+          ...headerStyles,
+          backgroundColor: passedScrollThreshold ? 'white' : 'transparent',
+          boxShadow: passedScrollThreshold ? 'lg' : 'none',
+        }}>
+        {/* <Box sx={{
+
+
+        }}> */}
         <Box
           sx={{
+            maxWidth: '2400px', mx: 'auto',
             ...flexContainerStyles,
-            backgroundColor: passedScrollThreshold ? 'white' : 'transparent',
-            boxShadow: passedScrollThreshold ? 'lg' : 'none',
           }}
         >
           <Box width='50%' ml={[0, 4, null, 0]}>
@@ -58,9 +66,11 @@ export function Header({ logo, title = '', pageList = [], active = '', ...props 
               alignItems='flex-start'
               color='white'
               pageList={pageList}
+              linkShadow={linkShadow}
             />
           </Sidebar>
         </Box>
+        {/* </Box> */}
       </Box>
     </>
   );

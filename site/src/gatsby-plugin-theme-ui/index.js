@@ -37,7 +37,7 @@ export default merge({}, baseTheme, {
     neuGray: `7px 7px 14px #7b7c7d,
     -7px -7px 14px #858687`,
     insetLight: 'inset 0 0 0 1000px rgba(255,255,255,.2)',
-    insetDark: 'inset 0 0 0 1000px rgba(0,0,0,.2)'
+    insetDark: 'inset 0 0 0 1000px rgba(0,0,0,.4)'
   },
   borders: {
     ...baseTheme.borders,

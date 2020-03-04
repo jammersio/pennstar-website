@@ -22,7 +22,7 @@ export const Cards = ({ cards: homeCards, ...props }) => {
           <Box
             bg='gray.3'
             fontSize='64px'
-            py='3'
+            py='4'
             sx={{
               borderTopWidth: '4px',
               borderTopLeftRadius: 'lg',

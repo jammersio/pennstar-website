@@ -9,6 +9,12 @@ import { HomeHero } from './home-hero.js'
 import Layout from "../gatsby-theme-styleguide/components/Layout"
 import "../styles/styles.scss"
 
+const textShadow = {
+  textShadow: '1px 1px 1px rgba(0, 0, 0, 0.25)'
+}
+const textShadow2 = {
+  textShadow: '-2px 0px 4px rgba(255, 255, 255, 0.25)'
+}
 
 export default function (props) {
 
@@ -20,6 +26,7 @@ export default function (props) {
   return (
     <Layout
       pageList={props.pageContext.pageList}
+      linkShadow={textShadow}
       {...siteMetadata}
     >
       <HomeHero hero={hero} />

@@ -5,7 +5,7 @@ import { brandStyles } from './brand-styles'
 import { INDEX_ROUTE } from '../../routes'
 
 const linkStyles = {
-  color: 'gray.4',
+  color: 'blue.4',
   '&:hover': {
     textDecoration: 'none',
   },

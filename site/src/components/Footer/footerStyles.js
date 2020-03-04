@@ -7,7 +7,7 @@ export const footerStyles = {
   justifyContent: 'center',
   alignItems: 'center',
   height: 'headerHeight',
-  maxWidth: ['full', null, null, '90%'],
+  maxWidth: ['full', null, null, '2400px'],
   mx: 'auto',
   '& h3': {
     display: ['none', null, null, 'block'],

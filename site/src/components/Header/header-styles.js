@@ -1,11 +1,14 @@
 const textShadow = {
   textShadow: '1px 1px 1px rgba(0, 0, 0, 0.25)'
 }
+const textShadow2 = {
+  textShadow: '-2px 0px 4px rgba(178, 178, 178, 0.25)'
+}
 
 export const headerStyles = {
   position: 'fixed',
   width: 'full',
-  height: '72',
+  height: '72px',
   top: 0,
   left: 0,
   zIndex: 3000,
@@ -14,7 +17,7 @@ export const headerStyles = {
   // using flexbox to center content in header
   display: 'flex',
   justifyContent: 'flex-end',
-  ml: 'auto',
+  // ml: 'auto',
   '& .header-nav': {
     fontSize: [0, 0, 1],
     display: ['none', 'none', 'flex'],
@@ -25,7 +28,7 @@ export const headerStyles = {
         fontSize: [null, null, 1, null, 2],
         pr: 3,
         textTransform: 'uppercase',
-        ...textShadow,
+        ...textShadow2,
         '&:hover': {
           color: 'blue.4',
           textDecoration: 'none',

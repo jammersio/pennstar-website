@@ -16,6 +16,10 @@ export const HomeHero = ({ hero }) => {
       backgroundSize='cover'
       backgroundPosition={['bottom left', null, null, 'center left']}
       outerProps={{ boxShadow: 'insetDark' }}
+      sx={{
+        maxWidth: '2200px',
+        mx: [null, null, null, 'auto'],
+      }}
     >
       <Flex
         ml={[0, 5]}
@@ -29,6 +33,7 @@ export const HomeHero = ({ hero }) => {
         >
           <Heading
             fontSize={[3, 5, 6]}
+            color='primary'
             sx={{ ...textShadow }}
           >
             {hero.heading}
@@ -36,8 +41,8 @@ export const HomeHero = ({ hero }) => {
           <Text
             mt='2'
             fontSize='2'
-            color='muted'
-            sx={{ ...textShadow }}
+            color='base'
+            sx={{ ...textShadow, fontWeight: 'bold' }}
           >
             {hero.tagline}
           </Text>
@@ -53,7 +58,8 @@ export const HomeHero = ({ hero }) => {
             mb='-3'
             sx={{
               '& a': {
-                color: 'white',
+                color: 'base',
+                fontWeight: 'bold',
                 ...textShadow,
                 '&:hover': {
                   color: 'primaryHover',

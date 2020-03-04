@@ -8,7 +8,7 @@ export function Card({ innerProps, boxShadow = 'neu', children, ...props }) {
       as='article'
       textAlign={`center`}
       my={[0]}
-      p={[1, 3]}
+      p={[1, 1]}
       {...props}
     >
       <Box sx={{

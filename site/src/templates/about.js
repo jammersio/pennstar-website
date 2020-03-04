@@ -10,6 +10,13 @@ import Layout from "../gatsby-theme-styleguide/components/Layout"
 
 const defaultBg = 'https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80'
 
+const textShadow = {
+  textShadow: '1px 1px 1px rgba(0, 0, 0, 0.25)'
+}
+const textShadow2 = {
+  textShadow: '-2px 0px 4px rgba(178, 178, 178, 0.25)'
+}
+
 
 const mainSectionStyles = {
   bg: 'base',
@@ -34,6 +41,7 @@ export default function (props) {
   return (
     <Layout
       pageList={props.pageContext.pageList}
+      linkShadow={textShadow2}
       {...siteMetadata}
     >
 

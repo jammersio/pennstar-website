@@ -14,6 +14,8 @@ const heroStyles = {
   px: 2,
   py: 6,
   textAlign: 'right',
+  maxWidth: '2200px',
+  mx: 'auto',
   color: 'secondary',
   '& .hero-box': {
     '& > h2': {

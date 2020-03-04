@@ -21,6 +21,12 @@ export const ServiceHero = ({ hero }) => {
         justifyContent='flex-end'
         position='relative'
         width='full'
+        maxWidth='2400px'
+        mt={[null, null, null, '6']}
+        mx='auto'
+        sx={{
+
+        }}
       >
         <Box
           mt={[5, null, null, 4]}

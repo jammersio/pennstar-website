@@ -10,7 +10,7 @@ export const FooterMenuLayout = ({ column1, column2, column3, ...props }) => {
     }}>
       <Box
         display={['block', null, null, null, 'flex']}
-        maxWidth={['full', null, null, '90%']}
+        maxWidth={['full', null, null, '2400px']}
         mx='auto'
         px={[0, 0, 0, 6]}
       >

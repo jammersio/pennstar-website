@@ -20,6 +20,7 @@ export const FullHero = ({
       outerProps={{
         sx: {
           minHeight: '60vh',
+          // maxHeight: '65vh',
           backgroundImage: `url(${bgImg})`,
           backgroundSize: backgroundSize,
           backgroundPosition: backgroundPosition,
